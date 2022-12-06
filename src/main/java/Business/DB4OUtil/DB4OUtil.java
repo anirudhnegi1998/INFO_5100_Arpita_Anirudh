@@ -5,8 +5,8 @@
 package Business.DB4OUtil;
 
 import java.nio.file.Paths;
-import Business.ConfigureASystem;
-import Business.EcoSystem;
+import Business.Configuration;
+import Business.AdminPanel;
 import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;
 import com.db4o.ObjectSet;
@@ -49,7 +49,7 @@ public class DB4OUtil {
             config.common().updateDepth(Integer.MAX_VALUE);
 
             //Register your top most Class here
-            config.common().objectClass(EcoSystem.class).cascadeOnUpdate(true); // Change to the object you want to save
+            config.common().objectClass(AdminPanel.class).cascadeOnUpdate(true); // Change to the object you want to save
 
             ObjectContainer db = Db4oEmbedded.openFile(config, FILENAME);
             return db;
@@ -59,19 +59,19 @@ public class DB4OUtil {
         return null;
     }
 
-    public synchronized void storeSystem(EcoSystem system) {
+    public synchronized void storeSystem(AdminPanel system) {
         ObjectContainer conn = createConnection();
         conn.store(system);
         conn.commit();
         conn.close();
     }
 
-    public EcoSystem retrieveSystem() {
+    public AdminPanel retrieveSystem() {
         ObjectContainer conn = createConnection();
-        ObjectSet<EcoSystem> systems = conn.query(EcoSystem.class); // Change to the object you want to save
-        EcoSystem system;
+        ObjectSet<AdminPanel> systems = conn.query(AdminPanel.class); // Change to the object you want to save
+        AdminPanel system;
         if (systems.size() == 0) {
-            system = ConfigureASystem.configure();  // If there's no System in the record, create a new one
+            system = Configuration.configure();  // If there's no System in the record, create a new one
         } else {
             system = systems.get(systems.size() - 1);
         }

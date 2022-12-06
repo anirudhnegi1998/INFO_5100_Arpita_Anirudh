@@ -3,17 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-/**
- *
- * @author anirudhnegi
- */
+
 package Business.Employee;
 
 import java.util.ArrayList;
-
 /**
  *
- * @author InfiniteLoops
+ * @author anirudhnegi
  */
 public class EmployeeDirectory {
 
