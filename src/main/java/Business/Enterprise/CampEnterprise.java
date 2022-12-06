@@ -13,7 +13,7 @@ import java.util.Date;
  *
  * @author anirudhnegi
  */
-ppublic class CampEnterprise extends Enterprise {
+public class CampEnterprise extends Enterprise {
 
     private String street;
     private String city;
