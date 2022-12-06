@@ -3,20 +3,28 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package UserInterface;
+import Business.AdminPanel;
 import Business.DB4OUtil.DB4OUtil;
+import Business.Enterprise.Enterprise;
+/*import Business.Network.Network;
+import Business.Organization.Organization;
+import Business.UserAccount.UserAccount;
+import userinterface.GeneralRole.SponsorRegistrationPanel;
+import userinterface.VolunteerCampRole.VolunteerRegistrationPanel;
+*/
 import java.awt.CardLayout;
 import java.awt.Color;
-
-import java.util.logging.Logger;
+import java.io.IOException;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import java.util.logging.*;
 
 /**
  *
  * @author arpitajaiswal
  */
 public class Dashboard extends javax.swing.JFrame {
-    private EcoSystem system;
+    private AdminPanel system;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
     private final static Logger logr = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     /**
