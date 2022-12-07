@@ -1,13 +1,15 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Business.Employee;
-
 
 /**
  *
- * @author anirudhnegi
+ * @author InfiniteLoops
  */
-
 public class Employee {
-    
+
     private String name;
     private int id;
     private static int count = 1;
@@ -33,4 +35,5 @@ public class Employee {
     public String toString() {
         return name;
     }
+
 }
