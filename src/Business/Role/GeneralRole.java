@@ -5,7 +5,7 @@
  */
 package Business.Role;
 
-import Business.EcoSystem;
+import Business.AdminPanel;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.FundraiserOrganization;
@@ -21,7 +21,7 @@ import userinterface.CorporateRole.CorporateWorkAreaJPanel;
 public class GeneralRole extends Role {
 
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise,Network network, EcoSystem business) {
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise,Network network, AdminPanel business) {
         return new CorporateWorkAreaJPanel(userProcessContainer, account, (FundraiserOrganization) organization, network, enterprise, business);
     }
 }

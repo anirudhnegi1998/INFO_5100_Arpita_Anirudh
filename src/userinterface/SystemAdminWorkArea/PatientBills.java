@@ -5,7 +5,7 @@
  */
 package userinterface.SystemAdminWorkArea;
 
-import Business.EcoSystem;
+import Business.AdminPanel;
 import Business.Enterprise.Enterprise;
 import Business.Enterprise.EventEnterprise;
 import Business.Enterprise.HospitalEnterprise;
@@ -31,10 +31,10 @@ public class PatientBills extends javax.swing.JPanel {
      * Creates new form PatientBills
      */
     private JPanel userProcessContainer;
-    private EcoSystem ecosystem;
+    private AdminPanel ecosystem;
     private static int funds = 0;
     private final static Logger logr = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-    public PatientBills(JPanel userProcessContainer, EcoSystem ecosystem) {
+    public PatientBills(JPanel userProcessContainer, AdminPanel ecosystem) {
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
         initComponents();

@@ -4,7 +4,7 @@
  */
 package Business.Role;
 
-import Business.EcoSystem;
+import Business.AdminPanel;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Organization;
@@ -19,7 +19,7 @@ import javax.swing.JPanel;
 public class SystemAdminRole extends Role {
 
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, Network network, EcoSystem system) {
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, Network network, AdminPanel system) {
         return new SystemAdminWorkAreaJPanel(userProcessContainer, account, system);
     }
 }

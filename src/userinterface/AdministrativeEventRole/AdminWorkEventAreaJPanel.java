@@ -1,6 +1,6 @@
 package userinterface.AdministrativeEventRole;
 
-import Business.EcoSystem;
+import Business.AdminPanel;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.UserAccount.UserAccount;
@@ -16,13 +16,13 @@ public class AdminWorkEventAreaJPanel extends javax.swing.JPanel {
     JPanel userProcessContainer;
     Enterprise enterprise;
     UserAccount account;
-    EcoSystem ecosystem;
+    AdminPanel ecosystem;
     Network network;
 
     /**
      * Creates new form AdminWorkAreaJPanel
      */
-    public AdminWorkEventAreaJPanel(JPanel userProcessContainer, Enterprise enterprise, UserAccount account, Network network, EcoSystem ecosystem) {
+    public AdminWorkEventAreaJPanel(JPanel userProcessContainer, Enterprise enterprise, UserAccount account, Network network, AdminPanel ecosystem) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.enterprise = enterprise;

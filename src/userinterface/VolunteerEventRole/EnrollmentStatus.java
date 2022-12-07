@@ -5,7 +5,7 @@
  */
 package userinterface.VolunteerEventRole;
 
-import Business.EcoSystem;
+import Business.AdminPanel;
 import Business.Employee.Employee;
 import Business.Enterprise.Enterprise;
 import Business.Enterprise.EventEnterprise;
@@ -28,10 +28,10 @@ public class EnrollmentStatus extends javax.swing.JPanel {
      */
     private JPanel userProcessContainer;
     private UserAccount user;
-    private EcoSystem eco;
+    private AdminPanel eco;
     private Network network;
 
-    public EnrollmentStatus(JPanel userProcessContainer, UserAccount user, Network network, EcoSystem eco) {
+    public EnrollmentStatus(JPanel userProcessContainer, UserAccount user, Network network, AdminPanel eco) {
         this.userProcessContainer = userProcessContainer;
         this.user = user;
         this.eco = eco;

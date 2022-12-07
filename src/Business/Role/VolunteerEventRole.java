@@ -5,7 +5,7 @@
  */
 package Business.Role;
 
-import Business.EcoSystem;
+import Business.AdminPanel;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Organization;
@@ -21,7 +21,7 @@ import userinterface.VolunteerEventRole.VolunteerEventHomePage;
 public class VolunteerEventRole extends Role {
 
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, Network network, EcoSystem business) {
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, Network network, AdminPanel business) {
         return new VolunteerEventHomePage(userProcessContainer, account, (VolunteerEventOrganization) organization, network, enterprise, business);
     }
 

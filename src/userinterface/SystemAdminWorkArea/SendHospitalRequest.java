@@ -5,7 +5,7 @@
  */
 package userinterface.SystemAdminWorkArea;
 
-import Business.EcoSystem;
+import Business.AdminPanel;
 import Business.Enterprise.Enterprise;
 import Business.Enterprise.EventEnterprise;
 import Business.WorkQueue.WorkRequest;
@@ -30,12 +30,12 @@ public class SendHospitalRequest extends javax.swing.JPanel {
      * Creates new form SendHospitalRequest
      */
     private JPanel userProcessContainer;
-    private EcoSystem eco;
+    private AdminPanel eco;
     private static int funds = 0;
     int count = 0;
     private final static Logger logr = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
-    public SendHospitalRequest(JPanel container, EcoSystem eco) {
+    public SendHospitalRequest(JPanel container, AdminPanel eco) {
         initComponents();
         this.userProcessContainer = container;
         this.eco = eco;

@@ -16,14 +16,14 @@ import java.util.ArrayList;
  *
  * @author InfiniteLoops
  */
-public class EcoSystem extends Organization {
+public class AdminPanel extends Organization {
 
-    private static EcoSystem business;
+    private static AdminPanel business;
     private ArrayList<Network> networkList;
 
-    public static EcoSystem getInstance() {
+    public static AdminPanel getInstance() {
         if (business == null) {
-            business = new EcoSystem();
+            business = new AdminPanel();
         }
         return business;
     }
@@ -53,7 +53,7 @@ public class EcoSystem extends Organization {
         return roleList;
     }
 
-    private EcoSystem() {
+    private AdminPanel() {
         super(null);
         networkList = new ArrayList<Network>();
     }

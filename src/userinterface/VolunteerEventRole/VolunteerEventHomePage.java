@@ -5,7 +5,7 @@
 package userinterface.VolunteerEventRole;
 
 import userinterface.CorporateRole.*;
-import Business.EcoSystem;
+import Business.AdminPanel;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.VolunteerEventOrganization;
@@ -24,12 +24,12 @@ public class VolunteerEventHomePage extends javax.swing.JPanel {
     private Enterprise enterprise;
     private UserAccount userAccount;
     private Network network;
-    private EcoSystem eco;
+    private AdminPanel eco;
 
     /**
      * Creates new form DoctorWorkAreaJPanel
      */
-    public VolunteerEventHomePage(JPanel userProcessContainer, UserAccount account, VolunteerEventOrganization organization, Network network, Enterprise enterprise, EcoSystem eco) {
+    public VolunteerEventHomePage(JPanel userProcessContainer, UserAccount account, VolunteerEventOrganization organization, Network network, Enterprise enterprise, AdminPanel eco) {
         initComponents();
 
         this.userProcessContainer = userProcessContainer;

@@ -3,10 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Ashutosh/Boston/Northeastern_University/AED/Git/infinite-loops/People_Welfare_Organization/src/userinterface/AboutUsJPanel.java</file>
-            <file>file:/C:/Ashutosh/Boston/Northeastern_University/AED/Git/infinite-loops/People_Welfare_Organization/src/userinterface/AdministrativeEventRole/SponsorApprovalJPanel.java</file>
-            <file>file:/C:/Ashutosh/Boston/Northeastern_University/AED/Git/infinite-loops/People_Welfare_Organization/src/userinterface/MainJFrame.java</file>
-            <file>file:/C:/Ashutosh/Boston/Northeastern_University/AED/Git/infinite-loops/People_Welfare_Organization/src/Business/DB4OUtil/DB4OUtil.java</file>
+            <file>file:/Users/arpitajaiswal/Desktop/INFO_5100_Arpita_Anirudh/src/Business/AdminPanel.java</file>
+            <file>file:/Users/arpitajaiswal/Desktop/INFO_5100_Arpita_Anirudh/src/Business/DB4OUtil/DB4OUtil.java</file>
+            <file>file:/Users/arpitajaiswal/Desktop/INFO_5100_Arpita_Anirudh/src/Business/Configuration.java</file>
+            <file>file:/Users/arpitajaiswal/Desktop/INFO_5100_Arpita_Anirudh/src/userinterface/Dashboard.java</file>
+            <file>file:/Users/arpitajaiswal/Desktop/INFO_5100_Arpita_Anirudh/src/Business/SendMailUsingAuthentication.java</file>
+            <file>file:/Users/arpitajaiswal/Desktop/INFO_5100_Arpita_Anirudh/src/userinterface/AboutUsJPanel.java</file>
         </group>
     </open-files>
 </project-private>

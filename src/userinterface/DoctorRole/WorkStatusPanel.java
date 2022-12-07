@@ -4,7 +4,7 @@
  */
 package userinterface.DoctorRole;
 
-import Business.EcoSystem;
+import Business.AdminPanel;
 import Business.Enterprise.Enterprise;
 import Business.Organization.DoctorOrganization;
 import Business.UserAccount.UserAccount;
@@ -25,14 +25,14 @@ public class WorkStatusPanel extends javax.swing.JPanel {
     private DoctorOrganization organization;
     private Enterprise enterprise;
     private UserAccount userAccount;
-    private EcoSystem business;
+    private AdminPanel business;
 
     int count = 0;
 
     /**
      * Creates new form DoctorWorkAreaJPanel
      */
-    public WorkStatusPanel(JPanel userProcessContainer, UserAccount account, DoctorOrganization organization, Enterprise enterprise, EcoSystem business) {
+    public WorkStatusPanel(JPanel userProcessContainer, UserAccount account, DoctorOrganization organization, Enterprise enterprise, AdminPanel business) {
         initComponents();
 
         this.userProcessContainer = userProcessContainer;

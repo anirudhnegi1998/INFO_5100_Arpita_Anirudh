@@ -4,7 +4,7 @@
  */
 package userinterface.LabAssistantRole;
 
-import Business.EcoSystem;
+import Business.AdminPanel;
 import Business.Enterprise.Enterprise;
 import Business.Organization.LabOrganization;
 import Business.Organization.Organization;
@@ -23,7 +23,7 @@ import javax.swing.table.DefaultTableModel;
 public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
-    private EcoSystem business;
+    private AdminPanel business;
     private UserAccount userAccount;
     private LabOrganization labOrganization;
     private Enterprise enterprise;
@@ -31,7 +31,7 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
     /**
      * Creates new form LabAssistantWorkAreaJPanel
      */
-    public LabAssistantWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, LabOrganization organization, EcoSystem business, Enterprise enterprise) {
+    public LabAssistantWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, LabOrganization organization, AdminPanel business, Enterprise enterprise) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;

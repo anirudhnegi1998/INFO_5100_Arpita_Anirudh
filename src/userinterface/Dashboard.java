@@ -4,7 +4,7 @@
  */
 package userinterface;
 
-import Business.EcoSystem;
+import Business.AdminPanel;
 import Business.DB4OUtil.DB4OUtil;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
@@ -28,7 +28,7 @@ public class Dashboard extends javax.swing.JFrame {
     /**
      * Creating Dashboard
      */
-    private EcoSystem system;
+    private AdminPanel system;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
     private final static Logger logr = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
  //   private static Logger log = Logger.getLogger(MainJFrame.class);

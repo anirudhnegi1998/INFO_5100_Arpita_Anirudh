@@ -5,7 +5,7 @@
  */
 package userinterface.CorporateRole;
 
-import Business.EcoSystem;
+import Business.AdminPanel;
 import Business.Employee.Employee;
 import Business.Enterprise.Enterprise;
 import Business.Enterprise.EventEnterprise;
@@ -30,9 +30,9 @@ public class FundraiserEvents extends javax.swing.JPanel {
     private JPanel userProcessContainer;
     private UserAccount userAccount;
     private Network network;
-    private EcoSystem business;
+    private AdminPanel business;
     private final static Logger logr = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-    public FundraiserEvents(JPanel userProcessContainer, UserAccount user, Network network, EcoSystem eco) {
+    public FundraiserEvents(JPanel userProcessContainer, UserAccount user, Network network, AdminPanel eco) {
         this.userProcessContainer = userProcessContainer;
         this.userAccount = user;
         this.network = network;

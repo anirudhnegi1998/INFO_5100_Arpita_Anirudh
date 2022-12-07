@@ -4,7 +4,7 @@
  */
 package userinterface.CorporateRole;
 
-import Business.EcoSystem;
+import Business.AdminPanel;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.FundraiserOrganization;
@@ -23,12 +23,12 @@ public class CorporateWorkAreaJPanel extends javax.swing.JPanel {
     private Enterprise enterprise;
     private UserAccount userAccount;
     private Network network;
-    private EcoSystem eco;
+    private AdminPanel eco;
     private final static Logger logr = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     /**
      * Creates new form DoctorWorkAreaJPanel
      */
-    public CorporateWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, FundraiserOrganization organization,Network network, Enterprise enterprise, EcoSystem eco ) {
+    public CorporateWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, FundraiserOrganization organization,Network network, Enterprise enterprise, AdminPanel eco ) {
         initComponents();
         
         this.userProcessContainer = userProcessContainer;
