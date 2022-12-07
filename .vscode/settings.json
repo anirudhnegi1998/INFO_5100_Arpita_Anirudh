@@ -1,0 +1,17 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/Users/anirudhnegi/Downloads/INFO5100-Project/AbsoluteLayout.jar",
+        "/Users/anirudhnegi/Downloads/INFO5100-Project/bridj-0.7.0.jar",
+        "/Users/anirudhnegi/Downloads/INFO5100-Project/db4o-8.0.184.15484-all-java5.jar",
+        "/Users/anirudhnegi/Downloads/INFO5100-Project/javax.activation.jar",
+        "/Users/anirudhnegi/Downloads/INFO5100-Project/javax.mail.jar",
+        "/Users/anirudhnegi/Downloads/INFO5100-Project/jcalendar-1.4.jar",
+        "/Users/anirudhnegi/Downloads/INFO5100-Project/jcommon-1.0.0.jar",
+        "/Users/anirudhnegi/Downloads/INFO5100-Project/jfreechart-1.0.1.jar",
+        "/Users/anirudhnegi/Downloads/INFO5100-Project/slf4j-api-1.7.2.jar",
+        "/Users/anirudhnegi/Downloads/INFO5100-Project/webcam-capture-0.3.12.jar"
+    ]
+}
