@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author raunak
+ * @author anirudhnegi
  */
 public class AdminWorkEventAreaJPanel extends javax.swing.JPanel {
 
@@ -187,10 +187,10 @@ public class AdminWorkEventAreaJPanel extends javax.swing.JPanel {
 
     private void userJButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userJButton4ActionPerformed
         // TODO add your handling code here:
-        VolunteerEventApprovalJPanel volunteerApprovalJPanel = new VolunteerEventApprovalJPanel(userProcessContainer, enterprise, account);
-        userProcessContainer.add("VolunteerApprovalJPanel", volunteerApprovalJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+//        VolunteerEventApprovalJPanel volunteerApprovalJPanel = new VolunteerEventApprovalJPanel(userProcessContainer, enterprise, account);
+//        userProcessContainer.add("VolunteerApprovalJPanel", volunteerApprovalJPanel);
+//        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+//        layout.next(userProcessContainer);
     }//GEN-LAST:event_userJButton4ActionPerformed
 
 

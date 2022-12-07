@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author ashwinven
+ * @author arpitajaiswal
  */
 public class AboutUsJPanel extends javax.swing.JPanel {
     

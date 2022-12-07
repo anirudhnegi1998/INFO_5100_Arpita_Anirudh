@@ -129,10 +129,10 @@ public class AdminWorkCampAreaJPanel extends javax.swing.JPanel {
 
     private void VolunteerApprovalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VolunteerApprovalBtnActionPerformed
         // TODO add your handling code here:
-        VolunteerCampApprovalJPanel volunteerApprovalJPanel = new VolunteerCampApprovalJPanel(userProcessContainer, enterprise, account);
-        userProcessContainer.add("VolunteerApprovalJPanel", volunteerApprovalJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+//        VolunteerCampApprovalJPanel volunteerApprovalJPanel = new VolunteerCampApprovalJPanel(userProcessContainer, enterprise, account);
+//        userProcessContainer.add("VolunteerApprovalJPanel", volunteerApprovalJPanel);
+//        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+//        layout.next(userProcessContainer);
     }//GEN-LAST:event_VolunteerApprovalBtnActionPerformed
 
     private void ManageUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ManageUserBtnActionPerformed

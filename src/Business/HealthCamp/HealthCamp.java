@@ -7,7 +7,7 @@ package Business.HealthCamp;
 
 /**
  *
- * @author InfiniteLoops
+ * @author arpitajaiswal
  */
 public class HealthCamp {
 

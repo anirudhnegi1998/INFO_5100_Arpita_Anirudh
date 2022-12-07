@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author MyPC1
+ * @author arpitajaiswal
  */
 public class HospitalEnterprise extends Enterprise {
 
