@@ -1,12 +1,17 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Business.Employee;
 
 import java.util.ArrayList;
+
 /**
  *
- * @author anirudhnegi
- **/
+ * @author InfiniteLoops
+ */
 public class EmployeeDirectory {
-    
+
     private ArrayList<Employee> employeeList;
 
     public EmployeeDirectory() {

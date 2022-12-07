@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Business.Enterprise;
 
 import Business.HealthCamp.HealthCampDirectory;
@@ -5,13 +10,13 @@ import Business.Organization.Organization;
 import Business.Organization.OrganizationDirectory;
 import Business.Role.Role;
 import java.util.ArrayList;
+
 /**
  *
- * @author anirudhnegi
+ * @author MyPC1
  */
-
 public abstract class Enterprise extends Organization {
-    
+
     private EnterpriseType enterpriseType;
     private OrganizationDirectory organizationDirectory;
 
@@ -66,4 +71,5 @@ public abstract class Enterprise extends Organization {
         public String toString() {
             return this.getName();
         }
+    
 }

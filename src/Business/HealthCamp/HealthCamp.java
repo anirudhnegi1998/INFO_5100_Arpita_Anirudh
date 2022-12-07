@@ -1,16 +1,19 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Business.HealthCamp;
 
 /**
  *
- * @author anirudhnegi
+ * @author InfiniteLoops
  */
 public class HealthCamp {
 
     private String street;
     private String city;
-
     private String state;
-    
     private String zipcode;
     private String peopleAffected;
     private String percentChild;
@@ -100,4 +103,3 @@ public class HealthCamp {
         return street;
     }
 }
-
