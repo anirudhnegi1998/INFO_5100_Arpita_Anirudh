@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Business.Enterprise;
 
 import Business.HealthCamp.HealthCampDirectory;
@@ -13,8 +9,9 @@ import java.util.ArrayList;
  *
  * @author anirudhnegi
  */
-public abstract class Enterprise extends Organization {
 
+public abstract class Enterprise extends Organization {
+    
     private EnterpriseType enterpriseType;
     private OrganizationDirectory organizationDirectory;
 
@@ -69,5 +66,4 @@ public abstract class Enterprise extends Organization {
         public String toString() {
             return this.getName();
         }
-    
 }

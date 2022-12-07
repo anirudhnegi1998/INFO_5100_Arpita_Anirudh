@@ -1,19 +1,10 @@
 package Business.Enterprise;
 
-
 import Business.EcoSystem;
-import Business.Enterprise.CampEnterprise;
-import Business.Enterprise.Enterprise;
-import Business.Enterprise.EventEnterprise;
-import Business.Enterprise.HospitalEnterprise;
 import Business.Network.Network;
+import Business.Organization.OrganizationDirectory;
 import java.util.ArrayList;
 import java.util.Date;
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 
 /**
  *
