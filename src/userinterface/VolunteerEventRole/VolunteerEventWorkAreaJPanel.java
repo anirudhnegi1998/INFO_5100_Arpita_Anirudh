@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author raunak
+ * @author anirudhnegi
  */
 public class VolunteerEventWorkAreaJPanel extends javax.swing.JPanel {
 

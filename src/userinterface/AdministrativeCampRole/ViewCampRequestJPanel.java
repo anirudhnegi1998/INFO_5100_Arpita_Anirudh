@@ -26,7 +26,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author InfiniteLoops
+ * @author arpitajaiswal
  */
 public class ViewCampRequestJPanel extends javax.swing.JPanel {
     

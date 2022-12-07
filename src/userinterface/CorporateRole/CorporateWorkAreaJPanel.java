@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 import java.util.logging.*;
 /**
  *
- * @author raunak
+ * @author arpitajaiswal
  */
 public class CorporateWorkAreaJPanel extends javax.swing.JPanel {
 

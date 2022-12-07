@@ -18,7 +18,7 @@ import java.util.logging.*;
 
 /**
  *
- * @author jo-ji
+ * @author arpitajaiswal
  */
 public class DonateFunds extends javax.swing.JPanel {
 

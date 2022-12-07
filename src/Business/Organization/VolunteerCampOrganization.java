@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author raunak
+ * @author anirudhnegi
  */
 public class VolunteerCampOrganization extends Organization {
 

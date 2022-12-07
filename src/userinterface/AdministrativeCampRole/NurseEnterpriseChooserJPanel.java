@@ -20,7 +20,7 @@ import userinterface.NurseRole.VolunteerNurseHomePage;
 
 /**
  *
- * @author InfiniteLoops
+ * @author arpitajaiswal
  */
 public class NurseEnterpriseChooserJPanel extends javax.swing.JPanel {
 

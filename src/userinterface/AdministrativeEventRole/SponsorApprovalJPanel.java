@@ -21,7 +21,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author InfiniteLoops
+ * @author anirudhnegi
  */
 public class SponsorApprovalJPanel extends javax.swing.JPanel {
 

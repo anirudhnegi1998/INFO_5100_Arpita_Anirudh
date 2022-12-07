@@ -25,7 +25,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author InfiniteLoops
+ * @author anirudhnegi
  */
 public class PatientRegistration extends javax.swing.JPanel {
 

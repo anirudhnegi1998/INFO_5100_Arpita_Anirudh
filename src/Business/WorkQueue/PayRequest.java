@@ -7,7 +7,7 @@ package Business.WorkQueue;
 
 /**
  *
- * @author InfiniteLoops
+ * @author anirudhnegi
  */
 public class PayRequest extends WorkRequest {
 

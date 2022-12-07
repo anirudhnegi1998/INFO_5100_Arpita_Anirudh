@@ -16,7 +16,7 @@ import userinterface.VolunteerEventRole.VolunteerEventHomePage;
 
 /**
  *
- * @author InfiniteLoops
+ * @author arpitajaiswal
  */
 public class VolunteerEventRole extends Role {
 

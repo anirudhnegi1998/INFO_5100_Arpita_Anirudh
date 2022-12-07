@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author InfiniteLoops
+ * @author arpitajaiswal
  */
 public class VolunteerCampChooserJPanel extends javax.swing.JPanel {
 

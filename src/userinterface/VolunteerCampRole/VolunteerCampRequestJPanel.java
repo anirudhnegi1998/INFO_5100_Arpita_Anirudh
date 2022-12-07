@@ -14,7 +14,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author InfiniteLoops
+ * @author arpitajaiswal
  */
 public class VolunteerCampRequestJPanel extends javax.swing.JPanel {
 

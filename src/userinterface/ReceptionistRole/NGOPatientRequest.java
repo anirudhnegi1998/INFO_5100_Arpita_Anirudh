@@ -18,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author jo-ji
+ * @author anirudhnegi
  */
 public class NGOPatientRequest extends javax.swing.JPanel {
 

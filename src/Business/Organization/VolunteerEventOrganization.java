@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author InfiniteLoops
+ * @author anirudhnegi
  */
 public class VolunteerEventOrganization extends Organization {
 

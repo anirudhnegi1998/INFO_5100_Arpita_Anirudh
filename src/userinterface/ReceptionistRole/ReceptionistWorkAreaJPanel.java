@@ -18,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author raunak
+ * @author arpitajaiswal
  */
 public class ReceptionistWorkAreaJPanel extends javax.swing.JPanel {
 

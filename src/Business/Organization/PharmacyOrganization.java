@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author ashwinven
+ * @author anirudhnegi
  */
 public class PharmacyOrganization extends Organization{
 

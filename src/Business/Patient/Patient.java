@@ -7,7 +7,7 @@ package Business.Patient;
 
 /**
  *
- * @author InfiniteLoops
+ * @author arpitajaiswal
  */
 public class Patient {
 

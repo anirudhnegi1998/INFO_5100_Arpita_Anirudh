@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author ashwinven
+ * @author arpitajaiswal
  */
 public class UpdateUserNameJFrame extends javax.swing.JFrame {
     

@@ -24,7 +24,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author jo-ji
+ * @author anirudhnegi
  */
 public class CreateFundEvent extends javax.swing.JPanel {
 

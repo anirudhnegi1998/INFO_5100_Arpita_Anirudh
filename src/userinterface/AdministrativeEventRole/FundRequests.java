@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author jo-ji
+ * @author anirudhnegi
  */
 public class FundRequests extends javax.swing.JPanel {
 

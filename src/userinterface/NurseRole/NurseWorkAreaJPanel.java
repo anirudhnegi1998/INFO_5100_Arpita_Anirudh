@@ -20,7 +20,7 @@ import userinterface.DoctorRole.RequestTestJPanel;
 
 /**
  *
- * @author raunak
+ * @author anirudhnegi
  */
 public class NurseWorkAreaJPanel extends javax.swing.JPanel {
 

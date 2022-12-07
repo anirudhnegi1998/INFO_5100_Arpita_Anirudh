@@ -24,7 +24,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author raunak
+ * @author anirudhnegi
  */
 public class PatientNurseRequestJPanel extends javax.swing.JPanel {
 

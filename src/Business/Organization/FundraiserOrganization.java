@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author InfiniteLoops
+ * @author anirudhnegi
  */
 public class FundraiserOrganization extends Organization {
 

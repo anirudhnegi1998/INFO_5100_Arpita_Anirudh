@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author InfiniteLoops
+ * @author arpitajaiswal
  */
 public class RequestHealthCampJPanel extends javax.swing.JPanel {
 
