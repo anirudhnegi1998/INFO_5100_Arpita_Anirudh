@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author InfiniteLoops
+ * @author arpitajaiswal
  */
 public class VolunteerHomePage extends javax.swing.JPanel {
 

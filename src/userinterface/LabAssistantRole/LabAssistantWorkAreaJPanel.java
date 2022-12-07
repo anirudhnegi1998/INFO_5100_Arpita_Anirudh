@@ -18,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author raunak
+ * @author arpitajaiswal
  */
 public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
 

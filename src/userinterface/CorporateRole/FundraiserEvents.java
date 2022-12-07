@@ -20,7 +20,7 @@ import java.util.logging.*;
 
 /**
  *
- * @author jo-ji
+ * @author arpitajaiswal
  */
 public class FundraiserEvents extends javax.swing.JPanel {
 

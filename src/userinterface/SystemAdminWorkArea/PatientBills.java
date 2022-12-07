@@ -23,7 +23,7 @@ import java.util.logging.*;
 
 /**
  *
- * @author jo-ji
+ * @author anirudhnegi
  */
 public class PatientBills extends javax.swing.JPanel {
 

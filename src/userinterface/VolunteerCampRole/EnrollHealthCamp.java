@@ -20,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author InfiniteLoops
+ * @author anirudhnegi
  */
 public class EnrollHealthCamp extends javax.swing.JPanel {
 

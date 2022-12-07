@@ -7,7 +7,7 @@ package Business.Organization;
 
 /**
  *
- * @author InfiniteLoops
+ * @author anirudhnegi
  */
 import Business.Role.NurseRole;
 import Business.Role.Role;

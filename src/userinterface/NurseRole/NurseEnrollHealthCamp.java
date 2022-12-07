@@ -21,7 +21,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author InfiniteLoops
+ * @author anirudhnegi
  */
 public class NurseEnrollHealthCamp extends javax.swing.JPanel {
 

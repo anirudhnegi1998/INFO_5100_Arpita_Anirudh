@@ -23,7 +23,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author InfiniteLoops
+ * @author arpitajaiswal
  */
 public class VolunteerRegistrationPanel extends javax.swing.JPanel {
 

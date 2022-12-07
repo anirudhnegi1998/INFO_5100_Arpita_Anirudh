@@ -15,7 +15,7 @@ import java.util.logging.*;
 
 /**
  *
- * @author raunak
+ * @author anirudhnegi
  */
 public class ManageNetworkJPanel extends javax.swing.JPanel {
 

@@ -22,7 +22,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author raunak
+ * @author arpitajaiswal
  */
 public class BillGeneration extends javax.swing.JPanel {
 

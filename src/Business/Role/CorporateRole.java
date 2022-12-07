@@ -16,7 +16,7 @@ import userinterface.CorporateRole.CorporateWorkAreaJPanel;
 
 /**
  *
- * @author InfiniteLoops
+ * @author arpitajaiswal
  */
 public class CorporateRole extends Role {
 

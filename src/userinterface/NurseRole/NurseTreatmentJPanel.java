@@ -20,7 +20,7 @@ import userinterface.LabAssistantRole.LabAssistantWorkAreaJPanel;
 
 /**
  *
- * @author raunak
+ * @author anirudhnegi
  */
 public class NurseTreatmentJPanel extends javax.swing.JPanel {
 
