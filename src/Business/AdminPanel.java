@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author InfiniteLoops
+ * @author arpitajaiswal
  */
 public class AdminPanel extends Organization {
 

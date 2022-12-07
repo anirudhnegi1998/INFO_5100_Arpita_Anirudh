@@ -13,7 +13,7 @@ import java.util.Date;
 
 /**
  *
- * @author InfiniteLoops
+ * @author arpitajaiswal
  */
 public class CampEnterprise extends Enterprise {
 
