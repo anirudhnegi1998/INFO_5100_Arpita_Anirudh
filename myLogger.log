@@ -1,6 +1,0 @@
-Dec 07, 2022 2:46:22 PM userinterface.MainJFrame loginJButtonActionPerformed
-INFO: LoggingIn
-Dec 07, 2022 2:46:23 PM userinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel btnManageAdminActionPerformed
-INFO: ManageAdmin
-Dec 07, 2022 2:46:25 PM userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel backJButtonActionPerformed
-INFO: back Button action Performed
