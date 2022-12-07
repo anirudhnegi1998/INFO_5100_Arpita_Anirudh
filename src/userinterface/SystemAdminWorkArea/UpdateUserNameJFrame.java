@@ -5,7 +5,7 @@
  */
 package userinterface.SystemAdminWorkArea;
 
-import Business.EcoSystem;
+import Business.AdminPanel;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.UserAccount.UserAccount;
@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
  */
 public class UpdateUserNameJFrame extends javax.swing.JFrame {
     
-    private EcoSystem system;
+    private AdminPanel system;
     private Network selectedNetwork;
     private ManageEnterpriseAdminJPanel panel;
     private Enterprise enterpriseName;
@@ -29,7 +29,7 @@ public class UpdateUserNameJFrame extends javax.swing.JFrame {
      * Creates new form UpdateUserNameJFrame
      */
 
-    UpdateUserNameJFrame(EcoSystem system, Network network, Enterprise enterpriseName, UserAccount user,Enterprise.EnterpriseType type,ManageEnterpriseAdminJPanel panel) {
+    UpdateUserNameJFrame(AdminPanel system, Network network, Enterprise enterpriseName, UserAccount user,Enterprise.EnterpriseType type,ManageEnterpriseAdminJPanel panel) {
          initComponents();
          this.system = system;
          this.selectedNetwork = network;

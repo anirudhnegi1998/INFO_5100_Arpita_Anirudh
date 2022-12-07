@@ -5,7 +5,7 @@
  */
 package userinterface.SystemAdminWorkArea;
 
-import Business.EcoSystem;
+import Business.AdminPanel;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Organization;
@@ -27,10 +27,10 @@ public class PatientFundRequest extends javax.swing.JPanel {
      * Creates new form PatientFundRequest
      */
     private JPanel userProcessContainer;
-    private EcoSystem eco;
+    private AdminPanel eco;
     private UserAccount user;
 
-    public PatientFundRequest(JPanel container, EcoSystem eco, UserAccount user) {
+    public PatientFundRequest(JPanel container, AdminPanel eco, UserAccount user) {
         this.userProcessContainer = container;
         this.eco = eco;
         this.user = user;

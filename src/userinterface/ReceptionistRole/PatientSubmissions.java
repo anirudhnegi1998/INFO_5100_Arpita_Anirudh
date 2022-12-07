@@ -5,7 +5,7 @@
  */
 package userinterface.ReceptionistRole;
 
-import Business.EcoSystem;
+import Business.AdminPanel;
 import Business.Enterprise.Enterprise;
 import Business.Organization.LabOrganization;
 import Business.Organization.Organization;
@@ -31,8 +31,8 @@ public class PatientSubmissions extends javax.swing.JPanel {
     private ReceptionistOrganization organization;
     private Enterprise enterprise;
     private UserAccount userAccount;
-    private EcoSystem eco;
-    public PatientSubmissions(JPanel userProcessContainer, UserAccount account, ReceptionistOrganization organization, Enterprise enterprise, EcoSystem eco) {
+    private AdminPanel eco;
+    public PatientSubmissions(JPanel userProcessContainer, UserAccount account, ReceptionistOrganization organization, Enterprise enterprise, AdminPanel eco) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.organization = organization;

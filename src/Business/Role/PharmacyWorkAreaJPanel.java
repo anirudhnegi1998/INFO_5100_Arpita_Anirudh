@@ -5,7 +5,7 @@
  */
 package Business.Role;
 
-import Business.EcoSystem;
+import Business.AdminPanel;
 import Business.Enterprise.Enterprise;
 import Business.Organization.LabOrganization;
 import Business.Organization.PharmacyOrganization;
@@ -18,7 +18,7 @@ import javax.swing.JPanel;
  */
 public class PharmacyWorkAreaJPanel extends JPanel {
 
-    public PharmacyWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, PharmacyOrganization pharmacyOrganization, EcoSystem business, Enterprise enterprise) {
+    public PharmacyWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, PharmacyOrganization pharmacyOrganization, AdminPanel business, Enterprise enterprise) {
     
     
      }

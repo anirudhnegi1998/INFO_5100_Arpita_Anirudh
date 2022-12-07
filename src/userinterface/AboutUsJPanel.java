@@ -5,7 +5,7 @@
  */
 package userinterface;
 
-import Business.EcoSystem;
+import Business.AdminPanel;
 import java.awt.CardLayout;
 import java.awt.Image;
 import javax.swing.ImageIcon;
@@ -19,12 +19,12 @@ import javax.swing.JPanel;
 public class AboutUsJPanel extends javax.swing.JPanel {
     
     private JPanel userProcessContainer;
-    private EcoSystem system;
+    private AdminPanel system;
 
     /**
      * Creates new form AboutUsJPanel
      */
-    public AboutUsJPanel(JPanel userProcessContainer, EcoSystem system) {
+    public AboutUsJPanel(JPanel userProcessContainer, AdminPanel system) {
         initComponents();
         this.system = system;
         this.userProcessContainer = userProcessContainer;
@@ -60,14 +60,16 @@ public class AboutUsJPanel extends javax.swing.JPanel {
         backbtn = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
         setBorder(new javax.swing.border.MatteBorder(null));
 
         jTextArea1.setEditable(false);
+        jTextArea1.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jTextArea1.setForeground(new java.awt.Color(51, 0, 51));
         jTextArea1.setRows(5);
-        jTextArea1.setText("To address the health issues of homeless people is a very challenging health problem in recent year as US Department of Housing and Urban Development (HUD) reported that 564,000 people \nare homeless in the United States. In the recent years the lack of health insurance is the most common reason for homeless people to not get access to proper healthcare. \n\nPeople Welfare Organization strives to address this issue in the best way possible. So PWO organizes fund raiser events, raise funds for those who cannot afford health cards and provides \nhospital treatment of utmost quality.\n\nOur sincere thanks to our beloved volunteers, sponsors, doctors, nurses,lab assistants and receptionist for making this initiative a grand success.\n\nContact Us: +1(857)544-1289  \nEmail: pwo.usapproval@gmail.com"); // NOI18N
+        jTextArea1.setText("We are Home is an ongoing project, which is designed to help not just people or community \nbut cover as big as a district. Here at We are Home, a single person is enough to create change\n\nWe are Home covers orgnisations such as Hospitals, Funraisers and HealthCampManagement\nAll organisations are inter-connected and are ready-to-serve each other in critical time\n\nHere at We are Home, we help people, community and regions together. \nCome join us.  \n"); // NOI18N
         jScrollPane1.setViewportView(jTextArea1);
 
         backbtn.setBackground(new java.awt.Color(255, 255, 255));
@@ -79,9 +81,11 @@ public class AboutUsJPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel7.setBackground(new java.awt.Color(0, 255, 0));
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 153, 153));
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Blue/contact.png"))); // NOI18N
-        jLabel7.setText("PEOPLE WELFARE ORGANIZATION");
+        jLabel7.setText("We are Home");
         jLabel7.setBorder(new javax.swing.border.MatteBorder(null));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -89,32 +93,36 @@ public class AboutUsJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(580, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(imageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(160, 160, 160))
+                .addGap(238, 238, 238))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(173, 173, 173)
                         .addComponent(backbtn)
-                        .addGap(247, 247, 247)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(48, 48, 48)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 680, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(384, 384, 384)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(286, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(backbtn)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addComponent(imageLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(8, 8, 8))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(backbtn))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(imageLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 228, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(20, 20, 20))
         );
     }// </editor-fold>//GEN-END:initComponents
 

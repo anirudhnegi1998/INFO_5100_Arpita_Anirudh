@@ -4,7 +4,7 @@
  */
 package Business.Role;
 
-import Business.EcoSystem;
+import Business.AdminPanel;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Organization;
@@ -22,7 +22,7 @@ import userinterface.AdministrativeHospitalRole.AdminWorkHospitalAreaJPanel;
 public class AdminRole extends Role{
 
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, Network network, EcoSystem business) {
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, Network network, AdminPanel business) {
         if(enterprise.getEnterpriseType().equals(Enterprise.EnterpriseType.Camp)){
                 return new AdminWorkCampAreaJPanel(userProcessContainer, enterprise,account,network,business);
         }else if(enterprise.getEnterpriseType().equals(Enterprise.EnterpriseType.Event)){

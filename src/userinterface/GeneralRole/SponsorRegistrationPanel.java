@@ -5,7 +5,7 @@
  */
 package userinterface.GeneralRole;
 
-import Business.EcoSystem;
+import Business.AdminPanel;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Organization;
@@ -26,7 +26,7 @@ import javax.swing.JPanel;
 public class SponsorRegistrationPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
-    private EcoSystem system;
+    private AdminPanel system;
     private static final Pattern mailPattern = Pattern.compile("^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$");
     private static final Pattern ssnPattern = Pattern.compile("^\\d{3}-?\\d{2}-?\\d{4}$|^XXX-XX-XXXX$");
     private static final Pattern passportPattern = Pattern.compile("^\\d{3}-?\\d{2}-?\\d{4}$|^XXX-XX-XXXX$");
@@ -35,7 +35,7 @@ public class SponsorRegistrationPanel extends javax.swing.JPanel {
     /**
      * Creates new form VolunteerRegistration
      */
-    public SponsorRegistrationPanel(JPanel userProcessContainerÏ, EcoSystem system) {
+    public SponsorRegistrationPanel(JPanel userProcessContainerÏ, AdminPanel system) {
         initComponents();
         this.system = system;
         this.userProcessContainer = userProcessContainer;

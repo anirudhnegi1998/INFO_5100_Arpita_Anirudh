@@ -4,7 +4,7 @@
  */
 package userinterface.NurseRole;
 
-import Business.EcoSystem;
+import Business.AdminPanel;
 import Business.Enterprise.Enterprise;
 import Business.Organization.NurseOrganization;
 import Business.Organization.Organization;
@@ -29,7 +29,7 @@ import javax.swing.JPanel;
 public class PatientNurseRequestJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
-    private EcoSystem business;
+    private AdminPanel business;
     private UserAccount userAccount;
     private NurseOrganization nurseOrganization;
     private WorkRequest req;
@@ -39,7 +39,7 @@ public class PatientNurseRequestJPanel extends javax.swing.JPanel {
     /**
      * Creates new form ProcessWorkRequestJPanel
      */
-    public PatientNurseRequestJPanel(JPanel userProcessContainer, UserAccount account, NurseOrganization organization, EcoSystem business, Enterprise enter, WorkRequest req) {
+    public PatientNurseRequestJPanel(JPanel userProcessContainer, UserAccount account, NurseOrganization organization, AdminPanel business, Enterprise enter, WorkRequest req) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;

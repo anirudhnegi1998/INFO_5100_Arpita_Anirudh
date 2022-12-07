@@ -5,7 +5,7 @@
 package userinterface.ReceptionistRole;
 
 import userinterface.DoctorRole.*;
-import Business.EcoSystem;
+import Business.AdminPanel;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.ReceptionistOrganization;
@@ -27,12 +27,12 @@ public class ReceptionistWorkAreaJPanel extends javax.swing.JPanel {
     private Enterprise enterprise;
     private UserAccount userAccount;
     private Network network;
-    private EcoSystem eco;
+    private AdminPanel eco;
 
     /**
      * Creates new form DoctorWorkAreaJPanel
      */
-    public ReceptionistWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, ReceptionistOrganization organization, Enterprise enterprise, Network network, EcoSystem eco) {
+    public ReceptionistWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, ReceptionistOrganization organization, Enterprise enterprise, Network network, AdminPanel eco) {
         initComponents();
 
         this.userProcessContainer = userProcessContainer;
