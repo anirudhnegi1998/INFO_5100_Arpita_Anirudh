@@ -8,7 +8,9 @@ public class HealthCamp {
 
     private String street;
     private String city;
+
     private String state;
+    
     private String zipcode;
     private String peopleAffected;
     private String percentChild;
