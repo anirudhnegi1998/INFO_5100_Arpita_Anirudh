@@ -5,7 +5,7 @@
 package userinterface.VolunteerEventRole;
 
 import userinterface.DoctorRole.*;
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.VolunteerEventOrganization;
 import Business.UserAccount.UserAccount;

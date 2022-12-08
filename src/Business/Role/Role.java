@@ -4,7 +4,7 @@
  */
 package Business.Role;
 
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Organization;
@@ -17,7 +17,7 @@ import javax.swing.JPanel;
  */
 public abstract class Role {
 
-    AdminPanel business;
+    EcoSystem business;
 
     public enum RoleType {
         Admin("Admin"),
@@ -53,9 +53,9 @@ public abstract class Role {
             Organization organization,
             Enterprise enterprise,
             Network network,
-            AdminPanel business);
+            EcoSystem business);
 
-    public AdminPanel getEcoSystem() {
+    public EcoSystem getEcoSystem() {
 
         return business;
     }

@@ -1,6 +1,6 @@
 package userinterface.AdministrativeCampRole;
 
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.UserAccount.UserAccount;
@@ -16,13 +16,13 @@ public class AdminWorkCampAreaJPanel extends javax.swing.JPanel {
     JPanel userProcessContainer;
     Enterprise enterprise;
     UserAccount account;
-    AdminPanel ecosystem;
+    EcoSystem ecosystem;
     Network network;
 
     /**
      * Creates new form AdminWorkAreaJPanel
      */
-        public AdminWorkCampAreaJPanel(JPanel userProcessContainer, Enterprise enterprise, UserAccount account,Network network,AdminPanel ecosystem) {
+        public AdminWorkCampAreaJPanel(JPanel userProcessContainer, Enterprise enterprise, UserAccount account,Network network,EcoSystem ecosystem) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.enterprise = enterprise;

@@ -5,7 +5,7 @@
  */
 package userinterface.ReceptionistRole;
 
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.Organization.ReceptionistOrganization;
@@ -30,7 +30,7 @@ public class NGOPatientRequest extends javax.swing.JPanel {
     private Enterprise enterprise;
     private UserAccount userAccount;
 
-    public NGOPatientRequest(JPanel userProcessContainer, UserAccount account, ReceptionistOrganization organization, Enterprise enterprise, AdminPanel eco) {
+    public NGOPatientRequest(JPanel userProcessContainer, UserAccount account, ReceptionistOrganization organization, Enterprise enterprise, EcoSystem eco) {
         this.userProcessContainer = userProcessContainer;
         this.organization = organization;
         this.enterprise = enterprise;

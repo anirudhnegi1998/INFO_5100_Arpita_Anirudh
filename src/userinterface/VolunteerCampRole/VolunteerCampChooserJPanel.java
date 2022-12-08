@@ -5,7 +5,7 @@
  */
 package userinterface.VolunteerCampRole;
 
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Organization;
@@ -27,11 +27,11 @@ public class VolunteerCampChooserJPanel extends javax.swing.JPanel {
     JPanel userProcessContainer;
     Enterprise enterprise;
     UserAccount account;
-    AdminPanel ecosystem;
+    EcoSystem ecosystem;
     VolunteerCampOrganization organization;
     Network network;
 
-    public VolunteerCampChooserJPanel(JPanel userProcessContainer, UserAccount account, VolunteerCampOrganization organization, Network network, Enterprise enterprise, AdminPanel business) {
+    public VolunteerCampChooserJPanel(JPanel userProcessContainer, UserAccount account, VolunteerCampOrganization organization, Network network, Enterprise enterprise, EcoSystem business) {
         this.userProcessContainer = userProcessContainer;
         this.enterprise = enterprise;
         this.account = account;

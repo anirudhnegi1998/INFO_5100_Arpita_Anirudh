@@ -5,7 +5,7 @@
  */
 package userinterface.AdministrativeCampRole;
 
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Employee.Employee;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
@@ -31,7 +31,7 @@ import javax.swing.JPanel;
 public class ViewCampRequestJPanel extends javax.swing.JPanel {
     
     private JPanel userProcessContainer;
-    private AdminPanel business;
+    private EcoSystem business;
     private UserAccount userAccount;
     private WorkRequest request;
     private Enterprise enterprise;
@@ -40,7 +40,7 @@ public class ViewCampRequestJPanel extends javax.swing.JPanel {
     /**
      * Creates new form ViewCampRequestJPanel
      */
-    public ViewCampRequestJPanel(JPanel userProcessContainer, UserAccount account, AdminPanel business, WorkRequest request, Network network, Enterprise enterprise) {
+    public ViewCampRequestJPanel(JPanel userProcessContainer, UserAccount account, EcoSystem business, WorkRequest request, Network network, Enterprise enterprise) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;

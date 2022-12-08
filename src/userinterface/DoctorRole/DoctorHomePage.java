@@ -5,7 +5,7 @@
  */
 package userinterface.DoctorRole;
 
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.DoctorOrganization;
@@ -23,13 +23,13 @@ public class DoctorHomePage extends javax.swing.JPanel {
     private DoctorOrganization organization;
     private Enterprise enterprise;
     private UserAccount userAccount;
-    private AdminPanel business;
+    private EcoSystem business;
     private Network network;
 
     /**
      * Creates new form DoctorHomePage
      */
-    public DoctorHomePage(JPanel userProcessContainer, UserAccount account, DoctorOrganization organization, Enterprise enterprise, AdminPanel business) {
+    public DoctorHomePage(JPanel userProcessContainer, UserAccount account, DoctorOrganization organization, Enterprise enterprise, EcoSystem business) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.organization = organization;

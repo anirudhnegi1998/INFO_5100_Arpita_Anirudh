@@ -5,7 +5,7 @@
  */
 package userinterface.AdministrativeCampRole;
 
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.NurseOrganization;
@@ -27,14 +27,14 @@ public class NurseEnterpriseChooserJPanel extends javax.swing.JPanel {
     JPanel userProcessContainer;
     Enterprise enterprise;
     UserAccount account;
-    AdminPanel ecosystem;
+    EcoSystem ecosystem;
     NurseOrganization organization;
     Network network;
 
     /**
      * Creates new form NurseEnterpriseChooserJPanel
      */
-    public NurseEnterpriseChooserJPanel(JPanel userProcessContainer, UserAccount account, NurseOrganization organization, Enterprise enterprise, AdminPanel business) {
+    public NurseEnterpriseChooserJPanel(JPanel userProcessContainer, UserAccount account, NurseOrganization organization, Enterprise enterprise, EcoSystem business) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.enterprise = enterprise;

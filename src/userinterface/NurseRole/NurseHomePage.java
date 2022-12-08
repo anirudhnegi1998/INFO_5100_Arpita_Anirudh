@@ -5,7 +5,7 @@
  */
 package userinterface.NurseRole;
 
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.NurseOrganization;
@@ -23,13 +23,13 @@ public class NurseHomePage extends javax.swing.JPanel {
     private NurseOrganization organization;
     private Enterprise enterprise;
     private UserAccount userAccount;
-    private AdminPanel business;
+    private EcoSystem business;
     private Network network;
 
     /**
      * Creates new form VolunteerHomePage
      */
-    public NurseHomePage(JPanel userProcessContainer, UserAccount account, NurseOrganization organization, Enterprise enterprise, Network network, AdminPanel business) {
+    public NurseHomePage(JPanel userProcessContainer, UserAccount account, NurseOrganization organization, Enterprise enterprise, Network network, EcoSystem business) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.organization = organization;

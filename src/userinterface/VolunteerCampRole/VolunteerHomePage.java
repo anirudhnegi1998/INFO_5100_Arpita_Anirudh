@@ -5,7 +5,7 @@
  */
 package userinterface.VolunteerCampRole;
 
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.VolunteerCampOrganization;
 import Business.UserAccount.UserAccount;
@@ -22,13 +22,13 @@ public class VolunteerHomePage extends javax.swing.JPanel {
     private VolunteerCampOrganization organization;
     private Enterprise enterprise;
     private UserAccount account;
-    private AdminPanel business;
+    private EcoSystem business;
     
 
     /**
      * Creates new form VolunteerHomePage
      */
-    public VolunteerHomePage(JPanel userProcessContainer, UserAccount account, VolunteerCampOrganization organization, Enterprise enterprise,AdminPanel business) {
+    public VolunteerHomePage(JPanel userProcessContainer, UserAccount account, VolunteerCampOrganization organization, Enterprise enterprise,EcoSystem business) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.organization = organization;
