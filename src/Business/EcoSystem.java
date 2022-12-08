@@ -5,30 +5,23 @@
  */
 package Business;
 
-// importing package with .java class
-
 import Business.Enterprise.Enterprise;
-
-import Business.Organization.Organization;
 import Business.Network.Network;
+import Business.Organization.Organization;
 import Business.Role.Role;
-
 import Business.Role.SystemAdminRole;
 import java.util.ArrayList;
 
 /**
  *
- * @author arpitajaiswal
+ * @author anirudhnegi
  */
 public class EcoSystem extends Organization {
 
-    private ArrayList<Network> networkList;
     private static EcoSystem business;
-    
-    
+    private ArrayList<Network> networkList;
 
     public static EcoSystem getInstance() {
-        
         if (business == null) {
             business = new EcoSystem();
         }
@@ -37,67 +30,55 @@ public class EcoSystem extends Organization {
 
     public Network createAndAddNetwork() {
         Network network = new Network();
-        
         networkList.add(network);
-        
         return network;
     }
     
     public void removeNetwork(Network network) {
-        
         networkList.remove(network);
     }
     
     public void updateNetwork(Network network,String name){
-        
         for(Network n:networkList){
-            
             if(n.equals(network)){
-                
                 n.setName(name);
-            }}
+            }
+        }
     }
 
     @Override
-    public  ArrayList  <Role>  getSupportedRole(){
+    public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roleList = new ArrayList<Role>();
-        roleList.add (new SystemAdminRole());
-        
+        roleList.add(new SystemAdminRole());
         return roleList;
     }
 
-    private EcoSystem() 
-    {
+    private EcoSystem() {
         super(null);
-        
         networkList = new ArrayList<Network>();
     }
 
     public ArrayList<Network> getNetworkList() {
-        
         return networkList;
     }
 
     public void setNetworkList(ArrayList<Network> networkList) {
-        
         this.networkList = networkList;
     }
 
     public boolean checkIfUserIsUnique(String userName) {
-        if(this.getUserAccountDirectory().checkIfUsernameIsUnique(userName)) {
+        if (this.getUserAccountDirectory().checkIfUsernameIsUnique(userName)) {
             return false;
         }
-        
         return true;
     }
 
     public boolean isDuplicateNetwork(String name) {
      for(Network n:networkList){
-            
-         if(n.equals(name)){
-                
-             return true;
+            if(n.equals(name)){
+                return true;
             }
         }    
     return false;
-    }}
+    }
+}

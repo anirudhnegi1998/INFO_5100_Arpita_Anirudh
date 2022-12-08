@@ -7,7 +7,7 @@ package Business;
 
 /**
  *
- * @author arpitajaiswal
+ * @author anirudhnegi
  */
 import javax.mail.*;
 import javax.mail.internet.*;

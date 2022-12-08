@@ -24,7 +24,7 @@ import org.jfree.data.category.DefaultCategoryDataset;
 
 /**
  *
- * @author anirudhnegi
+ * @author arpitajaiswal
  */
 public class FundraiserEvents extends javax.swing.JPanel {
 

@@ -1,4 +1,38 @@
-Dec 08, 2022 10:59:29 AM userinterface.Dashboard loginJButtonActionPerformed
+Dec 08, 2022 4:32:04 PM userinterface.MainJFrame loginJButtonActionPerformed
 INFO: LoggingIn
-Dec 08, 2022 10:59:31 AM userinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel btnManageNetworkActionPerformed
+Dec 08, 2022 4:32:05 PM userinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel btnManageNetworkActionPerformed
 INFO: ManageNetwork
+Dec 08, 2022 4:32:10 PM userinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel btnManageAdminActionPerformed
+INFO: ManageAdmin
+Dec 08, 2022 4:32:29 PM userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel backJButtonActionPerformed
+INFO: back Button action Performed
+Dec 08, 2022 4:32:31 PM userinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel btnManageEnterpriseActionPerformed
+INFO: ManageEnterprise
+Dec 08, 2022 4:32:40 PM userinterface.SystemAdminWorkArea.ManageEnterpriseJPanel submitJButtonActionPerformed
+INFO: Submit Button aaction Performed
+Dec 08, 2022 4:32:41 PM userinterface.SystemAdminWorkArea.ManageEnterpriseJPanel submitJButtonActionPerformed
+INFO: New Enterprise Created
+Dec 08, 2022 4:32:42 PM userinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel btnManageAdminActionPerformed
+INFO: ManageAdmin
+Dec 08, 2022 4:32:57 PM userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel submitJButtonActionPerformed
+INFO: Submit Button action Performed
+Dec 08, 2022 4:32:58 PM userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel submitJButtonActionPerformed
+INFO: Credentials of the user has been created
+Dec 08, 2022 4:32:58 PM userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel submitJButtonActionPerformed
+INFO: User Account Submitted
+Dec 08, 2022 4:32:59 PM userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel backJButtonActionPerformed
+INFO: back Button action Performed
+Dec 08, 2022 4:33:01 PM userinterface.MainJFrame logoutJButtonActionPerformed
+INFO: successfully Logged out
+Dec 08, 2022 4:33:15 PM userinterface.MainJFrame loginJButtonActionPerformed
+INFO: LoggingIn
+Dec 08, 2022 4:33:16 PM userinterface.MainJFrame logoutJButtonActionPerformed
+INFO: successfully Logged out
+Dec 08, 2022 4:33:21 PM userinterface.MainJFrame loginJButtonActionPerformed
+INFO: LoggingIn
+Dec 08, 2022 4:33:27 PM userinterface.MainJFrame logoutJButtonActionPerformed
+INFO: successfully Logged out
+Dec 08, 2022 4:33:32 PM userinterface.MainJFrame loginJButtonActionPerformed
+INFO: LoggingIn
+Dec 08, 2022 4:33:35 PM userinterface.MainJFrame logoutJButtonActionPerformed
+INFO: successfully Logged out

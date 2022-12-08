@@ -14,7 +14,7 @@ import java.util.Date;
 
 /**
  *
- * @author arpitajaiswal
+ * @author anirudhnegi
  */
 public class EventEnterprise extends Enterprise {
     private String street;

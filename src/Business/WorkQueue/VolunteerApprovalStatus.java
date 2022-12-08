@@ -8,7 +8,7 @@ package Business.WorkQueue;
 
 /**
  *
- * @author anirudhnegi
+ * @author arpitajaiswal
  */
 public class VolunteerApprovalStatus extends WorkRequest{
     

@@ -49,12 +49,11 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         for (Network network : system.getNetworkList()) {
             for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
                 for (UserAccount userAccount : enterprise.getUserAccountDirectory().getUserAccountList()) {
-                    Object[] row = new Object[5];
+                    Object[] row = new Object[4];
                     row[0] = enterprise;
                     row[1] = network;
                     row[2] = userAccount;
                     row[3] = enterprise.getEnterpriseType();
-                    row[4] = Business.UserAccount.UserAccount.password;
                     model.addRow(row);
                 }
             }
@@ -124,11 +123,11 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Enterprise Name", "Network Name", "Username", "Enterprise Type", "Password"
+                "Enterprise Name", "Network Name", "Username", "Enterprise Type"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, true, true, true,true
+                false, true, true, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {

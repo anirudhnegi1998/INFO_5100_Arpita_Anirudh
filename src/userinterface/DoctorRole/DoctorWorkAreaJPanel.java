@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
 import java.util.logging.*;
 /**
  *
- * @author arpitajaiswal
+ * @author anirudhnegi
  */
 public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
 

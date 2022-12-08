@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author arpitajaiswal
+ * @author anirudhnegi
  */
 public class UpdateNetworkJFrame extends javax.swing.JFrame {
     

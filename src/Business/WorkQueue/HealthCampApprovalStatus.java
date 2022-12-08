@@ -7,7 +7,7 @@ package Business.WorkQueue;
 
 /**
  *
- * @author anirudhnegi
+ * @author arpitajaiswal
  */
 public class HealthCampApprovalStatus extends WorkRequest {
 

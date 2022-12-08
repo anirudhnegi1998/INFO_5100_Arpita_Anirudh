@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author anirudhnegi
+ * @author arpitajaiswal
  */
 public class VolunteerNurseHomePage extends javax.swing.JPanel {
 

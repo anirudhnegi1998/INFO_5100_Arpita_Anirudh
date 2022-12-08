@@ -20,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author anirudhnegi
+ * @author arpitajaiswal
  */
 public class FundraiserEventVolunteer extends javax.swing.JPanel {
 

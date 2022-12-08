@@ -19,7 +19,7 @@ import java.util.logging.*;
 
 /**
  *
- * @author arpitajaiswal
+ * @author anirudhnegi
  */
 public class PatientDetails extends javax.swing.JPanel {
 

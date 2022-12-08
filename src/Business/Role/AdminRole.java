@@ -17,7 +17,7 @@ import userinterface.AdministrativeHospitalRole.AdminWorkHospitalAreaJPanel;
 
 /**
  *
- * @author arpitajaiswal
+ * @author anirudhnegi
  */
 public class AdminRole extends Role{
 

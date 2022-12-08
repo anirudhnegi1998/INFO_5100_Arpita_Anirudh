@@ -17,7 +17,7 @@ import userinterface.CorporateRole.CorporateWorkAreaJPanel;
 
 /**
  *
- * @author arpitajaiswal
+ * @author anirudhnegi
  */
 public class StudentRole extends Role {
 
