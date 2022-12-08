@@ -88,7 +88,6 @@ public class EnrollmentStatus extends javax.swing.JPanel {
 
         backJButton.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         backJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Prev Menu.png"))); // NOI18N
-        backJButton.setText("BACK");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
