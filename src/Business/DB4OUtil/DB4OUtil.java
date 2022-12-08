@@ -1,6 +1,6 @@
 package Business.DB4OUtil;
 
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Configuration;
 import com.db4o.ObjectContainer;
 import com.db4o.Db4oEmbedded;
@@ -13,10 +13,11 @@ import com.db4o.ta.TransparentPersistenceSupport;
 /**
  *
  * @author anirudhnegi
- */
+ **/
 public class DB4OUtil {
     private static DB4OUtil dB4OUtil;
-    private static final String FILENAME = Paths.get("Databank.db4o").toAbsolutePath().toString();// path to the data store
+    // path to the data
+    private static final String FILENAME = Paths.get("Databank.db4o").toAbsolutePath().toString();
     
 
     public synchronized static DB4OUtil getInstance() {
@@ -45,8 +46,8 @@ public class DB4OUtil {
            
             config.common().updateDepth(Integer.MAX_VALUE);
 
-           
-            config.common().objectClass(AdminPanel.class).cascadeOnUpdate(true); // Change to the object you want to save
+           // Change to the object which is to be saved
+            config.common().objectClass(EcoSystem.class).cascadeOnUpdate(true); 
 
             ObjectContainer db=  Db4oEmbedded.openFile(config, FILENAME);
             
@@ -59,7 +60,7 @@ public class DB4OUtil {
         return null;
     }
 
-    public synchronized void storeSystem (AdminPanel system) {
+    public synchronized void storeSystem (EcoSystem system) {
         
         ObjectContainer conn = createConnection();
         
@@ -71,15 +72,18 @@ public class DB4OUtil {
     
     }
 
-    public AdminPanel retrieveSystem(){
+    public EcoSystem retrieveSystem(){
         ObjectContainer conn = createConnection();
-        ObjectSet<AdminPanel>  systems =  conn.query(AdminPanel.class); // Change to the object you want to save
         
-        AdminPanel system;
+        // Change to the object which is to be saved
+        ObjectSet<EcoSystem>  systems =  conn.query(EcoSystem.class); 
+        
+        EcoSystem system;
         
         if (systems.size() == 0)
         {
-           system = Configuration.configure();  // If there's no System in the record, create a new one
+           // If no record present in the system, a new record will be added
+            system = Configuration.configure();  
         } else {
             system = systems.get(systems.size() - 1);
         }

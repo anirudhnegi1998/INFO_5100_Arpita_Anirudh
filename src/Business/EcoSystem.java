@@ -20,17 +20,17 @@ import java.util.ArrayList;
  *
  * @author arpitajaiswal
  */
-public class AdminPanel extends Organization {
+public class EcoSystem extends Organization {
 
     private ArrayList<Network> networkList;
-    private static AdminPanel business;
+    private static EcoSystem business;
     
     
 
-    public static AdminPanel getInstance() {
+    public static EcoSystem getInstance() {
         
         if (business == null) {
-            business = new AdminPanel();
+            business = new EcoSystem();
         }
         return business;
     }
@@ -66,7 +66,7 @@ public class AdminPanel extends Organization {
         return roleList;
     }
 
-    private AdminPanel() 
+    private EcoSystem() 
     {
         super(null);
         

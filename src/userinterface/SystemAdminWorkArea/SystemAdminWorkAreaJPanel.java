@@ -5,7 +5,7 @@
  */
 package userinterface.SystemAdminWorkArea;
 
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Organization;
@@ -27,11 +27,11 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
      * Creates new form SystemAdminWorkAreaJPanel
      */
     JPanel userProcessContainer;
-    AdminPanel ecosystem;
+    EcoSystem ecosystem;
     UserAccount user;
     private final static Logger logr = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     
-    public SystemAdminWorkAreaJPanel(JPanel userProcessContainer, UserAccount user, AdminPanel ecosystem) {
+    public SystemAdminWorkAreaJPanel(JPanel userProcessContainer, UserAccount user, EcoSystem ecosystem) {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.ecosystem=ecosystem;

@@ -4,7 +4,7 @@
  */
 package userinterface.DoctorRole;
 
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.LabOrganization;
 import Business.Organization.NurseOrganization;

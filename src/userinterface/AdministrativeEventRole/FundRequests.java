@@ -5,7 +5,7 @@
  */
 package userinterface.AdministrativeEventRole;
 
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.UserAccount.UserAccount;
@@ -28,8 +28,8 @@ public class FundRequests extends javax.swing.JPanel {
     private JPanel userProcessContainer;
     private UserAccount user;
     private Network network;
-    private AdminPanel eco;
-    public FundRequests(JPanel userProcessContainer, Enterprise enter, UserAccount user, Network network, AdminPanel eco) {
+    private EcoSystem eco;
+    public FundRequests(JPanel userProcessContainer, Enterprise enter, UserAccount user, Network network, EcoSystem eco) {
         this.userProcessContainer = userProcessContainer;
         this.enter = enter;
         this.user = user;

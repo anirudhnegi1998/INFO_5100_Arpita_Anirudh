@@ -5,7 +5,7 @@
  */
 package Business.Role;
 
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.NurseOrganization;
@@ -21,7 +21,7 @@ import userinterface.AdministrativeCampRole.NurseEnterpriseChooserJPanel;
 public class NurseRole extends Role {
 
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, Network network, AdminPanel business) {
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, Network network, EcoSystem business) {
         return new NurseEnterpriseChooserJPanel(userProcessContainer, account, (NurseOrganization) organization, enterprise, business);
     }
 

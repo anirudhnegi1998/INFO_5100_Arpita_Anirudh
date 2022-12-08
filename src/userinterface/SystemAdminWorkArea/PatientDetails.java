@@ -5,7 +5,7 @@
  */
 package userinterface.SystemAdminWorkArea;
 
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.UserAccount.UserAccount;
@@ -29,9 +29,9 @@ public class PatientDetails extends javax.swing.JPanel {
     private JPanel userProcessContainer;
     private UserAccount userAccount;
     private WorkRequest work;
-    private AdminPanel eco;
+    private EcoSystem eco;
     private final static Logger logr = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-    public PatientDetails(JPanel userProcessContainer, UserAccount user, WorkRequest work, AdminPanel eco) {
+    public PatientDetails(JPanel userProcessContainer, UserAccount user, WorkRequest work, EcoSystem eco) {
         this.userProcessContainer = userProcessContainer;
         this.userAccount = user;
         this.work= work;

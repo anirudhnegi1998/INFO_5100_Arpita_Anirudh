@@ -4,7 +4,7 @@
  */
 package userinterface.SystemAdminWorkArea;
 
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Employee.Employee;
 import Business.Enterprise.Enterprise;
 import Business.Enterprise.Enterprise.EnterpriseType;
@@ -26,13 +26,13 @@ import java.util.logging.*;
 public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
     
     private JPanel userProcessContainer;
-    private AdminPanel system;
+    private EcoSystem system;
     private final static Logger logr = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
     /**
      * Creates new form ManageEnterpriseJPanel
      */
-    public ManageEnterpriseAdminJPanel(JPanel userProcessContainer, AdminPanel system) {
+    public ManageEnterpriseAdminJPanel(JPanel userProcessContainer, EcoSystem system) {
         initComponents();
         
         this.userProcessContainer = userProcessContainer;

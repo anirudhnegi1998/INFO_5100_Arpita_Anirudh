@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package userinterface.NurseRole;
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.NurseOrganization;
 import Business.UserAccount.UserAccount;
@@ -21,12 +21,12 @@ public class VolunteerNurseHomePage extends javax.swing.JPanel {
     private NurseOrganization organization;
     private Enterprise enterprise;
     private UserAccount account;
-    private AdminPanel business;
+    private EcoSystem business;
 
     /**
      * Creates new form VolunteerHomePage
      */
-    public VolunteerNurseHomePage(JPanel userProcessContainer, UserAccount account, NurseOrganization organization, Enterprise enterprise, AdminPanel business) {
+    public VolunteerNurseHomePage(JPanel userProcessContainer, UserAccount account, NurseOrganization organization, Enterprise enterprise, EcoSystem business) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.organization = organization;

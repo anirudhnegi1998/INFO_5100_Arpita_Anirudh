@@ -5,7 +5,7 @@
  */
 package userinterface.SystemAdminWorkArea;
 
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Enterprise.EventEnterprise;
 import Business.WorkQueue.WorkRequest;
@@ -30,12 +30,12 @@ public class SendHospitalRequest extends javax.swing.JPanel {
      * Creates new form SendHospitalRequest
      */
     private JPanel userProcessContainer;
-    private AdminPanel eco;
+    private EcoSystem eco;
     private static int funds = 0;
     int count = 0;
     private final static Logger logr = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
-    public SendHospitalRequest(JPanel container, AdminPanel eco) {
+    public SendHospitalRequest(JPanel container, EcoSystem eco) {
         initComponents();
         this.userProcessContainer = container;
         this.eco = eco;
@@ -57,7 +57,7 @@ public class SendHospitalRequest extends javax.swing.JPanel {
         workRequestJTable = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         fundcollected = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        assignBtn = new javax.swing.JButton();
         hospitalComboBox = new javax.swing.JComboBox();
         jButton2 = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
@@ -93,26 +93,18 @@ public class SendHospitalRequest extends javax.swing.JPanel {
         jLabel1.setText("FUNDS COLLECTED:");
 
         fundcollected.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        fundcollected.setText("jLabel2");
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/user_up.png"))); // NOI18N
-        jButton1.setText("ASSIGN TO HOSPITAL");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        assignBtn.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        assignBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Assign symbol.png"))); // NOI18N
+        assignBtn.setText("ASSIGN A HOSPITAL");
+        assignBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        hospitalComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                hospitalComboBoxActionPerformed(evt);
+                assignBtnActionPerformed(evt);
             }
         });
 
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/prev-48.png"))); // NOI18N
-        jButton2.setText("BACK");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/PrevMenu button.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -129,48 +121,50 @@ public class SendHospitalRequest extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel17)
-                        .addGap(92, 92, 92)
-                        .addComponent(jLabel1)
-                        .addGap(32, 32, 32)
-                        .addComponent(fundcollected))
-                    .addComponent(jButton1)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(hospitalComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 880, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(36, 36, 36)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel17)
+                                .addGap(92, 92, 92)
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(fundcollected, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(assignBtn)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 880, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(hospitalComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(53, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(fundcollected)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(fundcollected, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1))))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(hospitalComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(hospitalComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addContainerGap(205, Short.MAX_VALUE))
+                .addComponent(assignBtn)
+                .addContainerGap(173, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void assignBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignBtnActionPerformed
         // TODO add your handling code here:
         Enterprise enter = (Enterprise) hospitalComboBox.getSelectedItem();
         int selectedRow = workRequestJTable.getSelectedRow();
@@ -221,11 +215,10 @@ public class SendHospitalRequest extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Insufficient Funds");
         }
 
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void hospitalComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hospitalComboBoxActionPerformed
+    }//GEN-LAST:event_assignBtnActionPerformed
+    private void hospitalComboBoxActionPerformed(java.awt.event.ActionEvent evt) {                                                 
         // TODO add your handling code here:
-    }//GEN-LAST:event_hospitalComboBoxActionPerformed
+    }                                                
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -240,9 +233,9 @@ public class SendHospitalRequest extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton assignBtn;
     private javax.swing.JLabel fundcollected;
     private javax.swing.JComboBox hospitalComboBox;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel17;

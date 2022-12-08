@@ -5,7 +5,7 @@
  */
 package userinterface.CorporateRole;
 
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Enterprise.EventEnterprise;
 import Business.Network.Network;
@@ -27,10 +27,10 @@ public class DonateFunds extends javax.swing.JPanel {
      */
     private JPanel userProcessConatiner;
     private UserAccount user;
-    private AdminPanel eco;
+    private EcoSystem eco;
     private Network network;
     private final static Logger logr = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-    public DonateFunds(JPanel userProcessContainer, UserAccount user, Network network, AdminPanel eco) {
+    public DonateFunds(JPanel userProcessContainer, UserAccount user, Network network, EcoSystem eco) {
         this.userProcessConatiner = userProcessContainer;
         this.user = user;
         this.eco = eco;

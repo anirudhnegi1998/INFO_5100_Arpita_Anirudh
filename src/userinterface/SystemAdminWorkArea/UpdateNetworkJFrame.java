@@ -6,7 +6,7 @@
 package userinterface.SystemAdminWorkArea;
 
 import Business.DB4OUtil.DB4OUtil;
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Network.Network;
 import java.awt.Component;
 import javax.swing.JOptionPane;
@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
  */
 public class UpdateNetworkJFrame extends javax.swing.JFrame {
     
-    private AdminPanel system;
+    private EcoSystem system;
     private Network selectedNetwork;
     private ManageNetworkJPanel panel;
 
@@ -26,7 +26,7 @@ public class UpdateNetworkJFrame extends javax.swing.JFrame {
      */
     
 
-    UpdateNetworkJFrame(AdminPanel system, Network network, ManageNetworkJPanel panel) {
+    UpdateNetworkJFrame(EcoSystem system, Network network, ManageNetworkJPanel panel) {
         this.system = system;
         this.selectedNetwork = network;
         this.panel = panel;

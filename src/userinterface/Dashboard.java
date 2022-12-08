@@ -4,7 +4,7 @@
  */
 package userinterface;
 
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.DB4OUtil.DB4OUtil;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
@@ -28,7 +28,7 @@ public class Dashboard extends javax.swing.JFrame {
     /**
      * Creating Dashboard
      */
-    private AdminPanel system;
+    private EcoSystem system;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
     private final static Logger logr = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
  //   private static Logger log = Logger.getLogger(MainJFrame.class);
@@ -60,7 +60,7 @@ public class Dashboard extends javax.swing.JFrame {
         loginJLabel = new javax.swing.JLabel();
         logoutJButton = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        descriptionBtn = new javax.swing.JButton();
+        aboutUsBtn = new javax.swing.JButton();
         SponsorRegistrationBtn = new javax.swing.JButton();
         container = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -102,13 +102,12 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel5.setText("Sponsors");
 
-        descriptionBtn.setFont(new java.awt.Font("Verdana", 1, 16)); // NOI18N
-        descriptionBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/About-40.png"))); // NOI18N
-        descriptionBtn.setText("ABOUT US");
-        descriptionBtn.setToolTipText("");
-        descriptionBtn.addActionListener(new java.awt.event.ActionListener() {
+        aboutUsBtn.setFont(new java.awt.Font("Verdana", 1, 16)); // NOI18N
+        aboutUsBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/AboutUsButton.png"))); // NOI18N
+        aboutUsBtn.setToolTipText("");
+        aboutUsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                descriptionBtnActionPerformed(evt);
+                aboutUsBtnActionPerformed(evt);
             }
         });
 
@@ -125,12 +124,13 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(loginJButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(logoutJButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(aboutUsBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(loginJButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(logoutJButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(loginJLabel)
@@ -141,10 +141,9 @@ public class Dashboard extends javax.swing.JFrame {
                                     .addGap(40, 40, 40)))
                             .addComponent(jLabel5))
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(descriptionBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(userNameJTextField)
-                    .addComponent(passwordField, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(SponsorRegistrationBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(userNameJTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(passwordField)
+                    .addComponent(SponsorRegistrationBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -168,9 +167,9 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(SponsorRegistrationBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 474, Short.MAX_VALUE)
-                .addComponent(descriptionBtn)
-                .addGap(30, 30, 30))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 475, Short.MAX_VALUE)
+                .addComponent(aboutUsBtn)
+                .addGap(158, 158, 158))
         );
 
         jSplitPane1.setLeftComponent(jPanel1);
@@ -193,15 +192,15 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 2471, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 2421, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 573, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 833, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(321, Short.MAX_VALUE))
         );
 
         container.add(jPanel2, "card2");
@@ -232,7 +231,7 @@ public class Dashboard extends javax.swing.JFrame {
         logr.info("successfully Logged out");
     }//GEN-LAST:event_logoutJButtonActionPerformed
 
-    private void descriptionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descriptionBtnActionPerformed
+    private void aboutUsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutUsBtnActionPerformed
         // TODO add your handling code here:
          logr.info("Entering into About US");
          if((!userNameJTextField.getText().isEmpty()) && (!loginJButton.isEnabled())){
@@ -240,7 +239,7 @@ public class Dashboard extends javax.swing.JFrame {
         int selectionResult = JOptionPane.showConfirmDialog(null, "The current user session" +userNameJTextField.getText() + " will be terminated, Do you want to proceed?", 
                 "Warning", selectionButton);
         if (selectionResult == JOptionPane.YES_OPTION) {
-        AboutUsJPanel sp = new AboutUsJPanel(container, system);
+        AboutUsFrame sp = new AboutUsFrame(container, system);
         CardLayout layout = (CardLayout) container.getLayout();
         container.add("AboutUs", sp);
         layout.next(container);
@@ -252,17 +251,14 @@ public class Dashboard extends javax.swing.JFrame {
         passwordField.setText("");
         }
         }else{
-        AboutUsJPanel sp = new AboutUsJPanel(container, system);
+        AboutUsFrame sp = new AboutUsFrame(container, system);
         CardLayout layout = (CardLayout) container.getLayout();
         container.add("AboutUs", sp);
         layout.next(container);
 
-        loginJButton.setEnabled(false);
-        logoutJButton.setEnabled(true);
-        userNameJTextField.setEnabled(false);
-        passwordField.setEnabled(false);
+        
         }
-    }//GEN-LAST:event_descriptionBtnActionPerformed
+    }//GEN-LAST:event_aboutUsBtnActionPerformed
 
     private void SponsorRegistrationBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SponsorRegistrationBtnActionPerformed
         // TODO add your handling code here:
@@ -447,8 +443,8 @@ public class Dashboard extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton SponsorRegistrationBtn;
+    private javax.swing.JButton aboutUsBtn;
     private javax.swing.JPanel container;
-    private javax.swing.JButton descriptionBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

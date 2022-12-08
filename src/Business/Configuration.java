@@ -10,8 +10,8 @@ import Business.UserAccount.UserAccount;
  */
 public class Configuration {
 
-    public static AdminPanel configure() {
-AdminPanel system = AdminPanel.getInstance();
+    public static EcoSystem configure() {
+EcoSystem system = EcoSystem.getInstance();
       
 
         Employee emp = system.getEmployeeDirectory().createEmployee("admin");

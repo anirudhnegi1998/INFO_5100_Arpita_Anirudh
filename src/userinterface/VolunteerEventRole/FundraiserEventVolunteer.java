@@ -5,7 +5,7 @@
  */
 package userinterface.VolunteerEventRole;
 
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Employee.Employee;
 import Business.Enterprise.Enterprise;
 import Business.Enterprise.EventEnterprise;
@@ -30,9 +30,9 @@ public class FundraiserEventVolunteer extends javax.swing.JPanel {
     private JPanel userProcessContainer;
     private UserAccount userAccount;
     private Network network;
-    private AdminPanel business;
+    private EcoSystem business;
 
-    public FundraiserEventVolunteer(JPanel userProcessContainer, UserAccount user, Network network, AdminPanel eco) {
+    public FundraiserEventVolunteer(JPanel userProcessContainer, UserAccount user, Network network, EcoSystem eco) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = user;

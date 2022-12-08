@@ -5,7 +5,7 @@
 package userinterface.NurseRole;
 
 import userinterface.LabAssistantRole.*;
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.NurseOrganization;
 import Business.Organization.Organization;
@@ -25,7 +25,7 @@ import userinterface.DoctorRole.RequestTestJPanel;
 public class NurseWorkAreaJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
-    private AdminPanel business;
+    private EcoSystem business;
     private UserAccount userAccount;
     private NurseOrganization nurseOrganization;
     private Enterprise enterprise;
@@ -35,7 +35,7 @@ public class NurseWorkAreaJPanel extends javax.swing.JPanel {
     /**
      * Creates new form LabAssistantWorkAreaJPanel
      */
-    public NurseWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, AdminPanel business) {
+    public NurseWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
         initComponents();
 
         this.userProcessContainer = userProcessContainer;

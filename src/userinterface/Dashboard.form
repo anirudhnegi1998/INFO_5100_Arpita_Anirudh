@@ -25,7 +25,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,3,-2,0,0,12,121"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,4,-110,0,0,12,-67"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
@@ -64,9 +64,10 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="aboutUsBtn" max="32767" attributes="0"/>
                           <Component id="loginJButton" alignment="0" max="32767" attributes="0"/>
                           <Component id="logoutJButton" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
@@ -85,10 +86,9 @@
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="descriptionBtn" alignment="0" max="32767" attributes="0"/>
                           <Component id="userNameJTextField" alignment="0" max="32767" attributes="0"/>
                           <Component id="passwordField" alignment="1" max="32767" attributes="0"/>
-                          <Component id="SponsorRegistrationBtn" alignment="1" max="32767" attributes="0"/>
+                          <Component id="SponsorRegistrationBtn" alignment="1" pref="234" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -115,9 +115,9 @@
                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="SponsorRegistrationBtn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="474" max="32767" attributes="0"/>
-                      <Component id="descriptionBtn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <EmptySpace pref="475" max="32767" attributes="0"/>
+                      <Component id="aboutUsBtn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="158" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -183,19 +183,18 @@
                 <Property name="text" type="java.lang.String" value="Sponsors"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="descriptionBtn">
+            <Component class="javax.swing.JButton" name="aboutUsBtn">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="16" style="1"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/free_button_icons_icons_pack_120624/Yellow/About-40.png"/>
+                  <Image iconType="3" name="/Images/AboutUsButton.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="ABOUT US"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="descriptionBtnActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aboutUsBtnActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="SponsorRegistrationBtn">
@@ -257,8 +256,8 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel3" min="-2" pref="2471" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="jLabel3" min="-2" pref="2421" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="573" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -266,8 +265,8 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jLabel3" min="-2" pref="833" max="-2" attributes="0"/>
+                          <EmptySpace pref="321" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>

@@ -5,7 +5,7 @@
  */
 package Business.Enterprise;
 
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Network.Network;
 import Business.Organization.OrganizationDirectory;
 import java.util.ArrayList;
@@ -87,7 +87,7 @@ public class EnterpriseDirectory {
            return null;
      }
      
-     public void fetchNetwork(String name, Enterprise.EnterpriseType type,AdminPanel system, Network newNetwork){
+     public void fetchNetwork(String name, Enterprise.EnterpriseType type,EcoSystem system, Network newNetwork){
          for (Network network : system.getNetworkList()) {
          for(Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList()){
              if(enterprise.getName().equals(name) && enterprise.getEnterpriseType().equals(type)){

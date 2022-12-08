@@ -4,7 +4,7 @@
  */
 package userinterface.AdministrativeCampRole;
 
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Enterprise.CampEnterprise;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
@@ -34,7 +34,7 @@ import org.jfree.data.category.DefaultCategoryDataset;
 public class HealthcampRequestJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
-    private AdminPanel business;
+    private EcoSystem business;
     private UserAccount userAccount;
     private LabOrganization labOrganization;
     private Enterprise enterprise;
@@ -43,7 +43,7 @@ public class HealthcampRequestJPanel extends javax.swing.JPanel {
     /**
      * Creates new form LabAssistantWorkAreaJPanel
      */
-    public HealthcampRequestJPanel(JPanel userProcessContainer, UserAccount account, AdminPanel business, Network network, Enterprise enterprise) {
+    public HealthcampRequestJPanel(JPanel userProcessContainer, UserAccount account, EcoSystem business, Network network, Enterprise enterprise) {
         initComponents();
         this.network = network;
         this.userProcessContainer = userProcessContainer;

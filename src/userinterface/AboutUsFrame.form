@@ -27,45 +27,48 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="imageLabel" min="-2" pref="333" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="238" max="-2" attributes="0"/>
+              <EmptySpace pref="258" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="imageLabel" min="-2" pref="333" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="238" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jScrollPane1" min="-2" pref="749" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="266" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
           </Group>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="173" max="-2" attributes="0"/>
-                      <Component id="backbtn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="680" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+                      <Component id="backbutton" min="-2" pref="139" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="384" max="-2" attributes="0"/>
-                      <Component id="jLabel7" min="-2" pref="437" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="315" max="-2" attributes="0"/>
+                      <Component id="headingLabel" min="-2" pref="408" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="286" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="backbtn" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                      <Component id="jLabel7" min="-2" pref="42" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="imageLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="228" max="32767" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="236" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="backbutton" min="-2" pref="44" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="headingLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+              <Component id="imageLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="316" max="32767" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="236" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -78,12 +81,9 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextArea1">
+        <Component class="javax.swing.JTextArea" name="textArea">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
             <Property name="columns" type="int" value="20"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Times New Roman" size="18" style="1"/>
@@ -99,35 +99,29 @@
     </Container>
     <Component class="javax.swing.JLabel" name="imageLabel">
     </Component>
-    <Component class="javax.swing.JButton" name="backbtn">
+    <Component class="javax.swing.JButton" name="backbutton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/free_button_icons_icons_pack_120624/Yellow/prev-48.png"/>
+          <Image iconType="3" name="/Images/PrevMenu button.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="BACK"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backbtnActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backbuttonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel7">
+    <Component class="javax.swing.JLabel" name="headingLabel">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="ff" red="0" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="22" style="1"/>
+          <Font name="Tahoma" size="36" style="1"/>
         </Property>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="99" red="ff" type="rgb"/>
-        </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/free_button_icons_icons_pack_120624/Blue/contact.png"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="We are Home"/>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="   We are Home"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
             <MatteColorBorder/>

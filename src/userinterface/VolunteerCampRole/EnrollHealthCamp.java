@@ -5,7 +5,7 @@
  */
 package userinterface.VolunteerCampRole;
 
-import Business.AdminPanel;
+import Business.EcoSystem;
 import Business.Employee.Employee;
 import Business.Enterprise.CampEnterprise;
 import Business.Enterprise.Enterprise;
@@ -25,14 +25,14 @@ import javax.swing.table.DefaultTableModel;
 public class EnrollHealthCamp extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
-    private AdminPanel business;
+    private EcoSystem business;
     private Enterprise enterprise;
     private UserAccount userAccount;
 
     /**
      * Creates new form HealthCampStatus
      */
-    public EnrollHealthCamp(JPanel userProcessContainer, UserAccount account, AdminPanel business, Enterprise enterprise) {
+    public EnrollHealthCamp(JPanel userProcessContainer, UserAccount account, EcoSystem business, Enterprise enterprise) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.business = business;
