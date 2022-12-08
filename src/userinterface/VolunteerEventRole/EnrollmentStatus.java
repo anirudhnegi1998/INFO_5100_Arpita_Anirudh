@@ -59,7 +59,7 @@ public class EnrollmentStatus extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         refreshTestJButton = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(185, 219, 236));
 
         workRequestJTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -87,7 +87,7 @@ public class EnrollmentStatus extends javax.swing.JPanel {
         jScrollPane2.setViewportView(workRequestJTable1);
 
         backJButton.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        backJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/prev-48.png"))); // NOI18N
+        backJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Prev Menu.png"))); // NOI18N
         backJButton.setText("BACK");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,7 +102,7 @@ public class EnrollmentStatus extends javax.swing.JPanel {
         valueLabel.setText("<value>");
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        jLabel7.setText("ENROLLMENT STATUS - EVENT");
+        jLabel7.setText("        EVENT VOLUNTEER STATUS");
         jLabel7.setBorder(new javax.swing.border.MatteBorder(null));
 
         refreshTestJButton.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
@@ -149,7 +149,7 @@ public class EnrollmentStatus extends javax.swing.JPanel {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(backJButton)
-                .addContainerGap(263, Short.MAX_VALUE))
+                .addContainerGap(254, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
