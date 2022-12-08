@@ -89,7 +89,7 @@ public class EnrollHealthCamp extends javax.swing.JPanel {
         workRequestJTable = new javax.swing.JTable();
         jLabel7 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(185, 219, 236));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         enterpriseLabel.setText("ENTERPRISE NAME :");
@@ -107,8 +107,7 @@ public class EnrollHealthCamp extends javax.swing.JPanel {
         });
 
         assignJButton1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        assignJButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/add_user.png"))); // NOI18N
-        assignJButton1.setText("ENROLL");
+        assignJButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Enroll.png"))); // NOI18N
         assignJButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 assignJButton1ActionPerformed(evt);
@@ -116,8 +115,7 @@ public class EnrollHealthCamp extends javax.swing.JPanel {
         });
 
         backJButton.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        backJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/prev-48.png"))); // NOI18N
-        backJButton.setText("BACK");
+        backJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Prev Menu.png"))); // NOI18N
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
@@ -150,8 +148,7 @@ public class EnrollHealthCamp extends javax.swing.JPanel {
         jScrollPane1.setViewportView(workRequestJTable);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Blue/add_user.png"))); // NOI18N
-        jLabel7.setText("ENROLLMENT STATUS - CAMP");
+        jLabel7.setText("           ENROLLED CAMP STATUS");
         jLabel7.setBorder(new javax.swing.border.MatteBorder(null));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -195,7 +192,7 @@ public class EnrollHealthCamp extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(backJButton)
                     .addComponent(assignJButton1))
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -260,7 +257,7 @@ public class EnrollHealthCamp extends javax.swing.JPanel {
         if (user == null) {
             //JOptionPane.showMessageDialog(null, "User Account does not exist");
             for (Organization org : e.getOrganizationDirectory().getOrganizationList()) {
-                org.getEmployeeDirectory().createEmployee(userAccount.getEmployee().getName());
+                org.getEmployeeDirectory().createEmp(userAccount.getEmployee().getName());
                 for (Employee emp : org.getEmployeeDirectory().getEmployeeList()) {
                     if (userAccount.getEmployee().getName() == emp.getName()) {
                         employee = emp;

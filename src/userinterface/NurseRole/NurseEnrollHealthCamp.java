@@ -267,7 +267,7 @@ public class NurseEnrollHealthCamp extends javax.swing.JPanel {
         if (user == null) {
             //JOptionPane.showMessageDialog(null, "User Account does not exist");
             for (Organization org : e.getOrganizationDirectory().getOrganizationList()) {
-                org.getEmployeeDirectory().createEmployee(userAccount.getEmployee().getName());
+                org.getEmployeeDirectory().createEmp(userAccount.getEmployee().getName());
                 for (Employee emp : org.getEmployeeDirectory().getEmployeeList()) {
                     if (userAccount.getEmployee().getName() == emp.getName()) {
                         employee = emp;

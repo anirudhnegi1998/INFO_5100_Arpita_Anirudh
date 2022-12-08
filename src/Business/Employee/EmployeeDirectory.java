@@ -22,21 +22,21 @@ public class EmployeeDirectory {
         return employeeList;
     }
 
-    public Employee createEmployee(String name) {
-        Employee employee = new Employee();
-        employee.setName(name);
-        employeeList.add(employee);
-        return employee;
+    public Employee createEmp(String name) {
+        Employee emp = new Employee();
+        emp.setName(name);
+        employeeList.add(emp);
+        return emp;
     }
     
-    public void removeEmployee(Employee employee) {
-        employeeList.remove(employee);
+    public void removeEmp(Employee emp) {
+        employeeList.remove(emp);
     }
 
-    public Employee uniqueEmployee(String name) {
-        for (Employee em : employeeList) {
-            if (em.getName().equals(name)) {
-                return em;
+    public Employee uniqueEmp(String name) {
+        for (Employee emp : employeeList) {
+            if (emp.getName().equals(name)) {
+                return emp;
             }
         }
         return null;

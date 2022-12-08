@@ -390,7 +390,7 @@ public class ViewCampRequestJPanel extends javax.swing.JPanel {
                 if (diff1Days >= 10 && check == 1 && checkdate == 0) {
                     
                     enterprise = network.getEnterpriseDirectory().createAndAddCampEnterprise(name1, street1, city1, state1, zipCode1, noOfPeople1, percentChild1, percentElder1, campId1, healthcampDate.getDate(), Enterprise.EnterpriseType.Camp, enter);
-                    Employee employee = enterprise.getEmployeeDirectory().createEmployee("admin");
+                    Employee employee = enterprise.getEmployeeDirectory().createEmp("admin");
                     String username = "admin_" + name1;
                     enterprise.getUserAccountDirectory().createUserAccount(username, "admin", employee, new AdminRole());
                     enterprise.getOrganizationDirectory().createOrganization(Organization.OrganizationType.VolunteerCamp);

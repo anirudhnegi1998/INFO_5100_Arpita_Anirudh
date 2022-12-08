@@ -262,7 +262,7 @@ public class CreateFundEvent extends javax.swing.JPanel {
                             return;
                      }
                     enterprise = network.getEnterpriseDirectory().createAndAddEventEnterprise(eventName.getText(), street.getText(), city.getText(), state.getText(), zipCode.getText(), eventDay, Enterprise.EnterpriseType.Event, Integer.parseInt(eventApproxFund.getText()));
-                    Employee empl = enterprise.getEmployeeDirectory().createEmployee("admin");
+                    Employee empl = enterprise.getEmployeeDirectory().createEmp("admin");
                     String username = "admin_" + eventName.getText();
                     enterprise.getUserAccountDirectory().createUserAccount(username, "admin", empl, new AdminRole());
                     enterprise.getOrganizationDirectory().createOrganization(Organization.OrganizationType.VolunteerEvent);

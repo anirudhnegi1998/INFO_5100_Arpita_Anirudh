@@ -76,7 +76,7 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 102, 0)));
 
         loginJButton.setFont(new java.awt.Font("Verdana", 0, 16)); // NOI18N
-        loginJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/button.png"))); // NOI18N
+        loginJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logoutbutton.png"))); // NOI18N
         loginJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginJButtonActionPerformed(evt);
@@ -91,7 +91,7 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel2.setText("Password");
 
         logoutJButton.setFont(new java.awt.Font("Verdana", 0, 16)); // NOI18N
-        logoutJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/button (1).png"))); // NOI18N
+        logoutJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/login.png"))); // NOI18N
         logoutJButton.setEnabled(false);
         logoutJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

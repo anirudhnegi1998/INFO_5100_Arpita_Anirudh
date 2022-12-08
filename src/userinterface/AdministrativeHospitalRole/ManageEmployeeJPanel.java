@@ -253,7 +253,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         if (check == 0) {
 
             String name = nameJTextField.getText();
-            organization.getEmployeeDirectory().createEmployee(name);
+            organization.getEmployeeDirectory().createEmp(name);
             populateTable(organization);
             nameJTextField.setText("");
              JOptionPane.showMessageDialog(null, "Congrats! Employee has benn created!");
@@ -285,7 +285,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
             if (selectionResult == JOptionPane.YES_OPTION) {
                 Organization organization  = (Organization) organizationJTable.getValueAt(selectedRow, 2);
                 Employee employee  = (Employee) organizationJTable.getValueAt(selectedRow, 1);
-                organization.getEmployeeDirectory().removeEmployee(employee);
+                organization.getEmployeeDirectory().removeEmp(employee);
                 populateTable(organization);
             }
         } else {

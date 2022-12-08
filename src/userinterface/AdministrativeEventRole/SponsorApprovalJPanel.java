@@ -216,7 +216,7 @@ public class SponsorApprovalJPanel extends javax.swing.JPanel {
             //System.out.println(request.getRole());
             //System.out.println(request.getRole().equals("VolunteerCampRole"));
             if (request.getRole().equals("GeneralRole")) {
-                org.getEmployeeDirectory().createEmployee(request.getVolunteerName());
+                org.getEmployeeDirectory().createEmp(request.getVolunteerName());
                 for (Employee e : org.getEmployeeDirectory().getEmployeeList()) {
                     if (request.getVolunteerName() == e.getName()) {
                         employee = e;
@@ -235,7 +235,7 @@ public class SponsorApprovalJPanel extends javax.swing.JPanel {
                 org.getUserAccountDirectory().createUserAccount(request.getUsername(), request.getPassword(), employee, role);
                 break;
             } else if (request.getRole().equals("StudentRole")) {
-                org.getEmployeeDirectory().createEmployee(request.getVolunteerName());
+                org.getEmployeeDirectory().createEmp(request.getVolunteerName());
                 for (Employee e : org.getEmployeeDirectory().getEmployeeList()) {
                     if (request.getVolunteerName() == e.getName()) {
                         employee = e;
@@ -250,7 +250,7 @@ public class SponsorApprovalJPanel extends javax.swing.JPanel {
                 org.getUserAccountDirectory().createUserAccount(request.getUsername(), request.getPassword(), employee, role);
                 break;
             } else if (request.getRole().equals("CorporateRole")) {
-                org.getEmployeeDirectory().createEmployee(request.getVolunteerName());
+                org.getEmployeeDirectory().createEmp(request.getVolunteerName());
                 for (Employee e : org.getEmployeeDirectory().getEmployeeList()) {
                     if (request.getVolunteerName() == e.getName()) {
                         employee = e;
