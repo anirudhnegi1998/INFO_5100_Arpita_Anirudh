@@ -16,7 +16,7 @@ import userinterface.CorporateRole.CorporateWorkAreaJPanel;
 
 /**
  *
- * @author arpitajaiswal
+ * @author anirudhnegi
  */
 public class GeneralRole extends Role {
 

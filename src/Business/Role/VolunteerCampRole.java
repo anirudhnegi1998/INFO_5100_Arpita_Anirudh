@@ -17,7 +17,7 @@ import userinterface.VolunteerCampRole.VolunteerCampChooserJPanel;
 
 /**
  *
- * @author arpitajaiswal
+ * @author anirudhnegi
  */
 public class VolunteerCampRole extends Role {
 

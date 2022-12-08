@@ -20,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author arpitajaiswal
+ * @author anirudhnegi
  */
 public class PatientSubmissions extends javax.swing.JPanel {
 

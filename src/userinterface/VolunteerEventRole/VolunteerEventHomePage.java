@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author anirudhnegi
+ * @author arpitajaiswal
  */
 public class VolunteerEventHomePage extends javax.swing.JPanel {
 

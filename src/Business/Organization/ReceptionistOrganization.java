@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author anirudhnegi
+ * @author arpitajaiswal
  */
 public class ReceptionistOrganization extends Organization{
     

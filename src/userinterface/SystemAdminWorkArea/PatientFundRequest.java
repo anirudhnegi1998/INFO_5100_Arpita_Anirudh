@@ -19,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author arpitajaiswal
+ * @author anirudhnegi
  */
 public class PatientFundRequest extends javax.swing.JPanel {
 

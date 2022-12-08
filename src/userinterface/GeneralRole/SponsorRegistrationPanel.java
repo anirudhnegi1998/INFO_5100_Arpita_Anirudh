@@ -21,7 +21,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author arpitajaiswal
+ * @author anirudhnegi
  */
 public class SponsorRegistrationPanel extends javax.swing.JPanel {
 

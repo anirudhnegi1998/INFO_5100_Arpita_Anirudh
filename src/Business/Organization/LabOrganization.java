@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author anirudhnegi
+ * @author arpitajaiswal
  */
 public class LabOrganization extends Organization{
 
