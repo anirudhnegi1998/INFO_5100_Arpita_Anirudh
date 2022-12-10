@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author anirudhnegi
+ * @author arpitajaiswal
  */
 public class UserAccountDirectory {
     
@@ -25,21 +25,11 @@ public class UserAccountDirectory {
     }
     
     public UserAccount authenticateUser(String username, String password){
-        for (UserAccount ua : userAccountList)
-            if (ua.getUsername().equals(username) && ua.getPassword().equals(password)){
-                return ua;
+        for (UserAccount useracc : userAccountList)
+            if (useracc.getUsername().equals(username) && useracc.getPassword().equals(password)){
+                return useracc;
             }
         return null;
-    }
-    
-    public UserAccount createUserAccount(String username, String password, Employee employee, Role role){
-        UserAccount userAccount = new UserAccount();
-        userAccount.setUsername(username);
-        userAccount.setPassword(password);
-        userAccount.setEmployee(employee);
-        userAccount.setRole(role);
-        userAccountList.add(userAccount);
-        return userAccount;
     }
     
     public UserAccount removeUserAccount(UserAccount useraccount){
@@ -47,19 +37,35 @@ public class UserAccountDirectory {
         return useraccount;
     }
     
+    public UserAccount createUserAccount(String username, String password, Employee employee, Role role){
+        
+        
+        UserAccount uacc = new UserAccount();
+        uacc.setPassword(password);
+        uacc.setEmployee(employee);
+        uacc.setUsername(username);
+        uacc.setRole(role);
+        
+        userAccountList.add(uacc);
+        return uacc;
+    }
+    
+    
+    public UserAccount fetchUserAccount(String username){
+        for (UserAccount useracc : userAccountList){
+            if (useracc.getUsername().equals(username))
+                return useracc;
+        }
+        return null;
+    }
+    
     public boolean checkIfUsernameIsUnique(String username){
-        for (UserAccount ua : userAccountList){
-            if (ua.getUsername().equals(username))
+        for (UserAccount useracc : userAccountList){
+            if (useracc.getUsername().equals(username))
                 return false;
         }
         return true;
     }
     
-    public UserAccount fetchUserAccount(String username){
-        for (UserAccount ua : userAccountList){
-            if (ua.getUsername().equals(username))
-                return ua;
-        }
-        return null;
-    }
+    
 }
