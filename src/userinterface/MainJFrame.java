@@ -5,13 +5,14 @@ import Business.EcoSystem;
 import java.io.IOException;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import Business.Organization.Organization;
+
 import userinterface.GeneralRole.SponsorRegistrationPanel;
 import userinterface.VolunteerCampRole.VolunteerRegistrationPanel;
 import java.util.logging.*;
 import Business.DB4OUtil.DB4OUtil;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
-import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.awt.Color;
@@ -23,13 +24,11 @@ import java.awt.Color;
  */
 public class MainJFrame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form MainJFrame
-     */
+   
     private EcoSystem system;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
     private final static Logger logr = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
- //   private static Logger log = Logger.getLogger(MainJFrame.class);
+ 
     
 
     public MainJFrame() {
@@ -224,8 +223,7 @@ public class MainJFrame extends javax.swing.JFrame {
     }// </editor-fold>                        
 
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // Get user name
-        //logger.info("Nitrogen Value changed: {}{}{}");
+
         logr.info("LoggingIn");
         String userName = userNameField.getText();
         // Get Password
@@ -235,12 +233,12 @@ public class MainJFrame extends javax.swing.JFrame {
         if((userName==null || userName.equals("")) && (password==null || password.equals(""))){
                  usernameLabel.setForeground(Color.RED);
                  passLabel.setForeground(Color.RED);
-                 JOptionPane.showMessageDialog(null, "Please enter user name and password!");
+                 JOptionPane.showMessageDialog(null, " User-name and password is blank");
                  return;
             }
         if(userName==null || userName.equals("")){
                  usernameLabel.setForeground(Color.RED);
-                 JOptionPane.showMessageDialog(null, "Please enter user name!");
+                 JOptionPane.showMessageDialog(null, "User-name is blank");
                  return;
             }else{
                  usernameLabel.setForeground(Color.BLACK);
@@ -248,12 +246,12 @@ public class MainJFrame extends javax.swing.JFrame {
         
         if(password==null || password.equals("")){
             passLabel.setForeground(Color.RED);
-            JOptionPane.showMessageDialog(null, "Please enter password!");
+            JOptionPane.showMessageDialog(null, "Password is blank");
             return;
         } else{
             passLabel.setForeground(Color.BLACK);
         }
-        //Step1: Check in the system admin user account directory if you have the user
+        //Check system admin user account directory if you have the user
         UserAccount userAccount = system.getUserAccountDirectory().authenticateUser(userName, password);
 
         Enterprise inEnterprise = null;
@@ -261,23 +259,20 @@ public class MainJFrame extends javax.swing.JFrame {
         Network inNetwork = null;
 
         if (userAccount == null) {
-            //Step 2: Go inside each network and check each enterprise
+            //Go inside each network and check each enterprise
             for (Network network : system.getNetworkList()) {
 
-                //Step 2.a: check against each enterprise
+                //check in each enterprise
                 for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
                     userAccount = enterprise.getUserAccountDirectory().authenticateUser(userName, password);
                     if (userAccount == null) {
-                        //Step 3:check against each organization for each enterprise
+                        //check in each organization and enterprise
                         for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
                             userAccount = organization.getUserAccountDirectory().authenticateUser(userName, password);
                             if (userAccount != null) {
                                 inNetwork = network;
                                 inEnterprise = enterprise;
-                                //System.out.println(inNetwork);
-                                //System.out.println(inEnterprise);
                                 inOrganization = organization;
-                                //System.out.println(inOrganization);
                                 break;
                             }
                         }
@@ -285,16 +280,13 @@ public class MainJFrame extends javax.swing.JFrame {
                     } else {
                         inEnterprise = enterprise;
                         inNetwork = network;
-                        //System.out.println(inEnterprise);
                         break;
                     }
                     if (inOrganization != null) {
-                        //System.out.println(inOrganization);
                         break;
                     }
                 }
                 if (inEnterprise != null) {
-                    //System.out.println(inEnterprise);
                     break;
                 }
             }
@@ -307,18 +299,11 @@ public class MainJFrame extends javax.swing.JFrame {
             return;
         } else {
             CardLayout layout = (CardLayout) container.getLayout();
-            //System.out.println(userAccount.getRole());
-            //System.out.println(userAccount.getRole().getEcoSystem());
-            //System.out.println(inEnterprise);
-            //System.out.println(inOrganization);
+           
             container.add("workArea", userAccount.getRole().createWorkArea(container, userAccount, inOrganization, inEnterprise, inNetwork, system));
             layout.next(container);
         }
-//      
-//        log.info("Current Enterprise\t" +inEnterprise);
-//        log.info("Current Organization\t" +inOrganization);
-//        log.info("Current Network\t" +inNetwork);
-
+   
         loginBtn.setEnabled(false);
         logoutBtn.setEnabled(true);
         userNameField.setEnabled(false);
@@ -340,42 +325,11 @@ public class MainJFrame extends javax.swing.JFrame {
         container.add("blank", jPanel2);
         CardLayout crdLyt = (CardLayout) container.getLayout();
         crdLyt.next(container);
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Green/ngo.jpg"))); // NOI18N
         dB4OUtil.storeSystem(system);
-        logr.info("successfully Logged out");
+        logr.info("Logged out");
     }                                         
 
-    private void descriptionBtnActionPerformed(java.awt.event.ActionEvent evt) {                                               
-        // TODO add your handling code here:
-         logr.info("Entering into About US");
-         if((!userNameField.getText().isEmpty()) && (!loginBtn.isEnabled())){
-        int selectionButton = JOptionPane.YES_NO_OPTION;
-        int selectionResult = JOptionPane.showConfirmDialog(null, "The current user session" +userNameField.getText() + " will be terminated, Do you want to proceed?", 
-                "Warning", selectionButton);
-        if (selectionResult == JOptionPane.YES_OPTION) {
-        AboutUsJPanel sp = new AboutUsJPanel(container, system);
-        CardLayout layout = (CardLayout) container.getLayout();
-        container.add("AboutUs", sp);
-        layout.next(container);
-        loginBtn.setEnabled(false);
-        logoutBtn.setEnabled(true);
-        userNameField.setEnabled(false);
-        passwordField.setEnabled(false);
-        userNameField.setText("");
-        passwordField.setText("");
-        }
-        }else{
-        AboutUsJPanel sp = new AboutUsJPanel(container, system);
-        CardLayout layout = (CardLayout) container.getLayout();
-        container.add("AboutUs", sp);
-        layout.next(container);
-
-        loginBtn.setEnabled(false);
-        logoutBtn.setEnabled(true);
-        userNameField.setEnabled(false);
-        passwordField.setEnabled(false);
-        }
-    }                                              
+                                              
 
     private void CampRegisterBtnActionPerformed(java.awt.event.ActionEvent evt) {                                                
         // TODO add your handling code here:
@@ -409,10 +363,43 @@ public class MainJFrame extends javax.swing.JFrame {
         passwordField.setEnabled(false);
         }
         
-    }                                               
+    }                            
+    
+    private void descriptionBtnActionPerformed(java.awt.event.ActionEvent evt) {                                               
+         
+        logr.info("Entering into About US");
+         if((!userNameField.getText().isEmpty()) && (!loginBtn.isEnabled())){
+        int selectionButton = JOptionPane.YES_NO_OPTION;
+        int selectionResult = JOptionPane.showConfirmDialog(null, "The current user session" +userNameField.getText() + " will be terminated, Do you want to proceed?", 
+                "Warning", selectionButton);
+        if (selectionResult == JOptionPane.YES_OPTION) {
+        AboutUsJPanel sp = new AboutUsJPanel(container, system);
+        CardLayout layout = (CardLayout) container.getLayout();
+        container.add("AboutUs", sp);
+        layout.next(container);
+        loginBtn.setEnabled(false);
+        logoutBtn.setEnabled(true);
+        userNameField.setEnabled(false);
+        passwordField.setEnabled(false);
+        userNameField.setText("");
+        passwordField.setText("");
+        }
+        }else{
+        AboutUsJPanel sp = new AboutUsJPanel(container, system);
+        CardLayout layout = (CardLayout) container.getLayout();
+        container.add("AboutUs", sp);
+        layout.next(container);
+
+        loginBtn.setEnabled(false);
+        logoutBtn.setEnabled(true);
+        userNameField.setEnabled(false);
+        passwordField.setEnabled(false);
+        }
+    }    
+    
 
     private void SponsorRegistrationBtnActionPerformed(java.awt.event.ActionEvent evt) {                                                       
-        // TODO add your handling code here:
+        
         logr.info("Entering the Sponsor RegistrationScreen");
         if((!userNameField.getText().isEmpty()) && (!loginBtn.isEnabled())){
         int selectionButton = JOptionPane.YES_NO_OPTION;
@@ -495,20 +482,20 @@ public class MainJFrame extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify                     
     private javax.swing.JButton CampRegisterBtn;
+    private javax.swing.JPanel container;
     private javax.swing.JButton SponsorRegistrationBtn;
     private javax.swing.JLabel campLabel;
-    private javax.swing.JPanel container;
     private javax.swing.JButton descriptionBtn;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JButton loginBtn;
     private javax.swing.JLabel loginJLabel;
     private javax.swing.JButton logoutBtn;
     private javax.swing.JLabel passLabel;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField passwordField;
     private javax.swing.JTextField userNameField;
     private javax.swing.JLabel usernameLabel;
