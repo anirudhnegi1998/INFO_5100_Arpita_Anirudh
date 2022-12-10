@@ -21,12 +21,12 @@ public class MediaEnterprise extends Enterprise {
 
     @Override
     public ArrayList<Role> getSupportedRole() {
-        return null;//To change body of generated methods, choose Tools | Templates.
+        return null;
     }
 
     @Override
     public ArrayList<Organization> getSupportedType() {
-        return null; //To change body of generated methods, choose Tools | Templates.
+        return null; 
     }
     
 }

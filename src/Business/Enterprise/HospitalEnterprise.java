@@ -31,8 +31,11 @@ public class HospitalEnterprise extends Enterprise {
     @Override
     public ArrayList<Organization> getSupportedType() {
         ArrayList<Organization> organ = new ArrayList();
+        
         organ.add(new DoctorOrganization());
+        
         organ.add(new LabOrganization());
+        
         organ.add(new NurseOrganization());
         return organ;
     }
