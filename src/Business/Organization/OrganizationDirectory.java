@@ -25,6 +25,7 @@ public class OrganizationDirectory {
 
     public Organization createOrganization(OrganizationType type) {
         Organization organization = null;
+        
         if (type.getValue().equals(OrganizationType.Doctor.getValue())) {
             organization = new DoctorOrganization();
             organizationList.add(organization);
@@ -50,6 +51,8 @@ public class OrganizationDirectory {
         return organization;
     }
     
+    
+
     public void removeOrganization(Organization organization) {
         organizationList.remove(organization);
     }

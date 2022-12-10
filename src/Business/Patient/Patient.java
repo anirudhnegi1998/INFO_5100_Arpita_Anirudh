@@ -29,6 +29,8 @@ public class Patient {
     private String diagnosis;
     private String priority;
 
+   
+
     public Patient() {
         id = count;
         count++;
@@ -49,6 +51,8 @@ public class Patient {
     public String getLastname() {
         return lastname;
     }
+
+    
 
     public void setLastname(String lastname) {
         this.lastname = lastname;
@@ -93,6 +97,8 @@ public class Patient {
     public void setImage(String image) {
         this.image = image;
     }
+
+    
 
     @Override
     public String toString() {

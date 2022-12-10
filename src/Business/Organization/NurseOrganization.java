@@ -19,6 +19,7 @@ public class NurseOrganization extends Organization {
         super(Organization.OrganizationType.Nurse.getValue());
     }
 
+  
     @Override
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roles = new ArrayList();

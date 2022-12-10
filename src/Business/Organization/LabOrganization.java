@@ -18,6 +18,8 @@ public class LabOrganization extends Organization{
         super(Organization.OrganizationType.Lab.getValue());
     }
 
+  
+
     @Override
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roles = new ArrayList();

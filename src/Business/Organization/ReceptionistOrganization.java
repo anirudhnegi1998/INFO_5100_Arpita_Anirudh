@@ -13,11 +13,14 @@ import java.util.ArrayList;
  *
  * @author arpitajaiswal
  */
-public class ReceptionistOrganization extends Organization{
+public class ReceptionistOrganization extends Organization
+{
     
     public ReceptionistOrganization() {
         super(Organization.OrganizationType.Receptionist.getValue());
     }
+
+   
 
     @Override
     public ArrayList<Role> getSupportedRole() {

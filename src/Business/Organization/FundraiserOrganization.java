@@ -22,6 +22,8 @@ public class FundraiserOrganization extends Organization {
         super(Organization.OrganizationType.Fundrasier.getValue());
     }
 
+   
+
     @Override
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roles = new ArrayList();

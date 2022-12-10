@@ -10,27 +10,30 @@ package Business.HealthCamp;
  * @author anirudhnegi
  */
 public class HealthCamp {
-
-    private String street;
     private String city;
+    private String street;
     private String state;
     private String zipcode;
     private String peopleAffected;
     private String percentChild;
     private String percentElder;
     private int id;
+    
     private static int count = 1;
 
-    public HealthCamp() {
+    public HealthCamp() 
+    {
         id = count;
         count++;
     }
 
-    public String getStreet() {
+    public String getStreet() 
+    {
         return street;
     }
 
-    public void setStreet(String street) {
+    public void setStreet(String street) 
+    {
         this.street = street;
     }
 
@@ -55,10 +58,12 @@ public class HealthCamp {
     }
 
     public void setZipcode(String zipcode) {
+          
         this.zipcode = zipcode;
     }
 
     public String getPeopleAffected() {
+        
         return peopleAffected;
     }
 
@@ -71,6 +76,7 @@ public class HealthCamp {
     }
 
     public void setPercentChild(String percentChild) {
+        
         this.percentChild = percentChild;
     }
 
@@ -91,6 +97,7 @@ public class HealthCamp {
     }
 
     public static int getCount() {
+        
         return count;
     }
 

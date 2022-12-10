@@ -94,6 +94,8 @@ public abstract class Organization {
         this.organType = organType;
     }
 
+    
+
     @Override
     public String toString() {
         return name;

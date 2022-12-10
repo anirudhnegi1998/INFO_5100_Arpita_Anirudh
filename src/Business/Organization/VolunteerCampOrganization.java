@@ -12,11 +12,14 @@ import java.util.ArrayList;
  *
  * @author arpitajaiswal
  */
-public class VolunteerCampOrganization extends Organization {
+public class VolunteerCampOrganization extends Organization
+ {
 
     public VolunteerCampOrganization() {
         super(Organization.OrganizationType.VolunteerCamp.getValue());
     }
+
+    
 
     @Override
     public ArrayList<Role> getSupportedRole() {

@@ -13,19 +13,23 @@ import java.util.ArrayList;
  *
  * @author anirudhnegi
  */
-public class MediaEnterprise extends Enterprise {
+public class MediaEnterprise extends Enterprise 
+{
     
-    public MediaEnterprise(String name){
+    public MediaEnterprise(String name)
+    {
         super(name, Enterprise.EnterpriseType.Event);
     }
 
     @Override
-    public ArrayList<Role> getSupportedRole() {
+    public ArrayList<Role> getSupportedRole() 
+    {
         return null;
     }
 
     @Override
-    public ArrayList<Organization> getSupportedType() {
+    public ArrayList<Organization> getSupportedType() 
+    {
         return null; 
     }
     

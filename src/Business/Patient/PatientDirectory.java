@@ -11,7 +11,8 @@ import java.util.ArrayList;
  *
  * @author arpitajaiswal
  */
-public class PatientDirectory {
+public class PatientDirectory 
+{
 
     private ArrayList<Patient> patientList;
 

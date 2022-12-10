@@ -19,6 +19,8 @@ public class VolunteerEventOrganization extends Organization {
         super(Organization.OrganizationType.VolunteerEvent.getValue());
     }
 
+ 
+
     @Override
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roles = new ArrayList();
