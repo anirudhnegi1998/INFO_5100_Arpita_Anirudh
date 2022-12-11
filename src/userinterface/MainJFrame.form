@@ -83,14 +83,12 @@
                                       </Group>
                                   </Group>
                                   <Component id="campLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Component id="userNameField" alignment="0" max="32767" attributes="0"/>
                           <Component id="passwordField" alignment="1" max="32767" attributes="0"/>
                           <Component id="CampRegisterBtn" alignment="1" max="32767" attributes="0"/>
-                          <Component id="SponsorRegistrationBtn" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -117,11 +115,7 @@
                       <Component id="campLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="CampRegisterBtn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="SponsorRegistrationBtn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="502" max="32767" attributes="0"/>
+                      <EmptySpace pref="590" max="32767" attributes="0"/>
                       <Component id="descriptionBtn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
@@ -189,14 +183,6 @@
                 <Property name="text" type="java.lang.String" value="Camp Registration"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel5">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="16" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Sponsors"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JButton" name="descriptionBtn">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -223,20 +209,6 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CampRegisterBtnActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="SponsorRegistrationBtn">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Verdana" size="16" style="0"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Images/Assign symbol.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="REGISTER"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SponsorRegistrationBtnActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
