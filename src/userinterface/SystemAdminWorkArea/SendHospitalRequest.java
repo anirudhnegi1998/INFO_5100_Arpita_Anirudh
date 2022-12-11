@@ -26,12 +26,10 @@ import java.util.logging.*;
  */
 public class SendHospitalRequest extends javax.swing.JPanel {
 
-    /**
-     * Creates new form SendHospitalRequest
-     */
+    
     private JPanel userProcessContainer;
     private EcoSystem eco;
-    private static int funds = 0;
+    private static int funds = 5000;
     int count = 0;
     private final static Logger logr = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
@@ -62,7 +60,7 @@ public class SendHospitalRequest extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(181, 223, 237));
 
         workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -96,7 +94,7 @@ public class SendHospitalRequest extends javax.swing.JPanel {
         fundcollected.setText("jLabel2");
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/user_up.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Assign symbol.png"))); // NOI18N
         jButton1.setText("ASSIGN TO HOSPITAL");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,8 +109,7 @@ public class SendHospitalRequest extends javax.swing.JPanel {
         });
 
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/prev-48.png"))); // NOI18N
-        jButton2.setText("BACK");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Prev Menu.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -120,7 +117,6 @@ public class SendHospitalRequest extends javax.swing.JPanel {
         });
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Green/contact.png"))); // NOI18N
         jLabel17.setText("HOSPITAL REQUEST MANAGEMENT");
         jLabel17.setBorder(new javax.swing.border.MatteBorder(null));
 
@@ -137,13 +133,14 @@ public class SendHospitalRequest extends javax.swing.JPanel {
                         .addComponent(jLabel1)
                         .addGap(32, 32, 32)
                         .addComponent(fundcollected))
-                    .addComponent(jButton1)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 880, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createSequentialGroup()
                             .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(hospitalComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 880, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jButton1)
+                            .addGap(58, 58, 58)
+                            .addComponent(hospitalComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(53, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -158,20 +155,18 @@ public class SendHospitalRequest extends javax.swing.JPanel {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
+                .addGap(41, 41, 41)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(hospitalComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addContainerGap(205, Short.MAX_VALUE))
+                .addContainerGap(204, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
         Enterprise enter = (Enterprise) hospitalComboBox.getSelectedItem();
         int selectedRow = workRequestJTable.getSelectedRow();
         if (selectedRow < 0) {
@@ -179,20 +174,19 @@ public class SendHospitalRequest extends javax.swing.JPanel {
             return;
         }
         WorkRequest request = (WorkRequest) workRequestJTable.getValueAt(selectedRow, 4);
+        System.out.println("HI");
         if ((funds - request.getApproxPatientFee()) >= 0) {
-            System.out.println(request.getStatus());
+            System.out.println(request.getStatus() + "Funds:" +funds);
+            
             if (request.getStatus().equals("Hospital Sent")) {
                 JOptionPane.showMessageDialog(null, "Patient Already Added");
             } else if (request.getStatus().equals("Funding Process is going on")) {
                 for (UserAccount user : enter.getUserAccountDirectory().getUserAccountList()) {
                     if (user.getUsername().equals("adminhosp")) {
-                        // System.out.println(user);
-                        //System.out.println(request.getStatus());
-                        //System.out.println(user.getWorkQueue().getWorkRequestList());
+                        
                         request.setStatus("Hospital Sent");
                         request.setTypeOfRequest("Hospital Patient");
                         user.getWorkQueue().getWorkRequestList().add(request);
-                        //System.out.println(request.getStatus());
                         JOptionPane.showMessageDialog(null, "Details Sent to Hospital! ");
                         populateTable();
                     }
@@ -218,17 +212,15 @@ public class SendHospitalRequest extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "Pending from doctor");
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Insufficient Funds");
+            JOptionPane.showMessageDialog(null, "Insufficient Fund");
         }
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void hospitalComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hospitalComboBoxActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_hospitalComboBoxActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];

@@ -9,7 +9,6 @@ import Business.EcoSystem;
 import Business.Employee.Employee;
 import Business.Enterprise.CampEnterprise;
 import Business.Enterprise.Enterprise;
-import Business.Enterprise.HospitalEnterprise;
 import Business.Network.Network;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
@@ -21,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author anirudhnegi
+ * @author arpitajaiswal
  */
 public class NurseEnrollHealthCamp extends javax.swing.JPanel {
 
@@ -43,41 +42,7 @@ public class NurseEnrollHealthCamp extends javax.swing.JPanel {
         populateTable();
     }
 
-    public void populateTable() {
-        SimpleDateFormat format = new SimpleDateFormat("MM-dd-yyyy");
-        DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
-        model.setRowCount(0);
-        System.out.println(business.getNetworkList());
-        for (Network network : business.getNetworkList()) {
-            for (Enterprise e : network.getEnterpriseDirectory().getEnterpriseList()) {
-                //System.out.println(e.getName());
-                //System.out.println(h.getName());
-                if (e.getEnterpriseType().getValue().equals("Health Camp")) {
-
-                    CampEnterprise c = (CampEnterprise) e;
-//                     System.out.println(c.getCampHospital().equals(enterprise.getName()));
-//                    System.out.println(c.getCampHospital());
-//                    System.out.println(enterprise.getName());
-                    if (c.getCampHospital() != null) {
-                        if (c.getCampHospital().equals(enterprise.getName())) {
-                            Object[] row = new Object[5];
-                            row[0] = e;
-                            row[1] = c.getCampId();
-                            row[2] = c.getEventDate();
-                            row[3] = c.getPeopleAffected();
-                            row[4] = "Completed";
-                            model.addRow(row);
-                        }
-
-                        //System.out.println(c.getCampId());
-                        //System.out.println(c.getEventDate());
-                        //System.out.println(c.getPeopleAffected());
-                        //String dateConvert = format.format(request.getEventDate());
-                    }
-                }
-            }
-        }
-    }
+  
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -90,14 +55,14 @@ public class NurseEnrollHealthCamp extends javax.swing.JPanel {
 
         enterpriseLabel = new javax.swing.JLabel();
         valueLabel = new javax.swing.JLabel();
-        refreshTestJButton = new javax.swing.JButton();
-        assignJButton1 = new javax.swing.JButton();
-        backJButton = new javax.swing.JButton();
+        refreshBtn = new javax.swing.JButton();
+        assignBtn = new javax.swing.JButton();
+        backBtn = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        workRequestJTable = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
+        nurseEnrollmentCamptable = new javax.swing.JTable();
+        headLabel = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(181, 223, 237));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         enterpriseLabel.setText("ENTERPRISE NAME:");
@@ -105,32 +70,31 @@ public class NurseEnrollHealthCamp extends javax.swing.JPanel {
         valueLabel.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
         valueLabel.setText("<value>");
 
-        refreshTestJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Green/Button-Refresh-icon.png"))); // NOI18N
-        refreshTestJButton.setText("REFRESH");
-        refreshTestJButton.setToolTipText("");
-        refreshTestJButton.addActionListener(new java.awt.event.ActionListener() {
+        refreshBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Assign symbol.png"))); // NOI18N
+        refreshBtn.setText("REFRESH");
+        refreshBtn.setToolTipText("");
+        refreshBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                refreshTestJButtonActionPerformed(evt);
+                refreshBtnActionPerformed(evt);
             }
         });
 
-        assignJButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/user_up.png"))); // NOI18N
-        assignJButton1.setText("ENROLL");
-        assignJButton1.addActionListener(new java.awt.event.ActionListener() {
+        assignBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Assign symbol.png"))); // NOI18N
+        assignBtn.setText("ENROLL");
+        assignBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                assignJButton1ActionPerformed(evt);
+                assignBtnActionPerformed(evt);
             }
         });
 
-        backJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/prev-48.png"))); // NOI18N
-        backJButton.setText("BACK");
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        backBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Prev Menu.png"))); // NOI18N
+        backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                backBtnActionPerformed(evt);
             }
         });
 
-        workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
+        nurseEnrollmentCamptable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -153,12 +117,11 @@ public class NurseEnrollHealthCamp extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(workRequestJTable);
+        jScrollPane1.setViewportView(nurseEnrollmentCamptable);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Blue/rss.png"))); // NOI18N
-        jLabel1.setText("NURSE HEALTHCAMP ENROLLMENT");
-        jLabel1.setToolTipText("");
+        headLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        headLabel.setText("            NURSE HEALTHCAMP ENROLLMENT");
+        headLabel.setToolTipText("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -167,58 +130,60 @@ public class NurseEnrollHealthCamp extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(150, 150, 150)
+                        .addComponent(headLabel))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(backBtn))
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(37, 37, 37)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 854, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(backJButton)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(assignJButton1))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(enterpriseLabel)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
-                                    .addComponent(refreshTestJButton)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(150, 150, 150)
-                        .addComponent(jLabel1)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(enterpriseLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(143, 143, 143)
+                                .addComponent(refreshBtn)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(assignBtn)
+                .addGap(362, 362, 362))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addComponent(jLabel1)
+                .addGap(16, 16, 16)
+                .addComponent(backBtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(headLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(refreshTestJButton))
+                    .addComponent(refreshBtn))
                 .addGap(19, 19, 19)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(assignJButton1)
-                    .addComponent(backJButton))
-                .addContainerGap(162, Short.MAX_VALUE))
+                .addGap(33, 33, 33)
+                .addComponent(assignBtn)
+                .addContainerGap(125, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void refreshTestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshTestJButtonActionPerformed
+    private void refreshBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshBtnActionPerformed
 
-    }//GEN-LAST:event_refreshTestJButtonActionPerformed
+    }//GEN-LAST:event_refreshBtnActionPerformed
 
-    private void assignJButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButton1ActionPerformed
+    private void assignBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignBtnActionPerformed
         // TODO add your handling code here:
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = nurseEnrollmentCamptable.getSelectedRow();
 
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please make a selection");
             return;
         }
-        Enterprise e = (Enterprise) workRequestJTable.getValueAt(selectedRow, 0);
+        Enterprise e = (Enterprise) nurseEnrollmentCamptable.getValueAt(selectedRow, 0);
         Employee employee = null;
 
         UserAccount user = business.getUserAccountDirectory().authenticateUser(userAccount.getUsername(), userAccount.getPassword());
@@ -247,25 +212,26 @@ public class NurseEnrollHealthCamp extends javax.swing.JPanel {
                             }
 
                         } else {
+                            
                             inEnterprise = enterprise;
-                            //System.out.println(inEnterprise);
-                            //break;
+                            System.out.println(inEnterprise);
                         }
-                        if (inOrganization != null) {
-                            //System.out.println(inOrganization);
-                            //break;
+                        
+                         if (inEnterprise != null) {
+                        System.out.println(inEnterprise);
+                        
+                        }
+                         if (inOrganization != null) {
+                            System.out.println(inOrganization);
                         }
                     }
-                    if (inEnterprise != null) {
-                        //System.out.println(inEnterprise);
-                        //break;
-                    }
+                    
+                
                 }
             }
         }
 
         if (user == null) {
-            //JOptionPane.showMessageDialog(null, "User Account does not exist");
             for (Organization org : e.getOrganizationDirectory().getOrganizationList()) {
                 org.getEmployeeDirectory().createEmployee(userAccount.getEmployee().getName());
                 for (Employee emp : org.getEmployeeDirectory().getEmployeeList()) {
@@ -281,24 +247,53 @@ public class NurseEnrollHealthCamp extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Enrolled for Health Camp. Volunteer can register for Patients now!");
         }
 
-    }//GEN-LAST:event_assignJButton1ActionPerformed
+    }//GEN-LAST:event_assignBtnActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
-        // TODO add your handling code here:
+    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_backBtnActionPerformed
 
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton assignJButton1;
-    private javax.swing.JButton backJButton;
+    private javax.swing.JButton assignBtn;
+    private javax.swing.JButton backBtn;
     private javax.swing.JLabel enterpriseLabel;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel headLabel;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton refreshTestJButton;
+    private javax.swing.JTable nurseEnrollmentCamptable;
+    private javax.swing.JButton refreshBtn;
     private javax.swing.JLabel valueLabel;
-    private javax.swing.JTable workRequestJTable;
     // End of variables declaration//GEN-END:variables
+
+  public void populateTable() {
+        SimpleDateFormat format = new SimpleDateFormat("MM-dd-yyyy");
+        DefaultTableModel model = (DefaultTableModel) nurseEnrollmentCamptable.getModel();
+        model.setRowCount(0);
+        System.out.println(business.getNetworkList());
+        for (Network network : business.getNetworkList()) {
+            for (Enterprise e : network.getEnterpriseDirectory().getEnterpriseList()) {
+                if (e.getEnterpriseType().getValue().equals("Health Camp")) {
+
+                    CampEnterprise c = (CampEnterprise) e;
+                    if (c.getCampHospital() != null) {
+                        if (c.getCampHospital().equals(enterprise.getName())) {
+                            Object[] row = new Object[5];
+                            row[0] = e;
+                            row[1] = c.getCampId();
+                            row[2] = c.getEventDate();
+                            row[3] = c.getPeopleAffected();
+                            row[4] = "Completed";
+                            model.addRow(row);
+                        }
+
+                      }
+                }
+            }
+        }
+    }
+
 }
+

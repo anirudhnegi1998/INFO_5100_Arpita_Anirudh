@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package userinterface.NurseRole;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
@@ -13,19 +8,18 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author arpitajaiswal
+ * @author anirudhnegi
  */
 public class VolunteerNurseHomePage extends javax.swing.JPanel {
 
-    private JPanel userProcessContainer;
-    private NurseOrganization organization;
+    
     private Enterprise enterprise;
     private UserAccount account;
     private EcoSystem business;
+    private JPanel userProcessContainer;
+    private NurseOrganization organization;
 
-    /**
-     * Creates new form VolunteerHomePage
-     */
+    
     public VolunteerNurseHomePage(JPanel userProcessContainer, UserAccount account, NurseOrganization organization, Enterprise enterprise, EcoSystem business) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
@@ -46,34 +40,32 @@ public class VolunteerNurseHomePage extends javax.swing.JPanel {
     private void initComponents() {
 
         enterpriseLabel = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        headLabel = new javax.swing.JLabel();
         valueLabel = new javax.swing.JLabel();
-        manageOrganizationJButton = new javax.swing.JButton();
+        workReuqestBtn = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(181, 223, 237));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         enterpriseLabel.setText("ENTERPRISE:");
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("My Work Area - Volunteer Camp Role");
+        headLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        headLabel.setText("My Work Area - Volunteer Camp Role");
 
         valueLabel.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         valueLabel.setText("<value>");
 
-        manageOrganizationJButton.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        manageOrganizationJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Green/contact.png"))); // NOI18N
-        manageOrganizationJButton.setText("HEALTH CAMP WORK REQUEST");
-        manageOrganizationJButton.addActionListener(new java.awt.event.ActionListener() {
+        workReuqestBtn.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        workReuqestBtn.setText("HEALTH CAMP WORK REQUEST");
+        workReuqestBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                manageOrganizationJButtonActionPerformed(evt);
+                workReuqestBtnActionPerformed(evt);
             }
         });
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/prev-48.png"))); // NOI18N
-        jButton1.setText("BACK\n");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Prev Menu.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -93,14 +85,14 @@ public class VolunteerNurseHomePage extends javax.swing.JPanel {
                         .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(217, 217, 217)
-                        .addComponent(manageOrganizationJButton))
+                        .addComponent(workReuqestBtn))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(131, 131, 131)
-                        .addComponent(jLabel1)))
-                .addContainerGap(240, Short.MAX_VALUE))
+                        .addComponent(headLabel)))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,24 +100,24 @@ public class VolunteerNurseHomePage extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
                 .addGap(21, 21, 21)
-                .addComponent(jLabel1)
+                .addComponent(headLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(44, 44, 44)
-                .addComponent(manageOrganizationJButton)
-                .addContainerGap(300, Short.MAX_VALUE))
+                .addComponent(workReuqestBtn)
+                .addContainerGap(45, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void manageOrganizationJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageOrganizationJButtonActionPerformed
+    private void workReuqestBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_workReuqestBtnActionPerformed
 
         HealthCampWorkRequestJPanel nurseCampArea = new HealthCampWorkRequestJPanel(userProcessContainer, account, (NurseOrganization) organization, business, enterprise);
         userProcessContainer.add("HealthCampWorkRequestJPanel", nurseCampArea);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_manageOrganizationJButtonActionPerformed
+    }//GEN-LAST:event_workReuqestBtnActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -138,9 +130,9 @@ public class VolunteerNurseHomePage extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel enterpriseLabel;
+    private javax.swing.JLabel headLabel;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton manageOrganizationJButton;
     private javax.swing.JLabel valueLabel;
+    private javax.swing.JButton workReuqestBtn;
     // End of variables declaration//GEN-END:variables
 }

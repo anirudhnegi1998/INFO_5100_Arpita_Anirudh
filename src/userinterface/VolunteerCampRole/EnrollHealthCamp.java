@@ -1,26 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package userinterface.VolunteerCampRole;
 
 import Business.EcoSystem;
 import Business.Employee.Employee;
-import Business.Enterprise.CampEnterprise;
-import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Organization;
+import Business.Enterprise.CampEnterprise;
+import Business.Enterprise.Enterprise;
 import Business.UserAccount.UserAccount;
-import java.awt.CardLayout;
+
 import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import java.awt.CardLayout;
 import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author anirudhnegi 
+ * @author arpitajasiwal
  */
 public class EnrollHealthCamp extends javax.swing.JPanel {
 
@@ -29,9 +25,7 @@ public class EnrollHealthCamp extends javax.swing.JPanel {
     private Enterprise enterprise;
     private UserAccount userAccount;
 
-    /**
-     * Creates new form HealthCampStatus
-     */
+    
     public EnrollHealthCamp(JPanel userProcessContainer, UserAccount account, EcoSystem business, Enterprise enterprise) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
@@ -44,19 +38,15 @@ public class EnrollHealthCamp extends javax.swing.JPanel {
 
     public void populateTable() {
         SimpleDateFormat format = new SimpleDateFormat("MM-dd-yyyy");
-        DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
+        DefaultTableModel model = (DefaultTableModel) campEnrollStatusTable.getModel();
         model.setRowCount(0);
         int count = 0;
         for (Network network : business.getNetworkList()) {
             for (Enterprise e : network.getEnterpriseDirectory().getEnterpriseList()) {
-                //System.out.println(e.getName().toString());
+             
                 if (e.getEnterpriseType().getValue().equals("Health Camp") && (!e.getName().toString().equals("Boston HealthCamp")) && (count != 0)) {
-                    //System.out.println(e.getName());
+                    
                     CampEnterprise c = (CampEnterprise) e;
-                    //System.out.println(c.getCampId());
-                    //System.out.println(c.getEventDate());
-                    //System.out.println(c.getPeopleAffected());
-                    //String dateConvert = format.format(request.getEventDate());
                     Object[] row = new Object[5];
                     row[0] = e;
                     row[1] = c.getCampId();
@@ -80,51 +70,40 @@ public class EnrollHealthCamp extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        enterpriseLabel = new javax.swing.JLabel();
+        entLabel = new javax.swing.JLabel();
         valueLabel = new javax.swing.JLabel();
-        refreshTestJButton = new javax.swing.JButton();
-        assignJButton1 = new javax.swing.JButton();
-        backJButton = new javax.swing.JButton();
+        enrollBtn = new javax.swing.JButton();
+        backBtn = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        workRequestJTable = new javax.swing.JTable();
-        jLabel7 = new javax.swing.JLabel();
+        campEnrollStatusTable = new javax.swing.JTable();
+        headLabel = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(181, 223, 237));
 
-        enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        enterpriseLabel.setText("ENTERPRISE NAME :");
+        entLabel.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
+        entLabel.setText("NAME :");
 
         valueLabel.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         valueLabel.setText("<value>");
 
-        refreshTestJButton.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        refreshTestJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Green/Button-Refresh-icon.png"))); // NOI18N
-        refreshTestJButton.setText("REFRESH");
-        refreshTestJButton.addActionListener(new java.awt.event.ActionListener() {
+        enrollBtn.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        enrollBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Assign symbol.png"))); // NOI18N
+        enrollBtn.setText("ENROLL");
+        enrollBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                refreshTestJButtonActionPerformed(evt);
+                enrollBtnActionPerformed(evt);
             }
         });
 
-        assignJButton1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        assignJButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/add_user.png"))); // NOI18N
-        assignJButton1.setText("ENROLL");
-        assignJButton1.addActionListener(new java.awt.event.ActionListener() {
+        backBtn.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        backBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Prev Menu.png"))); // NOI18N
+        backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                assignJButton1ActionPerformed(evt);
+                backBtnActionPerformed(evt);
             }
         });
 
-        backJButton.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        backJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/prev-48.png"))); // NOI18N
-        backJButton.setText("BACK");
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
-            }
-        });
-
-        workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
+        campEnrollStatusTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -147,12 +126,11 @@ public class EnrollHealthCamp extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(workRequestJTable);
+        jScrollPane1.setViewportView(campEnrollStatusTable);
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Blue/add_user.png"))); // NOI18N
-        jLabel7.setText("ENROLLMENT STATUS - CAMP");
-        jLabel7.setBorder(new javax.swing.border.MatteBorder(null));
+        headLabel.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
+        headLabel.setText("                 CAMP ENROLLMENT STATUS");
+        headLabel.setBorder(new javax.swing.border.MatteBorder(null));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -164,54 +142,47 @@ public class EnrollHealthCamp extends javax.swing.JPanel {
                         .addGap(90, 90, 90)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(backJButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(assignJButton1))
+                                .addComponent(backBtn)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 517, Short.MAX_VALUE)
+                                .addComponent(enrollBtn))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(enterpriseLabel)
+                                .addComponent(entLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(refreshTestJButton))
+                                .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 750, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(278, 278, 278)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 416, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(207, 207, 207)
+                        .addComponent(headLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(206, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(13, 13, 13)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(headLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(valueLabel)
-                    .addComponent(refreshTestJButton))
-                .addGap(29, 29, 29)
+                    .addComponent(entLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(valueLabel))
+                .addGap(35, 35, 35)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(backJButton)
-                    .addComponent(assignJButton1))
-                .addContainerGap(116, Short.MAX_VALUE))
+                    .addComponent(enrollBtn)
+                    .addComponent(backBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(95, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void refreshTestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshTestJButtonActionPerformed
-
-    }//GEN-LAST:event_refreshTestJButtonActionPerformed
-
-    private void assignJButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButton1ActionPerformed
+    private void enrollBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrollBtnActionPerformed
         // TODO add your handling code here:
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = campEnrollStatusTable.getSelectedRow();
 
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please make a selection");
             return;
         }
-        Enterprise e = (Enterprise) workRequestJTable.getValueAt(selectedRow, 0);
+        Enterprise e = (Enterprise) campEnrollStatusTable.getValueAt(selectedRow, 0);
         Employee employee = null;
 
         UserAccount user = business.getUserAccountDirectory().authenticateUser(userAccount.getUsername(), userAccount.getPassword());
@@ -220,38 +191,28 @@ public class EnrollHealthCamp extends javax.swing.JPanel {
         Organization inOrganization = null;
 
         if (user == null) {
-            //Step 2: Go inside each network and check each enterprise
+            //Check inside each network 
             for (Network network : business.getNetworkList()) {
-                //Step 2.a: check against each enterprise
+                //check against each enterprise
                 for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
                     if (enterprise.equals(e)) {
                         user = enterprise.getUserAccountDirectory().authenticateUser(userAccount.getUsername(), userAccount.getPassword());
                         if (user == null) {
-                            //Step 3:check against each organization for each enterprise
+                            //check against each organization for each enterprise
                             for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
                                 user = organization.getUserAccountDirectory().authenticateUser(userAccount.getUsername(), userAccount.getPassword());
                                 if (user != null) {
                                     inEnterprise = enterprise;
-                                    //System.out.println(inEnterprise);
                                     inOrganization = organization;
-                                    //System.out.println(inOrganization);
-                                    //break;
                                 }
                             }
-
                         } else {
                             inEnterprise = enterprise;
-                            //System.out.println(inEnterprise);
-                            //break;
                         }
                         if (inOrganization != null) {
-                            //System.out.println(inOrganization);
-                            //break;
                         }
                     }
                     if (inEnterprise != null) {
-                        //System.out.println(inEnterprise);
-                        //break;
                     }
                 }
             }
@@ -274,24 +235,22 @@ public class EnrollHealthCamp extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Enrollment Already Done. Sent to Hospital Nurse for enrollment!");
         }
 
-    }//GEN-LAST:event_assignJButton1ActionPerformed
+    }//GEN-LAST:event_enrollBtnActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
-        // TODO add your handling code here:
+    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_backBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton assignJButton1;
-    private javax.swing.JButton backJButton;
-    private javax.swing.JLabel enterpriseLabel;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JButton backBtn;
+    private javax.swing.JTable campEnrollStatusTable;
+    private javax.swing.JButton enrollBtn;
+    private javax.swing.JLabel entLabel;
+    private javax.swing.JLabel headLabel;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton refreshTestJButton;
     private javax.swing.JLabel valueLabel;
-    private javax.swing.JTable workRequestJTable;
     // End of variables declaration//GEN-END:variables
 }

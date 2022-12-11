@@ -26,7 +26,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author arpitajaiswal
+ * @author anirudhnegi
  */
 public class ViewCampRequestJPanel extends javax.swing.JPanel {
     
@@ -106,10 +106,10 @@ public class ViewCampRequestJPanel extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         healthcampDate = new com.toedter.calendar.JDateChooser();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(181, 223, 237));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel11.setText("Street Address");
+        jLabel11.setText("Address");
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel12.setText("City");
@@ -148,9 +148,7 @@ public class ViewCampRequestJPanel extends javax.swing.JPanel {
 
         street.setEnabled(false);
 
-        backJButton.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        backJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/prev-48.png"))); // NOI18N
-        backJButton.setText("BACK");
+        backJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Prev Menu.png"))); // NOI18N
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
@@ -177,8 +175,7 @@ public class ViewCampRequestJPanel extends javax.swing.JPanel {
             }
         });
 
-        processJButton.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        processJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/user_ok.png"))); // NOI18N
+        processJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Assign symbol.png"))); // NOI18N
         processJButton.setText("APPROVE");
         processJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -200,8 +197,7 @@ public class ViewCampRequestJPanel extends javax.swing.JPanel {
         });
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Blue/rss.png"))); // NOI18N
-        jLabel7.setText("CAMP REQUEST MANAGEMENT");
+        jLabel7.setText("HEALTH CAMP  REQUEST MANAGEMENT");
         jLabel7.setBorder(new javax.swing.border.MatteBorder(null));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -229,11 +225,11 @@ public class ViewCampRequestJPanel extends javax.swing.JPanel {
                                         .addComponent(jLabel13)
                                         .addComponent(jLabel14)
                                         .addComponent(jLabel15)
-                                        .addComponent(jLabel16)
                                         .addComponent(jLabel17)
                                         .addComponent(jLabel2)
                                         .addComponent(jLabel3)
-                                        .addComponent(jLabel18))
+                                        .addComponent(jLabel18)
+                                        .addComponent(jLabel16))
                                     .addGap(18, 18, 18))
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -247,11 +243,11 @@ public class ViewCampRequestJPanel extends javax.swing.JPanel {
                                 .addComponent(state, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
                                 .addComponent(zipCode, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
                                 .addComponent(noOfPeople, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                .addComponent(percentChild, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
                                 .addComponent(percentElder, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
                                 .addComponent(fName, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
-                                .addComponent(healthcampDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addContainerGap(402, Short.MAX_VALUE))
+                                .addComponent(healthcampDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(percentChild, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)))))
+                .addContainerGap(173, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {city, fName, noOfPeople, percentChild, percentElder, state, street, zipCode});
@@ -290,13 +286,13 @@ public class ViewCampRequestJPanel extends javax.swing.JPanel {
                     .addComponent(noOfPeople, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
-                    .addComponent(percentChild, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel17)
                     .addComponent(percentElder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(12, 12, 12)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(percentChild, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel18)
                     .addComponent(healthcampDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -308,7 +304,7 @@ public class ViewCampRequestJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(backJButton)
                     .addComponent(processJButton))
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

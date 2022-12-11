@@ -1,21 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package userinterface.SystemAdminWorkArea;
 
 import Business.EcoSystem;
-import Business.Enterprise.Enterprise;
-import Business.Network.Network;
-import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.WorkRequest;
-import java.awt.CardLayout;
-import java.awt.Component;
+
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import java.awt.Component;
 import javax.swing.table.DefaultTableModel;
+import java.awt.CardLayout;
 
 /**
  *
@@ -23,12 +16,11 @@ import javax.swing.table.DefaultTableModel;
  */
 public class PatientFundRequest extends javax.swing.JPanel {
 
-    /**
-     * Creates new form PatientFundRequest
-     */
+  
     private JPanel userProcessContainer;
-    private EcoSystem eco;
     private UserAccount user;
+    private EcoSystem eco;
+
 
     public PatientFundRequest(JPanel container, EcoSystem eco, UserAccount user) {
         this.userProcessContainer = container;
@@ -49,15 +41,15 @@ public class PatientFundRequest extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        workRequestJTable = new javax.swing.JTable();
-        refreshJButton = new javax.swing.JButton();
-        processJButton = new javax.swing.JButton();
+        fundRequestTable = new javax.swing.JTable();
+        refreshBtn = new javax.swing.JButton();
+        processBtn = new javax.swing.JButton();
         backBtn = new javax.swing.JButton();
-        jLabel17 = new javax.swing.JLabel();
+        headLabel = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(181, 223, 237));
 
-        workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
+        fundRequestTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -83,93 +75,92 @@ public class PatientFundRequest extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(workRequestJTable);
-        if (workRequestJTable.getColumnModel().getColumnCount() > 0) {
-            workRequestJTable.getColumnModel().getColumn(2).setResizable(false);
+        jScrollPane1.setViewportView(fundRequestTable);
+        if (fundRequestTable.getColumnModel().getColumnCount() > 0) {
+            fundRequestTable.getColumnModel().getColumn(2).setResizable(false);
         }
 
-        refreshJButton.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        refreshJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Green/Button-Refresh-icon.png"))); // NOI18N
-        refreshJButton.setText("REFRESH");
-        refreshJButton.addActionListener(new java.awt.event.ActionListener() {
+        refreshBtn.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        refreshBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Assign symbol.png"))); // NOI18N
+        refreshBtn.setText("REFRESH");
+        refreshBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                refreshJButtonActionPerformed(evt);
+                refreshBtnActionPerformed(evt);
             }
         });
 
-        processJButton.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        processJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/contact.png"))); // NOI18N
-        processJButton.setText("REQUEST FOR FUNDS");
-        processJButton.addActionListener(new java.awt.event.ActionListener() {
+        processBtn.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        processBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Assign symbol.png"))); // NOI18N
+        processBtn.setText("REQUEST FOR FUNDS");
+        processBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                processJButtonActionPerformed(evt);
+                processBtnActionPerformed(evt);
             }
         });
 
         backBtn.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        backBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/prev-48.png"))); // NOI18N
-        backBtn.setText("BACK");
+        backBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Prev Menu.png"))); // NOI18N
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtnActionPerformed(evt);
             }
         });
 
-        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Green/contact.png"))); // NOI18N
-        jLabel17.setText("PATIENT FUND REQUEST");
-        jLabel17.setBorder(new javax.swing.border.MatteBorder(null));
+        headLabel.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
+        headLabel.setText("PATIENT FUND REQUEST");
+        headLabel.setBorder(new javax.swing.border.MatteBorder(null));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 658, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel17)
-                        .addGap(88, 88, 88)
-                        .addComponent(refreshJButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(backBtn)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(processJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(refreshBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(backBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(processBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(22, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(headLabel)
+                .addGap(302, 302, 302))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(refreshJButton))
+                        .addGap(113, 113, 113)
+                        .addComponent(processBtn)
+                        .addGap(27, 27, 27)
+                        .addComponent(backBtn)
+                        .addGap(36, 36, 36)
+                        .addComponent(refreshBtn))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel17)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(backBtn)
-                    .addComponent(processJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(238, Short.MAX_VALUE))
+                        .addGap(24, 24, 24)
+                        .addComponent(headLabel)
+                        .addGap(28, 28, 28)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(248, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void refreshJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshJButtonActionPerformed
+    private void refreshBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshBtnActionPerformed
         populateTable();
-    }//GEN-LAST:event_refreshJButtonActionPerformed
+    }//GEN-LAST:event_refreshBtnActionPerformed
 
-    private void processJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processJButtonActionPerformed
-        int selectedRow = workRequestJTable.getSelectedRow();
+    private void processBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processBtnActionPerformed
+        int selectedRow = fundRequestTable.getSelectedRow();
 
         if (selectedRow < 0) {
              JOptionPane.showMessageDialog(null, "Please select a row");
             return;
         }
-        WorkRequest request = (WorkRequest) workRequestJTable.getValueAt(selectedRow, 4);
+        WorkRequest request = (WorkRequest) fundRequestTable.getValueAt(selectedRow, 4);
         populateTable();
         System.out.println(request.getStatus());
         if (request.getReceiver().equals(user)) {
@@ -178,13 +169,13 @@ public class PatientFundRequest extends javax.swing.JPanel {
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.next(userProcessContainer);
         } else {
-            JOptionPane.showMessageDialog(null, "Already In Process. Sent to Fund Raiser Admin for Approval!");
+            JOptionPane.showMessageDialog(null, "Work In Progress. Sent to Fund Raiser Admin for Approval! We appreciate Your Patience");
         }
 
-    }//GEN-LAST:event_processJButtonActionPerformed
+    }//GEN-LAST:event_processBtnActionPerformed
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
-        // TODO add your handling code here:
+      
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
@@ -197,19 +188,17 @@ public class PatientFundRequest extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBtn;
-    private javax.swing.JLabel jLabel17;
+    private javax.swing.JTable fundRequestTable;
+    private javax.swing.JLabel headLabel;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton processJButton;
-    private javax.swing.JButton refreshJButton;
-    private javax.swing.JTable workRequestJTable;
+    private javax.swing.JButton processBtn;
+    private javax.swing.JButton refreshBtn;
     // End of variables declaration//GEN-END:variables
-public void populateTable() {
-        DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
+
+    public void populateTable (){
+    DefaultTableModel model = (DefaultTableModel) fundRequestTable.getModel();
 
         model.setRowCount(0);
-//        for (UserAccount user : nurseOrganization.getUserAccountDirectory().getUserAccountList()) {
-//            System.out.print(user.getRole());
-//        }
         for (WorkRequest req : user.getWorkQueue().getWorkRequestList()) {
             System.out.println(req);
             if ((req.getTypeOfRequest() != null) && (req.getStatus() != null)) {

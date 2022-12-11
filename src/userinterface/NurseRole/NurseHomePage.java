@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package userinterface.NurseRole;
 
 import Business.EcoSystem;
@@ -19,23 +14,22 @@ import javax.swing.JPanel;
  */
 public class NurseHomePage extends javax.swing.JPanel {
 
-    private JPanel userProcessContainer;
+    private EcoSystem business;
+    private Network network;
     private NurseOrganization organization;
     private Enterprise enterprise;
     private UserAccount userAccount;
-    private EcoSystem business;
-    private Network network;
+    private JPanel userProcessContainer;
 
-    /**
-     * Creates new form VolunteerHomePage
-     */
+    
+
     public NurseHomePage(JPanel userProcessContainer, UserAccount account, NurseOrganization organization, Enterprise enterprise, Network network, EcoSystem business) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
         this.organization = organization;
         this.enterprise = enterprise;
         this.userAccount = account;
         this.network = network;
+        this.userProcessContainer = userProcessContainer;
         this.business = business;
         valueLabel.setText(enterprise.getName());
     }
@@ -50,45 +44,41 @@ public class NurseHomePage extends javax.swing.JPanel {
     private void initComponents() {
 
         enterpriseLabel = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        enrollementHCJButton = new javax.swing.JButton();
+        headLabel = new javax.swing.JLabel();
+        enrollementHCBtn = new javax.swing.JButton();
         valueLabel = new javax.swing.JLabel();
-        manageOrganizationJButton1 = new javax.swing.JButton();
-        assignJButton = new javax.swing.JButton();
+        manageOrgBtn = new javax.swing.JButton();
+        assignBtn = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(181, 223, 237));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        enterpriseLabel.setText("ENTERPRISE NAME:");
+        enterpriseLabel.setText("ENTERPRISE NAME: ");
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Blue/rss-32.png"))); // NOI18N
-        jLabel1.setText("NURSE WORK AREA");
+        headLabel.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
+        headLabel.setText("NURSE WORK AREA");
 
-        enrollementHCJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Green/user_up.png"))); // NOI18N
-        enrollementHCJButton.setText("ENROLLMENT FOR HEALTH CAMP");
-        enrollementHCJButton.addActionListener(new java.awt.event.ActionListener() {
+        enrollementHCBtn.setText("ENROLLMENT FOR HEALTH CAMP");
+        enrollementHCBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                enrollementHCJButtonActionPerformed(evt);
+                enrollementHCBtnActionPerformed(evt);
             }
         });
 
         valueLabel.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         valueLabel.setText("<value>");
 
-        manageOrganizationJButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Green/contact.png"))); // NOI18N
-        manageOrganizationJButton1.setText("HOSPITAL WORK REQUEST");
-        manageOrganizationJButton1.addActionListener(new java.awt.event.ActionListener() {
+        manageOrgBtn.setText("HOSPITAL WORK REQUEST");
+        manageOrgBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                manageOrganizationJButton1ActionPerformed(evt);
+                manageOrgBtnActionPerformed(evt);
             }
         });
 
-        assignJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/prev-48.png"))); // NOI18N
-        assignJButton.setText("BACK");
-        assignJButton.addActionListener(new java.awt.event.ActionListener() {
+        assignBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Prev Menu.png"))); // NOI18N
+        assignBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                assignJButtonActionPerformed(evt);
+                assignBtnActionPerformed(evt);
             }
         });
 
@@ -97,77 +87,75 @@ public class NurseHomePage extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(129, 129, 129)
-                        .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(197, 197, 197)
-                        .addComponent(jLabel1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(157, 157, 157)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(manageOrganizationJButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(enrollementHCJButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(assignJButton)))
+                .addGap(34, 34, 34)
+                .addComponent(assignBtn)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(77, 77, 77)
+                .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(headLabel)
+                .addGap(243, 243, 243))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(233, 233, 233)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(enrollementHCBtn)
+                    .addComponent(manageOrgBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(37, 37, 37)
-                .addComponent(assignJButton)
-                .addGap(47, 47, 47)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(assignBtn)
+                .addGap(41, 41, 41)
+                .addComponent(headLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(manageOrganizationJButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
-                .addComponent(enrollementHCJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(186, Short.MAX_VALUE))
+                .addComponent(manageOrgBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
+                .addComponent(enrollementHCBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(138, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void enrollementHCJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrollementHCJButtonActionPerformed
+    private void enrollementHCBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrollementHCBtnActionPerformed
         NurseEnrollHealthCamp enroll = new NurseEnrollHealthCamp(userProcessContainer, userAccount, business, enterprise);
         userProcessContainer.add("EnrollHealthCamp", enroll);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
 
-    }//GEN-LAST:event_enrollementHCJButtonActionPerformed
+    }//GEN-LAST:event_enrollementHCBtnActionPerformed
 
-    private void manageOrganizationJButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageOrganizationJButton1ActionPerformed
+    private void manageOrgBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageOrgBtnActionPerformed
         // TODO add your handling code here:
         NurseWorkAreaJPanel nurseWorkArea = new NurseWorkAreaJPanel(userProcessContainer, userAccount, (NurseOrganization) organization,enterprise, business);
         userProcessContainer.add("NurseWorkAreaJPanel", nurseWorkArea);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_manageOrganizationJButton1ActionPerformed
+    }//GEN-LAST:event_manageOrgBtnActionPerformed
 
-    private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed
+    private void assignBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignBtnActionPerformed
 
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_assignJButtonActionPerformed
+    }//GEN-LAST:event_assignBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton assignJButton;
-    private javax.swing.JButton enrollementHCJButton;
+    private javax.swing.JButton assignBtn;
+    private javax.swing.JButton enrollementHCBtn;
     private javax.swing.JLabel enterpriseLabel;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton manageOrganizationJButton1;
+    private javax.swing.JLabel headLabel;
+    private javax.swing.JButton manageOrgBtn;
     private javax.swing.JLabel valueLabel;
     // End of variables declaration//GEN-END:variables
 }

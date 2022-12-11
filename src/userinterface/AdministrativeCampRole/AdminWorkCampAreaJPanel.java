@@ -1,27 +1,28 @@
 package userinterface.AdministrativeCampRole;
 
-import Business.EcoSystem;
-import Business.Enterprise.Enterprise;
-import Business.Network.Network;
-import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
+import Business.EcoSystem;
+import Business.Organization.NurseOrganization;
+import Business.UserAccount.UserAccount;
+import Business.Enterprise.Enterprise;
+import Business.Network.Network;
+
 
 /**
  *
  * @author anirudhnegi
- */
+ *
+ **/
 public class AdminWorkCampAreaJPanel extends javax.swing.JPanel {
-
     JPanel userProcessContainer;
     Enterprise enterprise;
     UserAccount account;
     EcoSystem ecosystem;
     Network network;
+    NurseOrganization organization;
 
-    /**
-     * Creates new form AdminWorkAreaJPanel
-     */
+    
         public AdminWorkCampAreaJPanel(JPanel userProcessContainer, Enterprise enterprise, UserAccount account,Network network,EcoSystem ecosystem) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
@@ -41,91 +42,94 @@ public class AdminWorkCampAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        manageEmployeeJButton = new javax.swing.JButton();
-        manageOrganizationJButton = new javax.swing.JButton();
+        manageEmpButton = new javax.swing.JButton();
+        manageOrgButton = new javax.swing.JButton();
         enterpriseLabel = new javax.swing.JLabel();
         valueLabel = new javax.swing.JLabel();
         VolunteerApprovalBtn = new javax.swing.JButton();
         ManageUserBtn = new javax.swing.JButton();
         HealthCampBtn = new javax.swing.JButton();
+        NurseEnrollment = new javax.swing.JToggleButton();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(181, 223, 237));
         setPreferredSize(new java.awt.Dimension(1546, 471));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Blue/Home-36.png"))); // NOI18N
-        jLabel1.setText("HEALTHCAMP ADMINISTRATOR HOME");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, -1));
+        jLabel1.setText("                             MAIN MENU");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 40, 500, -1));
 
-        manageEmployeeJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Green/user_up.png"))); // NOI18N
-        manageEmployeeJButton.setText("MANAGE EMPLOYEE");
-        manageEmployeeJButton.addActionListener(new java.awt.event.ActionListener() {
+        manageEmpButton.setText("MANAGE EMPLOYEE");
+        manageEmpButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                manageEmployeeJButtonActionPerformed(evt);
+                manageEmpButtonActionPerformed(evt);
             }
         });
-        add(manageEmployeeJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 270, 40));
+        add(manageEmpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 270, 40));
 
-        manageOrganizationJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Green/user_up.png"))); // NOI18N
-        manageOrganizationJButton.setText("MANAGE ORGANIZATION");
-        manageOrganizationJButton.addActionListener(new java.awt.event.ActionListener() {
+        manageOrgButton.setText("MANAGE ORGANIZATION");
+        manageOrgButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                manageOrganizationJButtonActionPerformed(evt);
+                manageOrgButtonActionPerformed(evt);
             }
         });
-        add(manageOrganizationJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 270, 40));
+        add(manageOrgButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 270, 40));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        enterpriseLabel.setText("ENTERPRISE:");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, 160, 30));
+        enterpriseLabel.setText("HEALTHCAMP NAME:");
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 240, 30));
 
         valueLabel.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, 300, 30));
+        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, 390, 30));
 
-        VolunteerApprovalBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Green/user_ok.png"))); // NOI18N
         VolunteerApprovalBtn.setText("VOLUNTEER APPROVAL");
         VolunteerApprovalBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 VolunteerApprovalBtnActionPerformed(evt);
             }
         });
-        add(VolunteerApprovalBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, 270, 40));
+        add(VolunteerApprovalBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, 270, 40));
 
-        ManageUserBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Green/user_up.png"))); // NOI18N
         ManageUserBtn.setText("MANAGE USER");
         ManageUserBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ManageUserBtnActionPerformed(evt);
             }
         });
-        add(ManageUserBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, 270, 40));
+        add(ManageUserBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 270, 40));
 
-        HealthCampBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Green/rss.png"))); // NOI18N
         HealthCampBtn.setText("HEALTH CAMP REQUEST");
         HealthCampBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HealthCampBtnActionPerformed(evt);
             }
         });
-        add(HealthCampBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 330, 270, 40));
+        add(HealthCampBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, 270, 40));
+
+        NurseEnrollment.setText("NURSE ENROLLMENT ");
+        NurseEnrollment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NurseEnrollmentActionPerformed(evt);
+            }
+        });
+        add(NurseEnrollment, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, 280, 40));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void manageEmployeeJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageEmployeeJButtonActionPerformed
+    private void manageEmpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageEmpButtonActionPerformed
 
         ManageEmployeeJPanel manageEmployeeJPanel = new ManageEmployeeJPanel(userProcessContainer, enterprise);
         userProcessContainer.add("manageEmployeeJPanel", manageEmployeeJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
 
-    }//GEN-LAST:event_manageEmployeeJButtonActionPerformed
+    }//GEN-LAST:event_manageEmpButtonActionPerformed
 
-    private void manageOrganizationJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageOrganizationJButtonActionPerformed
+    private void manageOrgButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageOrgButtonActionPerformed
         ManageOrganizationJPanel manageOrganizationJPanel = new ManageOrganizationJPanel(userProcessContainer, enterprise);
         userProcessContainer.add("manageOrganizationJPanel", manageOrganizationJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_manageOrganizationJButtonActionPerformed
+    }//GEN-LAST:event_manageOrgButtonActionPerformed
 
     private void VolunteerApprovalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VolunteerApprovalBtnActionPerformed
         // TODO add your handling code here:
@@ -151,15 +155,24 @@ public class AdminWorkCampAreaJPanel extends javax.swing.JPanel {
         layout.next(userProcessContainer);
     }//GEN-LAST:event_HealthCampBtnActionPerformed
 
+    private void NurseEnrollmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NurseEnrollmentActionPerformed
+        // TODO add your handling code here:
+        NurseEnterpriseChooserJPanel NurseEnterpriseChooserJPanel = new NurseEnterpriseChooserJPanel(userProcessContainer,  account,  organization,  enterprise, ecosystem);
+        userProcessContainer.add("NurseEnterpriseChooserJPanel", NurseEnterpriseChooserJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_NurseEnrollmentActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton HealthCampBtn;
     private javax.swing.JButton ManageUserBtn;
+    private javax.swing.JToggleButton NurseEnrollment;
     private javax.swing.JButton VolunteerApprovalBtn;
     private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton manageEmployeeJButton;
-    private javax.swing.JButton manageOrganizationJButton;
+    private javax.swing.JButton manageEmpButton;
+    private javax.swing.JButton manageOrgButton;
     private javax.swing.JLabel valueLabel;
     // End of variables declaration//GEN-END:variables
 

@@ -23,10 +23,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
     private EcoSystem system;
     private final static Logger logr = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
-    /**
-     *
-     * Creates new form ManageNetworkJPanel
-     */
+    
     public ManageNetworkJPanel(JPanel userProcessContainer, EcoSystem system) {
         
 
@@ -61,15 +58,15 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         networkJTable = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
-        submitJButton = new javax.swing.JButton();
-        nameJTextField = new javax.swing.JTextField();
-        backJButton = new javax.swing.JButton();
-        deleteEnterpriseBtn = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        updateNetworkBtn = new javax.swing.JButton();
+        headLabel = new javax.swing.JLabel();
+        submtiBtn = new javax.swing.JButton();
+        networkField = new javax.swing.JTextField();
+        backBtn = new javax.swing.JButton();
+        delBtn = new javax.swing.JButton();
+        networkLabel = new javax.swing.JLabel();
+        updateBtn = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(181, 223, 237));
 
         networkJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -99,42 +96,41 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
             networkJTable.getColumnModel().getColumn(0).setResizable(false);
         }
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        jLabel1.setText("WELCOME TO NETWORK");
-        jLabel1.setBorder(new javax.swing.border.MatteBorder(null));
+        headLabel.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
+        headLabel.setText("WELCOME TO NETWORK");
+        headLabel.setBorder(new javax.swing.border.MatteBorder(null));
 
-        submitJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/user_ok.png"))); // NOI18N
-        submitJButton.setText("SUBMIT");
-        submitJButton.addActionListener(new java.awt.event.ActionListener() {
+        submtiBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Assign symbol.png"))); // NOI18N
+        submtiBtn.setText("SUBMIT");
+        submtiBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitJButtonActionPerformed(evt);
+                submtiBtnActionPerformed(evt);
             }
         });
 
-        backJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/prev-48.png"))); // NOI18N
-        backJButton.setText("BACK");
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        backBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Prev Menu.png"))); // NOI18N
+        backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                backBtnActionPerformed(evt);
             }
         });
 
-        deleteEnterpriseBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/del_user.png"))); // NOI18N
-        deleteEnterpriseBtn.setText("DELETE");
-        deleteEnterpriseBtn.addActionListener(new java.awt.event.ActionListener() {
+        delBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Assign symbol.png"))); // NOI18N
+        delBtn.setText("DELETE");
+        delBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteEnterpriseBtnActionPerformed(evt);
+                delBtnActionPerformed(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel2.setText("Network Name:");
+        networkLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        networkLabel.setText("Network Name:");
 
-        updateNetworkBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/user_up.png"))); // NOI18N
-        updateNetworkBtn.setText("UPDATE");
-        updateNetworkBtn.addActionListener(new java.awt.event.ActionListener() {
+        updateBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Assign symbol.png"))); // NOI18N
+        updateBtn.setText("UPDATE");
+        updateBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                updateNetworkBtnActionPerformed(evt);
+                updateBtnActionPerformed(evt);
             }
         });
 
@@ -142,70 +138,72 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(headLabel)
+                .addGap(197, 197, 197))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(173, 173, 173)
-                        .addComponent(backJButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(deleteEnterpriseBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(updateNetworkBtn))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(194, 194, 194)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(164, 164, 164)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addGap(80, 80, 80)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 493, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(submitJButton)))))
-                .addContainerGap(106, Short.MAX_VALUE))
+                                .addComponent(backBtn)
+                                .addGap(56, 56, 56)
+                                .addComponent(delBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(149, 149, 149))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addComponent(networkLabel)
+                        .addGap(27, 27, 27)
+                        .addComponent(networkField, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(67, 67, 67)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(updateBtn)
+                            .addComponent(submtiBtn))))
+                .addContainerGap(113, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(headLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(submitJButton)
-                    .addComponent(nameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(75, 75, 75)
+                    .addComponent(submtiBtn)
+                    .addComponent(networkField, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(networkLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(backJButton)
-                    .addComponent(deleteEnterpriseBtn)
-                    .addComponent(updateNetworkBtn))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(delBtn)
+                    .addComponent(updateBtn)
+                    .addComponent(backBtn))
+                .addGap(30, 30, 30))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
+    private void submtiBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submtiBtnActionPerformed
         logr.info("Submit network action performed");
         int check = 0;
-        if (nameJTextField.getText().isEmpty()) {
+        if (networkField.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Please enter a Network name");
             check = 1;
         }
         if (check == 0) {
-            String name = nameJTextField.getText();
+            String name = networkField.getText();
             Network network = system.createAndAddNetwork();
             network.setName(name);
             populateNetworkTable();
-            nameJTextField.setText("");
+            networkField.setText("");
             JOptionPane.showMessageDialog(null, "Network created successfully");
              logr.info("New network has been created");
         }
-    }//GEN-LAST:event_submitJButtonActionPerformed
+    }//GEN-LAST:event_submtiBtnActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
@@ -213,9 +211,9 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         sysAdminwjp.populateTree();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_backBtnActionPerformed
 
-    private void deleteEnterpriseBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteEnterpriseBtnActionPerformed
+    private void delBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delBtnActionPerformed
         // TODO add your handling code here:
         logr.info("Delete button Action Performed");
          DefaultTableModel model = (DefaultTableModel) networkJTable.getModel();
@@ -232,9 +230,9 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         }else{
              JOptionPane.showMessageDialog(null, "Please select a row");
         }
-    }//GEN-LAST:event_deleteEnterpriseBtnActionPerformed
+    }//GEN-LAST:event_delBtnActionPerformed
 
-    private void updateNetworkBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateNetworkBtnActionPerformed
+    private void updateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtnActionPerformed
         // TODO add your handling code here:
         DefaultTableModel model = (DefaultTableModel) networkJTable.getModel();
         int selectedRow = networkJTable.getSelectedRow();
@@ -249,17 +247,17 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
     }
         
         
-    }//GEN-LAST:event_updateNetworkBtnActionPerformed
+    }//GEN-LAST:event_updateBtnActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
-    private javax.swing.JButton deleteEnterpriseBtn;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton backBtn;
+    private javax.swing.JButton delBtn;
+    private javax.swing.JLabel headLabel;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField nameJTextField;
+    private javax.swing.JTextField networkField;
     private javax.swing.JTable networkJTable;
-    private javax.swing.JButton submitJButton;
-    private javax.swing.JButton updateNetworkBtn;
+    private javax.swing.JLabel networkLabel;
+    private javax.swing.JButton submtiBtn;
+    private javax.swing.JButton updateBtn;
     // End of variables declaration//GEN-END:variables
 }

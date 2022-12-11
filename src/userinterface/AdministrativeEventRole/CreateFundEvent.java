@@ -7,6 +7,8 @@ package userinterface.AdministrativeEventRole;
 
 import Business.Employee.Employee;
 import Business.Enterprise.Enterprise;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import Business.Network.Network;
 import Business.Organization.Organization;
 import Business.Role.AdminRole;
@@ -17,8 +19,6 @@ import java.awt.Component;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -56,84 +56,70 @@ public class CreateFundEvent extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        eventName = new javax.swing.JTextField();
-        street = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        city = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        state = new javax.swing.JTextField();
-        zipCode = new javax.swing.JTextField();
-        processJButton = new javax.swing.JButton();
-        backJButton = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        eventApproxFund = new javax.swing.JTextField();
-        eventDate = new com.toedter.calendar.JDateChooser();
+        headLabel = new javax.swing.JLabel();
+        eventLabel = new javax.swing.JLabel();
+        eventNameField = new javax.swing.JTextField();
+        streetField = new javax.swing.JTextField();
+        addressLabel = new javax.swing.JLabel();
+        cityLabel = new javax.swing.JLabel();
+        cityField = new javax.swing.JTextField();
+        stateLabel = new javax.swing.JLabel();
+        zipLabel = new javax.swing.JLabel();
+        stateField = new javax.swing.JTextField();
+        zipCodeField = new javax.swing.JTextField();
+        approveBtn = new javax.swing.JButton();
+        backBtn = new javax.swing.JButton();
+        dateLabel = new javax.swing.JLabel();
+        fundCollectedLabel = new javax.swing.JLabel();
+        eventApproxFundField = new javax.swing.JTextField();
+        eventDateField = new com.toedter.calendar.JDateChooser();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(181, 223, 237));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Blue/rss.png"))); // NOI18N
-        jLabel1.setText("CREATE FUNDRAISER EVENT");
+        headLabel.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
+        headLabel.setText("       Enter Event Details");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel2.setText("Event Name");
+        eventLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        eventLabel.setText("Event Name");
 
-        eventName.addActionListener(new java.awt.event.ActionListener() {
+        addressLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        addressLabel.setText("Address");
+
+        cityLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        cityLabel.setText("City");
+
+        stateLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        stateLabel.setText("State");
+
+        zipLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        zipLabel.setText("ZipCode");
+
+        approveBtn.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        approveBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Assign symbol.png"))); // NOI18N
+        approveBtn.setText("APPROVE");
+        approveBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eventNameActionPerformed(evt);
+                approveBtnActionPerformed(evt);
             }
         });
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel11.setText("Street Address");
-
-        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel12.setText("City");
-
-        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel13.setText("State");
-
-        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel14.setText("ZipCode");
-
-        state.addActionListener(new java.awt.event.ActionListener() {
+        backBtn.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        backBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Prev Menu.png"))); // NOI18N
+        backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                stateActionPerformed(evt);
+                backBtnActionPerformed(evt);
             }
         });
 
-        processJButton.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        processJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/user_ok.png"))); // NOI18N
-        processJButton.setText("APPROVE");
-        processJButton.addActionListener(new java.awt.event.ActionListener() {
+        dateLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        dateLabel.setText("Date");
+
+        fundCollectedLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        fundCollectedLabel.setText("Fund To Be Collected(Approx)");
+
+        eventApproxFundField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                processJButtonActionPerformed(evt);
-            }
-        });
-
-        backJButton.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        backJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/prev-48.png"))); // NOI18N
-        backJButton.setText("BACK");
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
-            }
-        });
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel5.setText("Date");
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel4.setText("Fund To Be Collected(Approx)");
-
-        eventApproxFund.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eventApproxFundActionPerformed(evt);
+                eventApproxFundFieldActionPerformed(evt);
             }
         });
 
@@ -144,105 +130,95 @@ public class CreateFundEvent extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(134, 134, 134)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(70, 70, 70)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(eventLabel)
+                            .addComponent(cityLabel)
+                            .addComponent(stateLabel)
+                            .addComponent(zipLabel)
+                            .addComponent(addressLabel)
+                            .addComponent(dateLabel)
+                            .addComponent(fundCollectedLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(eventApproxFundField, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(stateField, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(zipCodeField, javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel12)
-                                    .addComponent(jLabel13)
-                                    .addComponent(jLabel14)
-                                    .addComponent(jLabel11)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel4))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(eventApproxFund, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(state, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(zipCode, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
-                                        .addComponent(eventName, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(street)
-                                    .addComponent(city)
-                                    .addComponent(eventDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(58, 58, 58)
-                                .addComponent(backJButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(processJButton)))))
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(eventNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(streetField)
+                            .addComponent(cityField)
+                            .addComponent(eventDateField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(134, 134, 134)
+                        .addComponent(headLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(backBtn))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(226, 226, 226)
+                        .addComponent(approveBtn)))
                 .addContainerGap(44, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addComponent(jLabel1)
+                .addContainerGap()
+                .addComponent(backBtn)
+                .addGap(2, 2, 2)
+                .addComponent(headLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(eventNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eventLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(dateLabel)
+                    .addComponent(eventDateField, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(streetField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addressLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cityField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cityLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(stateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(stateLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(zipCodeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(zipLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(eventName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(street, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(city, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(state, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel13))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(zipCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(eventDate, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(eventApproxFund, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(processJButton)
-                    .addComponent(backJButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(110, 110, 110))
+                    .addComponent(fundCollectedLabel)
+                    .addComponent(eventApproxFundField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(56, 56, 56)
+                .addComponent(approveBtn)
+                .addContainerGap(43, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void eventNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eventNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_eventNameActionPerformed
-
-    private void stateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stateActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_stateActionPerformed
-
-    private void processJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processJButtonActionPerformed
+    private void approveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_approveBtnActionPerformed
 
         int check = 0;
         int checkdate = 0;
-        if (eventDate.getDate() == null || zipCode.getText().isEmpty() || state.getText().isEmpty() || city.getText().isEmpty() || street.getText().isEmpty() || eventName.getText().isEmpty() || eventApproxFund.getText().isEmpty()) {
+        if (eventDateField.getDate() == null || zipCodeField.getText().isEmpty() || stateField.getText().isEmpty() || cityField.getText().isEmpty() || streetField.getText().isEmpty() || eventNameField.getText().isEmpty() || eventApproxFundField.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Please enter all the fields");
         } else {
             check = 1;
             Enterprise enterprise = null;
-            //System.out.println(business.getNetworkList());
-            // enterprise = new CampEnterprise(Integer.toString(request.getCampId()));
+            
             Date eventDay = null;
             Date sysDate = null;
             SimpleDateFormat format = new SimpleDateFormat("MM-dd-yyyy");
             format.setLenient(false);
             try {
 
-                eventDay = eventDate.getDate();
+                eventDay = eventDateField.getDate();
                 sysDate = new Date();
                 long diff = sysDate.getTime() - eventDay.getTime();
                 long diff1 = eventDay.getTime() - sysDate.getTime();
@@ -256,25 +232,25 @@ public class CreateFundEvent extends javax.swing.JPanel {
 
                 if (diff1Days >= 4 && check == 1 && checkdate == 0) {
                     request.setStatus("Funding Process is going on");
-                    int zipcodeVal= validateZipCode(zipCode.getText());
+                    int zipcodeVal= validateZipCode(zipCodeField.getText());
                      if (zipcodeVal == 0) {
                             JOptionPane.showMessageDialog(null, "Please enter a valid 5 digit zip code");
                             return;
                      }
-                    enterprise = network.getEnterpriseDirectory().createAndAddEventEnterprise(eventName.getText(), street.getText(), city.getText(), state.getText(), zipCode.getText(), eventDay, Enterprise.EnterpriseType.Event, Integer.parseInt(eventApproxFund.getText()));
+                    enterprise = network.getEnterpriseDirectory().createAndAddEventEnterprise(eventNameField.getText(), streetField.getText(), cityField.getText(), stateField.getText(), zipCodeField.getText(), eventDay, Enterprise.EnterpriseType.Event, Integer.parseInt(eventApproxFundField.getText()));
                     Employee empl = enterprise.getEmployeeDirectory().createEmployee("admin");
-                    String username = "admin_" + eventName.getText();
+                    String username = "admin_" + eventNameField.getText();
                     enterprise.getUserAccountDirectory().createUserAccount(username, "admin", empl, new AdminRole());
                     enterprise.getOrganizationDirectory().createOrganization(Organization.OrganizationType.VolunteerEvent);
                     enterprise.getOrganizationDirectory().createOrganization(Organization.OrganizationType.Fundrasier);
                     JOptionPane.showMessageDialog(null, "FundRaiser Event Approved. Sponsors can donate for this event!");
-                    eventApproxFund.setText("");
-                    eventDate.setDate(null);
-                    eventName.setText("");
-                    street.setText("");
-                    city.setText("");
-                    state.setText("");
-                    zipCode.setText("");
+                    eventApproxFundField.setText("");
+                    eventDateField.setDate(null);
+                    eventNameField.setText("");
+                    streetField.setText("");
+                    cityField.setText("");
+                    stateField.setText("");
+                    zipCodeField.setText("");
 
                 } else {
                     JOptionPane.showMessageDialog(null, "Please enter a Date after 4 days");
@@ -284,9 +260,9 @@ public class CreateFundEvent extends javax.swing.JPanel {
             }
 
         }
-    }//GEN-LAST:event_processJButtonActionPerformed
+    }//GEN-LAST:event_approveBtnActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
@@ -294,13 +270,12 @@ public class CreateFundEvent extends javax.swing.JPanel {
         fund.populateTable();;
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_backBtnActionPerformed
 
-    private void eventApproxFundActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eventApproxFundActionPerformed
+    private void eventApproxFundFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eventApproxFundFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_eventApproxFundActionPerformed
+    }//GEN-LAST:event_eventApproxFundFieldActionPerformed
     private int validateZipCode(String validate) {
-    //    Matcher match = ZIP_PATTERN.matcher(validate);
     try{
     int zipcodeVal = Integer.parseInt(validate);
         if (validate.length() >= 6) {
@@ -313,22 +288,22 @@ public class CreateFundEvent extends javax.swing.JPanel {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
-    private javax.swing.JTextField city;
-    private javax.swing.JTextField eventApproxFund;
-    private com.toedter.calendar.JDateChooser eventDate;
-    private javax.swing.JTextField eventName;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JButton processJButton;
-    private javax.swing.JTextField state;
-    private javax.swing.JTextField street;
-    private javax.swing.JTextField zipCode;
+    private javax.swing.JLabel addressLabel;
+    private javax.swing.JButton approveBtn;
+    private javax.swing.JButton backBtn;
+    private javax.swing.JTextField cityField;
+    private javax.swing.JLabel cityLabel;
+    private javax.swing.JLabel dateLabel;
+    private javax.swing.JTextField eventApproxFundField;
+    private com.toedter.calendar.JDateChooser eventDateField;
+    private javax.swing.JLabel eventLabel;
+    private javax.swing.JTextField eventNameField;
+    private javax.swing.JLabel fundCollectedLabel;
+    private javax.swing.JLabel headLabel;
+    private javax.swing.JTextField stateField;
+    private javax.swing.JLabel stateLabel;
+    private javax.swing.JTextField streetField;
+    private javax.swing.JTextField zipCodeField;
+    private javax.swing.JLabel zipLabel;
     // End of variables declaration//GEN-END:variables
 }

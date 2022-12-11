@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author anirudhnegi
+ * @author InfiniteLoops
  */
 public class VolunteerCampChooserJPanel extends javax.swing.JPanel {
 
@@ -52,59 +52,58 @@ public class VolunteerCampChooserJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel3 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        enterpriseTypeJComboBox = new javax.swing.JComboBox();
-        enterpriseJComboBox = new javax.swing.JComboBox();
-        submitButton = new javax.swing.JButton();
-        networkJComboBox = new javax.swing.JComboBox();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        entLabel = new javax.swing.JLabel();
+        enterpriseLabel = new javax.swing.JLabel();
+        entTypeComboBox = new javax.swing.JComboBox();
+        entComboBox = new javax.swing.JComboBox();
+        submitBtn = new javax.swing.JButton();
+        networkComboBox = new javax.swing.JComboBox();
+        networkLabel = new javax.swing.JLabel();
+        headLabel = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(181, 223, 237));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setText("Enterprise");
+        entLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        entLabel.setText("Enterprise");
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel6.setText("Enterprise Type");
+        enterpriseLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        enterpriseLabel.setText("Enterprise Type");
 
-        enterpriseTypeJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        enterpriseTypeJComboBox.addActionListener(new java.awt.event.ActionListener() {
+        entTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        entTypeComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                enterpriseTypeJComboBoxActionPerformed(evt);
+                entTypeComboBoxActionPerformed(evt);
             }
         });
 
-        enterpriseJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        enterpriseJComboBox.addActionListener(new java.awt.event.ActionListener() {
+        entComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        entComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                enterpriseJComboBoxActionPerformed(evt);
+                entComboBoxActionPerformed(evt);
             }
         });
 
-        submitButton.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        submitButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/user_ok.png"))); // NOI18N
-        submitButton.setText("SUBMIT");
-        submitButton.addActionListener(new java.awt.event.ActionListener() {
+        submitBtn.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        submitBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Assign symbol.png"))); // NOI18N
+        submitBtn.setText("SUBMIT");
+        submitBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitButtonActionPerformed(evt);
+                submitBtnActionPerformed(evt);
             }
         });
 
-        networkJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        networkJComboBox.addActionListener(new java.awt.event.ActionListener() {
+        networkComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        networkComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                networkJComboBoxActionPerformed(evt);
+                networkComboBoxActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("Network");
+        networkLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        networkLabel.setText("Network");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Blue/user_download.png"))); // NOI18N
-        jLabel2.setText("CAMP SELECTION");
+        headLabel.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
+        headLabel.setText("CAMP SELECTION");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -113,93 +112,95 @@ public class VolunteerCampChooserJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(226, 226, 226)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
+                    .addComponent(networkLabel)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(submitButton)
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel6)
-                                .addComponent(jLabel3))
+                                .addComponent(enterpriseLabel)
+                                .addComponent(entLabel))
                             .addGap(53, 53, 53)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(enterpriseTypeJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(enterpriseJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(networkJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(entTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(entComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(networkComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel2)
-                            .addGap(78, 78, 78))))
+                            .addComponent(headLabel)
+                            .addGap(78, 78, 78))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGap(114, 114, 114)
+                            .addComponent(submitBtn))))
                 .addContainerGap(243, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {enterpriseJComboBox, enterpriseTypeJComboBox, networkJComboBox});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {entComboBox, entTypeComboBox, networkComboBox});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(119, 119, 119)
-                .addComponent(jLabel2)
+                .addComponent(headLabel)
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(networkJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(networkLabel)
+                    .addComponent(networkComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(enterpriseTypeJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(enterpriseLabel)
+                    .addComponent(entTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(enterpriseJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(33, 33, 33)
-                .addComponent(submitButton)
-                .addContainerGap(337, Short.MAX_VALUE))
+                    .addComponent(entComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(entLabel))
+                .addGap(39, 39, 39)
+                .addComponent(submitBtn)
+                .addContainerGap(319, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
         private void populateNetworkComboBox() {
-        networkJComboBox.removeAllItems();
+        networkComboBox.removeAllItems();
 
         for (Network network : ecosystem.getNetworkList()) {
-            networkJComboBox.addItem(network);
+            networkComboBox.addItem(network);
         }
     }
 
     private void populateEnterprisetypecomboBox(Network network) {
-        enterpriseTypeJComboBox.removeAllItems();
+        entTypeComboBox.removeAllItems();
         for (Enterprise.EnterpriseType type : Enterprise.EnterpriseType.values()) {
             if (type.equals(Enterprise.EnterpriseType.Camp)) {
-                enterpriseTypeJComboBox.addItem(type);
+                entTypeComboBox.addItem(type);
             }
         }
     }
 
     private void populateEnterpriseComboBox(Enterprise.EnterpriseType type, Network network) {
-        enterpriseJComboBox.removeAllItems();
+        entComboBox.removeAllItems();
 
         for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
             if (type.getValue().equals(enterprise.getEnterpriseType().getValue())) {
-                enterpriseJComboBox.addItem(enterprise);
+                entComboBox.addItem(enterprise);
             }
 
         }
     }
-    private void enterpriseTypeJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterpriseTypeJComboBoxActionPerformed
+    private void entTypeComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entTypeComboBoxActionPerformed
         // TODO add your handling code here:
-        Network network = (Network) networkJComboBox.getSelectedItem();
-        Enterprise.EnterpriseType type = (Enterprise.EnterpriseType) enterpriseTypeJComboBox.getSelectedItem();
+        Network network = (Network) networkComboBox.getSelectedItem();
+        Enterprise.EnterpriseType type = (Enterprise.EnterpriseType) entTypeComboBox.getSelectedItem();
         if (type != null) {
             populateEnterpriseComboBox(type, network);
         }
-    }//GEN-LAST:event_enterpriseTypeJComboBoxActionPerformed
+    }//GEN-LAST:event_entTypeComboBoxActionPerformed
 
-    private void enterpriseJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterpriseJComboBoxActionPerformed
+    private void entComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entComboBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_enterpriseJComboBoxActionPerformed
+    }//GEN-LAST:event_entComboBoxActionPerformed
 
-    private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
+    private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
         // TODO add your handling code here:
         UserAccount userAccount = ecosystem.getUserAccountDirectory().authenticateUser(account.getUsername(), account.getPassword());
         System.out.println(ecosystem.getUserAccountDirectory().getUserAccountList());
-        Enterprise e = (Enterprise) enterpriseJComboBox.getSelectedItem();
+        Enterprise e = (Enterprise) entComboBox.getSelectedItem();
 
         Enterprise inEnterprise = null;
         Organization inOrganization = null;
@@ -246,7 +247,7 @@ public class VolunteerCampChooserJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "User Account does not exist");
             return;
         } else {
-            VolunteerHomePage volunteerHome = new VolunteerHomePage(userProcessContainer, account, (VolunteerCampOrganization) organization, (Enterprise) enterpriseJComboBox.getSelectedItem(), ecosystem);
+            VolunteerHomePage volunteerHome = new VolunteerHomePage(userProcessContainer, account, (VolunteerCampOrganization) organization, (Enterprise) entComboBox.getSelectedItem(), ecosystem);
             userProcessContainer.add("VolunteerHomePage", volunteerHome);
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.next(userProcessContainer);
@@ -260,27 +261,27 @@ public class VolunteerCampChooserJPanel extends javax.swing.JPanel {
         }
         else
         JOptionPane.showMessageDialog(this, "User Account does not exist");*/
-    }//GEN-LAST:event_submitButtonActionPerformed
+    }//GEN-LAST:event_submitBtnActionPerformed
 
-    private void networkJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_networkJComboBoxActionPerformed
+    private void networkComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_networkComboBoxActionPerformed
 
-        Network network = (Network) networkJComboBox.getSelectedItem();
+        Network network = (Network) networkComboBox.getSelectedItem();
         if (network != null) {
             populateEnterprisetypecomboBox(network);
         }
 
-    }//GEN-LAST:event_networkJComboBoxActionPerformed
+    }//GEN-LAST:event_networkComboBoxActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox enterpriseJComboBox;
-    private javax.swing.JComboBox enterpriseTypeJComboBox;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JComboBox networkJComboBox;
-    private javax.swing.JButton submitButton;
+    private javax.swing.JComboBox entComboBox;
+    private javax.swing.JLabel entLabel;
+    private javax.swing.JComboBox entTypeComboBox;
+    private javax.swing.JLabel enterpriseLabel;
+    private javax.swing.JLabel headLabel;
+    private javax.swing.JComboBox networkComboBox;
+    private javax.swing.JLabel networkLabel;
+    private javax.swing.JButton submitBtn;
     // End of variables declaration//GEN-END:variables
 
 }

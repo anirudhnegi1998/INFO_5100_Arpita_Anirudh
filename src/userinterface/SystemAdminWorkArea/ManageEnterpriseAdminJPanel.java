@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package userinterface.SystemAdminWorkArea;
 
 import Business.EcoSystem;
@@ -11,7 +7,7 @@ import Business.Enterprise.Enterprise.EnterpriseType;
 import Business.Network.Network;
 import Business.Role.AdminRole;
 import Business.UserAccount.UserAccount;
-import Business.UserAccount.UserAccountDirectory;
+
 import java.awt.CardLayout;
 import java.awt.Component;
 import javax.swing.JOptionPane;
@@ -29,9 +25,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
     private EcoSystem system;
     private final static Logger logr = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
-    /**
-     * Creates new form ManageEnterpriseJPanel
-     */
+   
     public ManageEnterpriseAdminJPanel(JPanel userProcessContainer, EcoSystem system) {
         initComponents();
         
@@ -68,15 +62,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         }
     }
     
-    private void populateEnterpriseComboBox(EnterpriseType type, Network network) {
-        enterpriseJComboBox.removeAllItems();
-        
-        for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
-            if (type.getValue().equals(enterprise.getEnterpriseType().getValue())) {
-                enterpriseJComboBox.addItem(enterprise);
-            }
-        }
-    }
+    
     
     private void populateEnterpriseTypeComboBox(Network network) {
         enterpriseTypeJComboBox.removeAllItems();
@@ -85,6 +71,16 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             enterpriseTypeJComboBox.addItem(type);
         }
         
+    }
+    
+    private void populateEnterpriseComboBox(EnterpriseType type, Network network) {
+        enterpriseJComboBox.removeAllItems();
+        
+        for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
+            if (type.getValue().equals(enterprise.getEnterpriseType().getValue())) {
+                enterpriseJComboBox.addItem(enterprise);
+            }
+        }
     }
 
     /**
@@ -116,7 +112,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         updateNetworkBtn = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(181, 223, 237));
 
         enterpriseJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -159,7 +155,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             }
         });
 
-        submitJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/add_user.png"))); // NOI18N
+        submitJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Assign symbol.png"))); // NOI18N
         submitJButton.setText("SUBMIT");
         submitJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,8 +169,8 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel5.setText("Name");
 
-        backJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/prev-48.png"))); // NOI18N
-        backJButton.setText(" BACK");
+        backJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Prev Menu.png"))); // NOI18N
+        backJButton.setText(" ");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
@@ -191,7 +187,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel6.setText("Enterprise Type");
 
-        deleteSingleBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/del_user.png"))); // NOI18N
+        deleteSingleBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Assign symbol.png"))); // NOI18N
         deleteSingleBtn.setText("DELETE");
         deleteSingleBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -200,11 +196,10 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         });
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Blue/rss.png"))); // NOI18N
-        jLabel7.setText("WELCOME TO ENTERPRISE ADMIN");
+        jLabel7.setText("MANAGE ENTERPRISE ADMINS");
         jLabel7.setBorder(new javax.swing.border.MatteBorder(null));
 
-        updateNetworkBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/user_up.png"))); // NOI18N
+        updateNetworkBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Assign symbol.png"))); // NOI18N
         updateNetworkBtn.setText("UPDATE");
         updateNetworkBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -296,10 +291,10 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                 .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(deleteSingleBtn)
-                    .addComponent(submitJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(submitJButton)
+                    .addComponent(backJButton)
                     .addComponent(updateNetworkBtn))
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

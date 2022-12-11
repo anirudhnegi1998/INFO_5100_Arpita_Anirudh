@@ -26,7 +26,7 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="cc" red="cc" type="rgb"/>
+          <Color blue="ed" green="df" red="b5" type="rgb"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
@@ -36,7 +36,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="3" width="910" height="740"/>
+          <AbsoluteConstraints x="10" y="40" width="780" height="700"/>
         </Constraint>
       </Constraints>
 
@@ -47,26 +47,26 @@
                   <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="enterpriseLabel" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="hospitalLabel" min="-2" pref="150" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="valueLabel" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="196" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="backJButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="firstNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lastnameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="ageLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="heightLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="weightLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="genderLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="bloodGroupLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="bloodPressureLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="glucoseLevelLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="bodytemLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="symptomsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="diagnosisLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="backBtn" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
@@ -75,41 +75,41 @@
                                       <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                                           <Component id="jScrollPane1" alignment="0" min="-2" pref="290" max="-2" attributes="0"/>
                                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="bldGrp" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="weight" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="height" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="age" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="lName" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="fName" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="gender" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                              <Component id="bldGrpField" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="weightField" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="heightField" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="ageField" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="lNameField" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="fNameField" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="genderField" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                                           </Group>
-                                          <Component id="diagnosis" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                          <Component id="diagnosisField" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="gluLvl" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                                              <Component id="bldPres" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                                              <Component id="bodyTemp" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                              <Component id="gluLvlField" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                              <Component id="bldPresField" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                              <Component id="bodyTempField" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
-                                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                                  <Component id="requestTestJButton" pref="211" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                                  <Component id="requestTreatementBtn" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                                  <Component id="generatePrescriptionlBtn" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="270" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="headLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="204" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -117,10 +117,10 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="headLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="enterpriseLabel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="hospitalLabel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="valueLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -129,69 +129,69 @@
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="fName" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fNameField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="firstNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lName" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lNameField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lastnameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="age" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ageField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ageLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="height" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="heightField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="heightLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="weight" min="-2" max="-2" attributes="0"/>
+                                  <Component id="weightField" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jLabel8" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="weightLabel" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="gender" min="-2" max="-2" attributes="0"/>
+                          <Component id="genderField" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jLabel13" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="genderLabel" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="bldGrp" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="bldGrpField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="bloodGroupLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="bldPres" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="bldPresField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="bloodPressureLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="gluLvlField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="glucoseLevelLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="gluLvl" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="bodyTemp" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="bodyTempField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="bodytemLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                      <Component id="symptomsLabel" min="-2" max="-2" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" pref="110" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="diagnosis" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="diagnosisField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="diagnosisLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="backJButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="requestTestJButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="backBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="generatePrescriptionlBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="requestTreatementBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
               </Group>
@@ -199,7 +199,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="firstNameLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="0"/>
@@ -207,7 +207,7 @@
             <Property name="text" type="java.lang.String" value="First Name"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="lastnameLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="0"/>
@@ -215,7 +215,7 @@
             <Property name="text" type="java.lang.String" value="Last Name"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="ageLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="0"/>
@@ -223,7 +223,7 @@
             <Property name="text" type="java.lang.String" value="Age"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="heightLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="0"/>
@@ -231,7 +231,7 @@
             <Property name="text" type="java.lang.String" value="Height"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel8">
+        <Component class="javax.swing.JLabel" name="weightLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="0"/>
@@ -239,7 +239,7 @@
             <Property name="text" type="java.lang.String" value="Weight"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel13">
+        <Component class="javax.swing.JLabel" name="genderLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="0"/>
@@ -247,7 +247,7 @@
             <Property name="text" type="java.lang.String" value="Gender"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel11">
+        <Component class="javax.swing.JLabel" name="bloodGroupLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="0"/>
@@ -255,7 +255,7 @@
             <Property name="text" type="java.lang.String" value="Blood Group"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel14">
+        <Component class="javax.swing.JLabel" name="bloodPressureLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="0"/>
@@ -263,7 +263,7 @@
             <Property name="text" type="java.lang.String" value="Blood Pressure"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel15">
+        <Component class="javax.swing.JLabel" name="glucoseLevelLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="0"/>
@@ -271,7 +271,7 @@
             <Property name="text" type="java.lang.String" value="Glucose Level"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel16">
+        <Component class="javax.swing.JLabel" name="bodytemLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="0"/>
@@ -279,7 +279,7 @@
             <Property name="text" type="java.lang.String" value="Body Temperature"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel10">
+        <Component class="javax.swing.JLabel" name="symptomsLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="0"/>
@@ -287,70 +287,52 @@
             <Property name="text" type="java.lang.String" value="Symptoms"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="fName">
-          <Properties>
-            <Property name="editable" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fNameActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="lName">
-          <Properties>
-            <Property name="editable" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lNameActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="age">
-          <Properties>
-            <Property name="editable" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ageActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="height">
-          <Properties>
-            <Property name="editable" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="heightActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="weight">
-          <Properties>
-            <Property name="editable" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="weightActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="gender">
+        <Component class="javax.swing.JTextField" name="fNameField">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="bldGrp">
-          <Properties>
-            <Property name="editable" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bldGrpActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="bldPres">
+        <Component class="javax.swing.JTextField" name="lNameField">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="gluLvl">
+        <Component class="javax.swing.JTextField" name="ageField">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="bodyTemp">
+        <Component class="javax.swing.JTextField" name="heightField">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="weightField">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="genderField">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="bldGrpField">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="bldPresField">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="gluLvlField">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="bodyTempField">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
           </Properties>
@@ -362,7 +344,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextArea" name="patientSym">
+            <Component class="javax.swing.JTextArea" name="patientSymField">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="columns" type="int" value="20"/>
@@ -371,26 +353,25 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="backJButton">
+        <Component class="javax.swing.JButton" name="backBtn">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/free_button_icons_icons_pack_120624/Yellow/prev-48.png"/>
+              <Image iconType="3" name="/Images/Prev Menu.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="BACK"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backJButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backBtnActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="requestTestJButton">
+        <Component class="javax.swing.JButton" name="generatePrescriptionlBtn">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/free_button_icons_icons_pack_120624/Yellow/user_up.png"/>
+              <Image iconType="3" name="/Images/Assign symbol.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="GENERATE BILL"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="requestTestJButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="generatePrescriptionlBtnActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="valueLabel">
@@ -401,7 +382,7 @@
             <Property name="text" type="java.lang.String" value="&lt;value&gt;"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="enterpriseLabel">
+        <Component class="javax.swing.JLabel" name="hospitalLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="22" style="1"/>
@@ -409,7 +390,7 @@
             <Property name="text" type="java.lang.String" value="ENTERPRISE"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel12">
+        <Component class="javax.swing.JLabel" name="diagnosisLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="0"/>
@@ -417,32 +398,26 @@
             <Property name="text" type="java.lang.String" value="Possible Diagnosis"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="diagnosis">
+        <Component class="javax.swing.JTextField" name="diagnosisField">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="diagnosisActionPerformed"/>
-          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="requestTreatementBtn">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/free_button_icons_icons_pack_120624/Yellow/user_up.png"/>
+              <Image iconType="3" name="/Images/Assign symbol.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="REQUEST TREATMENT"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="requestTreatementBtnActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="headLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="22" style="1"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/free_button_icons_icons_pack_120624/Blue/rss.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="DOCTOR - BILL GENERATION"/>
           </Properties>

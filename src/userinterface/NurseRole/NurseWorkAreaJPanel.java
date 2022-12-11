@@ -1,22 +1,17 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package userinterface.NurseRole;
 
-import userinterface.LabAssistantRole.*;
+
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.NurseOrganization;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.LabTestWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
-import userinterface.DoctorRole.RequestTestJPanel;
 
 /**
  *
@@ -24,17 +19,16 @@ import userinterface.DoctorRole.RequestTestJPanel;
  */
 public class NurseWorkAreaJPanel extends javax.swing.JPanel {
 
-    private JPanel userProcessContainer;
-    private EcoSystem business;
+    
     private UserAccount userAccount;
     private NurseOrganization nurseOrganization;
     private Enterprise enterprise;
+    private JPanel userProcessContainer;
+    private EcoSystem business;
 
     int count = 0;
 
-    /**
-     * Creates new form LabAssistantWorkAreaJPanel
-     */
+   
     public NurseWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
         initComponents();
 
@@ -47,23 +41,7 @@ public class NurseWorkAreaJPanel extends javax.swing.JPanel {
         populateTable();
     }
 
-     public void populateTable() {
-        DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
-
-        model.setRowCount(0);
-
-        for (WorkRequest request : nurseOrganization.getWorkQueue().getWorkRequestList()) {
-            Object[] row = new Object[6];
-            row[0] = request;
-            row[1] = request.getMessage();
-            row[2] = request.getSender().getEmployee().getName();
-            row[3] = request.getReceiver() == null ? null : request.getReceiver().getEmployee().getName();
-            row[4] = request.getStatus();
-            row[5] = request.getNurseStatus();
-            model.addRow(row);
-        }
-    }
-
+ 
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -74,17 +52,17 @@ public class NurseWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        workRequestJTable = new javax.swing.JTable();
-        assignJButton = new javax.swing.JButton();
-        processJButton = new javax.swing.JButton();
-        refreshJButton = new javax.swing.JButton();
-        backJButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        nurseWorkAreaTable = new javax.swing.JTable();
+        assignBtn = new javax.swing.JButton();
+        processBtn = new javax.swing.JButton();
+        refreshBtn = new javax.swing.JButton();
+        backBtn = new javax.swing.JButton();
+        headLabel = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(181, 223, 237));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
+        nurseWorkAreaTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -107,65 +85,63 @@ public class NurseWorkAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(workRequestJTable);
+        jScrollPane1.setViewportView(nurseWorkAreaTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(108, 58, 700, 96));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 700, 96));
 
-        assignJButton.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        assignJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/add_user.png"))); // NOI18N
-        assignJButton.setText("ASSIGN TO ME");
-        assignJButton.addActionListener(new java.awt.event.ActionListener() {
+        assignBtn.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        assignBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Assign symbol.png"))); // NOI18N
+        assignBtn.setText("ASSIGN TO ME");
+        assignBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                assignJButtonActionPerformed(evt);
+                assignBtnActionPerformed(evt);
             }
         });
-        add(assignJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, -1, -1));
+        add(assignBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, -1, -1));
 
-        processJButton.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        processJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/user_ok.png"))); // NOI18N
-        processJButton.setText("PROCESS");
-        processJButton.addActionListener(new java.awt.event.ActionListener() {
+        processBtn.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        processBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Assign symbol.png"))); // NOI18N
+        processBtn.setText("PROCESS");
+        processBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                processJButtonActionPerformed(evt);
+                processBtnActionPerformed(evt);
             }
         });
-        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 170, -1, -1));
+        add(processBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 200, -1, -1));
 
-        refreshJButton.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        refreshJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Green/Button-Refresh-icon.png"))); // NOI18N
-        refreshJButton.setText("Refresh");
-        refreshJButton.addActionListener(new java.awt.event.ActionListener() {
+        refreshBtn.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        refreshBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Assign symbol.png"))); // NOI18N
+        refreshBtn.setText("Refresh");
+        refreshBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                refreshJButtonActionPerformed(evt);
+                refreshBtnActionPerformed(evt);
             }
         });
-        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 10, -1, -1));
+        add(refreshBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 40, 130, 40));
 
-        backJButton.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        backJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/prev-48.png"))); // NOI18N
-        backJButton.setText("BACK");
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        backBtn.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        backBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Prev Menu.png"))); // NOI18N
+        backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                backBtnActionPerformed(evt);
             }
         });
-        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, -1, -1));
+        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Blue/rss-32.png"))); // NOI18N
-        jLabel1.setText("NURSE WORK AREA");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 270, -1));
+        headLabel.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
+        headLabel.setText("NURSE WORK AREA");
+        add(headLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, 270, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed
-        int selectedRow = workRequestJTable.getSelectedRow();
+    private void assignBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignBtnActionPerformed
+        int selectedRow = nurseWorkAreaTable.getSelectedRow();
 
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please make a selection");
             return;
         }
         if (count == 0) {
-            WorkRequest request = (WorkRequest) workRequestJTable.getValueAt(selectedRow, 0);
+            WorkRequest request = (WorkRequest) nurseWorkAreaTable.getValueAt(selectedRow, 0);
             count++;
             request.setReceiver(userAccount);
             request.setNurseStatus("Pending");
@@ -175,19 +151,17 @@ public class NurseWorkAreaJPanel extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(null, "Cannot Assign More Than One Patient");
         }
+    }//GEN-LAST:event_assignBtnActionPerformed
 
+    private void processBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processBtnActionPerformed
 
-    }//GEN-LAST:event_assignJButtonActionPerformed
-
-    private void processJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processJButtonActionPerformed
-
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = nurseWorkAreaTable.getSelectedRow();
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please make a selection");
             return;
         }
 
-        WorkRequest request = (WorkRequest) workRequestJTable.getValueAt(selectedRow, 0);
+        WorkRequest request = (WorkRequest) nurseWorkAreaTable.getValueAt(selectedRow, 0);
         if ((request.getNurseStatus() == null && (request.getReceiver() == null))) {
             JOptionPane.showMessageDialog(null, "Please Assign a Patient");
         } else if ((request.getNurseStatus().equals("Pending")) && (request.getReceiver().equals(userAccount))) {
@@ -202,26 +176,45 @@ public class NurseWorkAreaJPanel extends javax.swing.JPanel {
         }
 
 
-    }//GEN-LAST:event_processJButtonActionPerformed
+    }//GEN-LAST:event_processBtnActionPerformed
 
-    private void refreshJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshJButtonActionPerformed
+    private void refreshBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshBtnActionPerformed
         populateTable();
-    }//GEN-LAST:event_refreshJButtonActionPerformed
+    }//GEN-LAST:event_refreshBtnActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
 
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_backBtnActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton assignJButton;
-    private javax.swing.JButton backJButton;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton assignBtn;
+    private javax.swing.JButton backBtn;
+    private javax.swing.JLabel headLabel;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton processJButton;
-    private javax.swing.JButton refreshJButton;
-    private javax.swing.JTable workRequestJTable;
+    private javax.swing.JTable nurseWorkAreaTable;
+    private javax.swing.JButton processBtn;
+    private javax.swing.JButton refreshBtn;
     // End of variables declaration//GEN-END:variables
+ 
+    
+    public void populateTable() {
+        DefaultTableModel model = (DefaultTableModel) nurseWorkAreaTable.getModel();
+
+        model.setRowCount(0);
+
+        for (WorkRequest request : nurseOrganization.getWorkQueue().getWorkRequestList()) {
+            Object[] row = new Object[6];
+            row[0] = request;
+            row[1] = request.getMessage();
+            row[2] = request.getSender().getEmployee().getName();
+            row[3] = request.getReceiver() == null ? null : request.getReceiver().getEmployee().getName();
+            row[4] = request.getStatus();
+            row[5] = request.getNurseStatus();
+            model.addRow(row);
+        }
+    }
+
 }

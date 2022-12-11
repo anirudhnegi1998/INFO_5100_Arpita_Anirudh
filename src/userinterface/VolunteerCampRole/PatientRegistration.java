@@ -1,27 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package userinterface.VolunteerCampRole;
 
 import Business.Enterprise.Enterprise;
-import Business.Network.Network;
-import Business.Organization.Organization;
 import Business.Organization.VolunteerCampOrganization;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.PatientTestRequest;
-import Business.WorkQueue.WorkRequest;
-import com.github.sarxos.webcam.Webcam;
-import com.github.sarxos.webcam.WebcamResolution;
 import java.awt.CardLayout;
 import java.io.File;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.imageio.ImageIO;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import Business.Network.Network;
+import Business.Organization.Organization;
 
 /**
  *
@@ -33,12 +21,13 @@ public class PatientRegistration extends javax.swing.JPanel {
     private VolunteerCampOrganization organization;
     private Enterprise enterprise;
     private UserAccount account;
-    private final String FILE_PATH = "./Pics/";
-    /**
-     * Creates new form PatientRegistration
-     */
-    public PatientRegistration(JPanel userProcessContainer, UserAccount account, VolunteerCampOrganization organization, Enterprise enterprise) {
+    
+    //This Frame stores new pateint details entered by the volunteer 
+    
+    public PatientRegistration(JPanel userProcessContainer, UserAccount account, Enterprise enterprise, VolunteerCampOrganization organization) {
         initComponents();
+        
+        
         this.userProcessContainer = userProcessContainer;
         this.organization = organization;
         this.enterprise = enterprise;
@@ -54,95 +43,87 @@ public class PatientRegistration extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        age = new javax.swing.JTextField();
-        height = new javax.swing.JTextField();
-        weight = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        fName = new javax.swing.JTextField();
-        lName = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
-        backJButton = new javax.swing.JButton();
-        genderCombo = new javax.swing.JComboBox<>();
+        heightLabel = new javax.swing.JLabel();
+        weightLabel = new javax.swing.JLabel();
+        ageLabel = new javax.swing.JLabel();
+        ageField = new javax.swing.JTextField();
+        heightField = new javax.swing.JTextField();
+        weightField = new javax.swing.JTextField();
+        lNameLabel = new javax.swing.JLabel();
+        fNameLabel = new javax.swing.JLabel();
+        fNameField = new javax.swing.JTextField();
+        lNameField = new javax.swing.JTextField();
+        headLabel = new javax.swing.JLabel();
+        submitBtn = new javax.swing.JButton();
+        genderLabel = new javax.swing.JLabel();
+        backBtn = new javax.swing.JButton();
+        genderComboBox = new javax.swing.JComboBox<>();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(181, 223, 237));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel7.setText("Height");
+        heightLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        heightLabel.setText("Height");
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel8.setText("Weight");
+        weightLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        weightLabel.setText("Weight");
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel6.setText("Age");
+        ageLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        ageLabel.setText("Age");
 
-        age.addActionListener(new java.awt.event.ActionListener() {
+        ageField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ageActionPerformed(evt);
+                ageFieldActionPerformed(evt);
             }
         });
 
-        height.addActionListener(new java.awt.event.ActionListener() {
+        heightField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                heightActionPerformed(evt);
+                heightFieldActionPerformed(evt);
             }
         });
 
-        weight.addActionListener(new java.awt.event.ActionListener() {
+        weightField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                weightActionPerformed(evt);
+                weightFieldActionPerformed(evt);
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setText("Last Name");
+        lNameLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        lNameLabel.setText("Last Name");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel2.setText("First Name");
+        fNameLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        fNameLabel.setText("First Name");
 
-        fName.addActionListener(new java.awt.event.ActionListener() {
+        fNameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fNameActionPerformed(evt);
+                fNameFieldActionPerformed(evt);
             }
         });
 
-        lName.addActionListener(new java.awt.event.ActionListener() {
+        headLabel.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
+        headLabel.setText("PATIENT INFORMATION");
+
+        submitBtn.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        submitBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Assign symbol.png"))); // NOI18N
+        submitBtn.setText("SUBMIT");
+        submitBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lNameActionPerformed(evt);
+                submitBtnActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Blue/info.png"))); // NOI18N
-        jLabel1.setText("PATIENT INFORMATION");
+        genderLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        genderLabel.setText("Gender");
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/user_ok.png"))); // NOI18N
-        jButton1.setText("SUBMIT");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        backBtn.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        backBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Prev Menu.png"))); // NOI18N
+        backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                backBtnActionPerformed(evt);
             }
         });
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel9.setText("Gender");
-
-        backJButton.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        backJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/prev-48.png"))); // NOI18N
-        backJButton.setText("BACK");
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
-            }
-        });
-
-        genderCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Declined To Answer" }));
+        genderComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Declined To Answer" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -151,106 +132,106 @@ public class PatientRegistration extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(89, 89, 89)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel9)
+                    .addComponent(ageLabel)
+                    .addComponent(heightLabel)
+                    .addComponent(weightLabel)
+                    .addComponent(genderLabel)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(backJButton)
+                        .addComponent(backBtn)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton1))
-                    .addComponent(jLabel1)
+                        .addComponent(submitBtn))
+                    .addComponent(headLabel)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
+                        .addComponent(fNameLabel)
                         .addGap(18, 18, 18)
-                        .addComponent(fName, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(fNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
+                        .addComponent(lNameLabel)
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(age, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lName, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(height, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(weight, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(genderCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(ageField, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(heightField, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(weightField, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(genderComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(jLabel1)
+                .addComponent(headLabel)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(fName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fNameLabel)
+                    .addComponent(fNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(lName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lNameLabel)
+                    .addComponent(lNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(age, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
+                    .addComponent(ageField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ageLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(height, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(heightLabel)
+                    .addComponent(heightField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(weight, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8))
+                    .addComponent(weightField, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(weightLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(genderCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9))
+                    .addComponent(genderComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(genderLabel))
                 .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(backJButton))
-                .addContainerGap(103, Short.MAX_VALUE))
+                    .addComponent(submitBtn)
+                    .addComponent(backBtn))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ageActionPerformed
+    private void ageFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ageFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ageActionPerformed
+    }//GEN-LAST:event_ageFieldActionPerformed
 
-    private void heightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_heightActionPerformed
+    private void heightFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_heightFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_heightActionPerformed
+    }//GEN-LAST:event_heightFieldActionPerformed
 
-    private void weightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_weightActionPerformed
+    private void weightFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_weightFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_weightActionPerformed
+    }//GEN-LAST:event_weightFieldActionPerformed
 
-    private void fNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fNameActionPerformed
+    private void fNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fNameFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fNameActionPerformed
+    }//GEN-LAST:event_fNameFieldActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
         // TODO add your handling code here:
-        String fname = fName.getText();
-        String lname = lName.getText();
+        String fname = fNameField.getText();
+        String lname = lNameField.getText();
         
-        String gender = genderCombo.getSelectedItem().toString();
+        String gender = genderComboBox.getSelectedItem().toString();
         String pic = null;
         
         
-        if(fname.equals("") || lname.equals("") || age.getText().isEmpty() || height.getText().isEmpty() || weight.getText().isEmpty()){
+        if(fname.equals("") || lname.equals("") || ageField.getText().isEmpty() || heightField.getText().isEmpty() || weightField.getText().isEmpty()){
                  JOptionPane.showMessageDialog(null, "Please enter all the fields!");
                  return;
             }
         
         try{
-        int age1 = Integer.parseInt(age.getText());
-        int height1 = Integer.parseInt(height.getText());
-        int weight1 = Integer.parseInt(weight.getText());
+        int age1 = Integer.parseInt(ageField.getText());
+        int height1 = Integer.parseInt(heightField.getText());
+        int weight1 = Integer.parseInt(weightField.getText());
         if((age1 > 110 ) || (age1 < 1)){
                  JOptionPane.showMessageDialog(null, "Please enter a Valid age!");
                  return;
             }
-        pic = getPic(fname);
+       
         for (UserAccount user : organization.getUserAccountDirectory().getUserAccountList()) {
             System.out.println(user);
             System.out.print(account);
@@ -265,68 +246,52 @@ public class PatientRegistration extends javax.swing.JPanel {
                 req.setPheight(height1);
                 req.setPweight(weight1);
                 req.setPgender(gender);
-                req.setPimage(pic);
+               
                 req.setStatus("Nurse Waiting");
                 System.out.print(enterprise.toString());
                 req.setCampName(enterprise.toString());
-                //req.setPimage("Have to upload");
-                System.out.println(account.getWorkQueue().getWorkRequestList());
                 account.getWorkQueue().getWorkRequestList().add(req);
                 System.out.println(req.getPatientFirstname());
                 System.out.println(account.getWorkQueue().getWorkRequestList());
-                JOptionPane.showMessageDialog(this, "Patient registered succesfully. Nurse can evaluate the Patient now!");
-                fName.setText("");
-                lName.setText("");
-                age.setText("");
-                height.setText("");
-                weight.setText("");
+                JOptionPane.showMessageDialog(this, "Patient registered succesfully. Details sent to Nurse for evaluation!");
+                
+                heightField.setText("");
+                weightField.setText("");
+                fNameField.setText("");
+                lNameField.setText("");
+                ageField.setText("");
             }
         }
         }catch(NumberFormatException e){
-         JOptionPane.showMessageDialog(null, "Please enter number for Age, Height and Weight!");   
-        } catch (IOException ex) {
-            System.err.println("");
-        }
-
+         JOptionPane.showMessageDialog(null, "Please enter numeric digits for Age, Height and Weight!");   
+        } 
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_submitBtnActionPerformed
 
-    public String getPic(String name) throws IOException {
-        Webcam webcam = Webcam.getDefault();
-        webcam.setViewSize(WebcamResolution.VGA.getSize());
-        webcam.open();
-        ImageIO.write(webcam.getImage(), "JPG", new File(name + "capture.jpg"));
-        String filename = "./" + name + "capture.jpg";
-        webcam.close();
-        return filename;
-    }
-    private void lNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lNameActionPerformed
-
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    
+    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_backBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField age;
-    private javax.swing.JButton backJButton;
-    private javax.swing.JTextField fName;
-    private javax.swing.JComboBox<String> genderCombo;
-    private javax.swing.JTextField height;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField lName;
-    private javax.swing.JTextField weight;
+    private javax.swing.JTextField ageField;
+    private javax.swing.JLabel ageLabel;
+    private javax.swing.JButton backBtn;
+    private javax.swing.JTextField fNameField;
+    private javax.swing.JLabel fNameLabel;
+    private javax.swing.JComboBox<String> genderComboBox;
+    private javax.swing.JLabel genderLabel;
+    private javax.swing.JLabel headLabel;
+    private javax.swing.JTextField heightField;
+    private javax.swing.JLabel heightLabel;
+    private javax.swing.JTextField lNameField;
+    private javax.swing.JLabel lNameLabel;
+    private javax.swing.JButton submitBtn;
+    private javax.swing.JTextField weightField;
+    private javax.swing.JLabel weightLabel;
     // End of variables declaration//GEN-END:variables
 }

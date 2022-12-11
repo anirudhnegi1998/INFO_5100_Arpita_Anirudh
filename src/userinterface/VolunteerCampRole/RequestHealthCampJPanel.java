@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package userinterface.VolunteerCampRole;
 
 import Business.Enterprise.Enterprise;
@@ -15,17 +10,16 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author anirudhnegi
+ * @author arpitajaiswal 
  */
 public class RequestHealthCampJPanel extends javax.swing.JPanel {
 
-    private JPanel userProcessContainer;
     private Enterprise enterprise;
+    
+    private JPanel userProcessContainer;
     private UserAccount userAccount;
 
-    /**
-     * Creates new form RequestHealthCampJPanel
-     */
+    
     public RequestHealthCampJPanel(JPanel userProcessContainer, UserAccount account, Enterprise enterprise) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
@@ -35,11 +29,11 @@ public class RequestHealthCampJPanel extends javax.swing.JPanel {
 
     }
     
-    private int validateZipCode(String validate) {
-    //    Matcher match = ZIP_PATTERN.matcher(validate);
+    private int verifyZipCode(String verify) {
+  
     try{
-    int zipcodeVal = Integer.parseInt(validate);
-        if (validate.length() >= 6) {
+    int zipcodeVal = Integer.parseInt(verify);
+        if (verify.length() >= 6) {
             return 0;
         }
         return 1;
@@ -57,67 +51,59 @@ public class RequestHealthCampJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel11 = new javax.swing.JLabel();
-        street = new javax.swing.JTextField();
-        city = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        state = new javax.swing.JTextField();
-        zipCode = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
-        enterpriseLabel = new javax.swing.JLabel();
-        backJButton = new javax.swing.JButton();
-        requestTestJButton = new javax.swing.JButton();
-        jLabel15 = new javax.swing.JLabel();
-        noOfPeople = new javax.swing.JTextField();
-        jLabel16 = new javax.swing.JLabel();
-        percentChild = new javax.swing.JTextField();
-        percentElder = new javax.swing.JTextField();
-        jLabel17 = new javax.swing.JLabel();
+        streetLabel = new javax.swing.JLabel();
+        streetField = new javax.swing.JTextField();
+        cityField = new javax.swing.JTextField();
+        cityLabel = new javax.swing.JLabel();
+        stateLabel = new javax.swing.JLabel();
+        stateField = new javax.swing.JTextField();
+        zipCodeField = new javax.swing.JTextField();
+        zipcodeLabel = new javax.swing.JLabel();
+        headLabel = new javax.swing.JLabel();
+        backBtn = new javax.swing.JButton();
+        requestHCBtn = new javax.swing.JButton();
+        noofAffectedPeopleLabel = new javax.swing.JLabel();
+        noOfPeopleField = new javax.swing.JTextField();
+        childPercentLabel = new javax.swing.JLabel();
+        childPercentField = new javax.swing.JTextField();
+        elderPercentField = new javax.swing.JTextField();
+        elderPercentLabel = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(181, 223, 237));
 
-        jLabel11.setText("Street Address");
+        streetLabel.setText("Street Address");
 
-        jLabel12.setText("City");
+        cityLabel.setText("City");
 
-        jLabel13.setText("State");
+        stateLabel.setText("State");
 
-        state.addActionListener(new java.awt.event.ActionListener() {
+        zipcodeLabel.setText("ZipCode");
+
+        headLabel.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
+        headLabel.setText("HEALTH CAMP REQUEST");
+
+        backBtn.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        backBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Prev Menu.png"))); // NOI18N
+        backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                stateActionPerformed(evt);
+                backBtnActionPerformed(evt);
             }
         });
 
-        jLabel14.setText("ZipCode");
-
-        enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        enterpriseLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Blue/contact.png"))); // NOI18N
-        enterpriseLabel.setText("HEALTH CAMP REQUEST");
-
-        backJButton.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        backJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/prev-48.png"))); // NOI18N
-        backJButton.setText("BACK");
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        requestHCBtn.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        requestHCBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Assign symbol.png"))); // NOI18N
+        requestHCBtn.setText("REQUEST FOR HEALTH CAMP");
+        requestHCBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                requestHCBtnActionPerformed(evt);
             }
         });
 
-        requestTestJButton.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        requestTestJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/free_button_icons_icons_pack_120624/Yellow/contact.png"))); // NOI18N
-        requestTestJButton.setText("REQUEST FOR HEALTH CAMP");
-        requestTestJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                requestTestJButtonActionPerformed(evt);
-            }
-        });
+        noofAffectedPeopleLabel.setText("No of People Affected");
 
-        jLabel15.setText("No of People Affected");
+        childPercentLabel.setText("Percentage of Affected Children");
 
-        jLabel16.setText("Percentage of Affected Children");
-
-        jLabel17.setText("Percentage of Affected Elders");
+        elderPercentLabel.setText("Percentage of Affected Elders");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -125,79 +111,76 @@ public class RequestHealthCampJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(backJButton)
-                            .addGap(90, 90, 90)
-                            .addComponent(requestTestJButton))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel11)
-                                .addComponent(jLabel12)
-                                .addComponent(jLabel13)
-                                .addComponent(jLabel14)
-                                .addComponent(jLabel15)
-                                .addComponent(jLabel16)
-                                .addComponent(jLabel17))
-                            .addGap(18, 18, 18)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(street)
-                                .addComponent(city)
-                                .addComponent(state)
-                                .addComponent(zipCode)
-                                .addComponent(noOfPeople)
-                                .addComponent(percentChild)
-                                .addComponent(percentElder))))
-                    .addComponent(enterpriseLabel))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(backBtn)
+                        .addGap(90, 90, 90)
+                        .addComponent(requestHCBtn))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(streetLabel)
+                            .addComponent(cityLabel)
+                            .addComponent(stateLabel)
+                            .addComponent(zipcodeLabel)
+                            .addComponent(noofAffectedPeopleLabel)
+                            .addComponent(childPercentLabel)
+                            .addComponent(elderPercentLabel))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(streetField)
+                            .addComponent(cityField)
+                            .addComponent(stateField)
+                            .addComponent(zipCodeField)
+                            .addComponent(noOfPeopleField)
+                            .addComponent(childPercentField)
+                            .addComponent(elderPercentField)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(headLabel)
+                        .addGap(100, 100, 100)))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(headLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(street, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(streetLabel)
+                    .addComponent(streetField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel12)
-                    .addComponent(city, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cityLabel)
+                    .addComponent(cityField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13)
-                    .addComponent(state, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(stateLabel)
+                    .addComponent(stateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
-                    .addComponent(zipCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(zipcodeLabel)
+                    .addComponent(zipCodeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
-                    .addComponent(noOfPeople, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(noofAffectedPeopleLabel)
+                    .addComponent(noOfPeopleField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
-                    .addComponent(percentChild, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(childPercentLabel)
+                    .addComponent(childPercentField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel17)
-                    .addComponent(percentElder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(elderPercentLabel)
+                    .addComponent(elderPercentField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(backJButton)
-                    .addComponent(requestTestJButton))
-                .addContainerGap(100, Short.MAX_VALUE))
+                    .addComponent(backBtn)
+                    .addComponent(requestHCBtn))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void stateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stateActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_stateActionPerformed
-
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
@@ -206,27 +189,29 @@ public class RequestHealthCampJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
 
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_backBtnActionPerformed
 
-    private void requestTestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_requestTestJButtonActionPerformed
+    private void requestHCBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_requestHCBtnActionPerformed
 
-        if(street.getText().isEmpty() || city.getText().isEmpty() || state.getText().isEmpty() || zipCode.getText().isEmpty() || noOfPeople.getText().isEmpty() || percentChild.getText().isEmpty() || percentElder.getText().isEmpty()){
+        if(streetField.getText().isEmpty() || cityField.getText().isEmpty() || stateField.getText().isEmpty() || zipCodeField.getText().isEmpty() || noOfPeopleField.getText().isEmpty() || childPercentField.getText().isEmpty() || elderPercentField.getText().isEmpty()){
         JOptionPane.showMessageDialog(null, "Enrollment cannot be completed as one or more fields are empty!");
        }
        else{
-       String address = street.getText();
-       String city1 = city.getText();
-       String state1 = state.getText();
-       String zipcode1 = zipCode.getText();
-       int zipcodeVal= validateZipCode(zipCode.getText());
+       String address = streetField.getText();
+       String city1 = cityField.getText();
+       String state1 = stateField.getText();
+       String zipcode1 = zipCodeField.getText();
+       int zipcodeVal= verifyZipCode(zipCodeField.getText());
         if (zipcodeVal == 0) {
             JOptionPane.showMessageDialog(null, "Please enter a valid 5 digit zip code");
             return;
         }
        try{
-       int people = Integer.parseInt(noOfPeople.getText());
-       int child = Integer.parseInt(percentChild.getText());
-       int elder = Integer.parseInt(percentElder.getText());
+           
+       
+       int people = Integer.parseInt(noOfPeopleField.getText());
+       int elder = Integer.parseInt(elderPercentField.getText());
+       int child = Integer.parseInt(childPercentField.getText());
        
       
        HealthCampApprovalStatus req = new HealthCampApprovalStatus();
@@ -235,53 +220,53 @@ public class RequestHealthCampJPanel extends javax.swing.JPanel {
        req.setCity(city1);
        req.setState(state1);
        req.setZipcode(zipcode1);
-       req.setPercentChild(noOfPeople.getText());
-       req.setPercentElder(percentChild.getText());
-       req.setPeopleAffected(percentElder.getText());
+       req.setPercentChild(noOfPeopleField.getText());
+       req.setPercentElder(childPercentField.getText());
+       req.setPeopleAffected(elderPercentField.getText());
        req.setStatus("Pending");
        req.setReceiver(userAccount);
        req.setName(userAccount.toString());
-       //System.out.println(userAccount.toString());
+       
        userAccount.getWorkQueue().getWorkRequestList().add(req);
 
        for (UserAccount user : enterprise.getUserAccountDirectory().getUserAccountList()) {
-           //System.out.println(user.getRole().toString());
+           
            if ((enterprise.getEnterpriseType() == Enterprise.EnterpriseType.Camp)) {
-               //System.out.println(user);
+               
                user.getWorkQueue().getWorkRequestList().add(req);
                JOptionPane.showMessageDialog(this, "Health Camp Request Submitted to Camp Admin!");
-               street.setText("");
-               city.setText("");
-               state.setText("");
-               zipCode.setText("");
-               noOfPeople.setText("");
-               percentChild.setText("");
-               percentElder.setText("");
+               streetField.setText("");
+               cityField.setText("");
+               stateField.setText("");
+               zipCodeField.setText("");
+               noOfPeopleField.setText("");
+               childPercentField.setText("");
+               elderPercentField.setText("");
            }
        }
        } catch(NumberFormatException e){
           JOptionPane.showMessageDialog(null, "Please enter number for people affected, percentage of affected children and elders!");
        }
-    }//GEN-LAST:event_requestTestJButtonActionPerformed
+    }//GEN-LAST:event_requestHCBtnActionPerformed
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
-    private javax.swing.JTextField city;
-    private javax.swing.JLabel enterpriseLabel;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JTextField noOfPeople;
-    private javax.swing.JTextField percentChild;
-    private javax.swing.JTextField percentElder;
-    private javax.swing.JButton requestTestJButton;
-    private javax.swing.JTextField state;
-    private javax.swing.JTextField street;
-    private javax.swing.JTextField zipCode;
+    private javax.swing.JButton backBtn;
+    private javax.swing.JTextField childPercentField;
+    private javax.swing.JLabel childPercentLabel;
+    private javax.swing.JTextField cityField;
+    private javax.swing.JLabel cityLabel;
+    private javax.swing.JTextField elderPercentField;
+    private javax.swing.JLabel elderPercentLabel;
+    private javax.swing.JLabel headLabel;
+    private javax.swing.JTextField noOfPeopleField;
+    private javax.swing.JLabel noofAffectedPeopleLabel;
+    private javax.swing.JButton requestHCBtn;
+    private javax.swing.JTextField stateField;
+    private javax.swing.JLabel stateLabel;
+    private javax.swing.JTextField streetField;
+    private javax.swing.JLabel streetLabel;
+    private javax.swing.JTextField zipCodeField;
+    private javax.swing.JLabel zipcodeLabel;
     // End of variables declaration//GEN-END:variables
 }
